@@ -1,0 +1,8 @@
+{
+  "name": "opus-having-fun-playground",
+  "private": true,
+  "description": "Playground for code-generated animations made by an AI agent",
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0"
+  }
+}

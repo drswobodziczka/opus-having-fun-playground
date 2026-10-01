@@ -1,0 +1,41 @@
+0.00 intro  GEM 100 0 100 idle    | OWL 220 0 100 idle    staples 0 
+0.25 intro  GEM 100 0 100 idle    | OWL 220 0 100 idle    staples 0 
+0.50 intro  GEM 100 0 100 idle    | OWL 220 0 100 idle    staples 0 
+0.75 intro  GEM 100 0 100 idle    | OWL 220 0 100 idle    staples 0 
+1.00 intro  GEM 100 0 100 idle    | OWL 220 0 100 idle    staples 0 
+1.25 fight  GEM 101 0 100 walk    | OWL 220 0 100 special staples 0 
+1.50 fight  GEM 113 0 100 walk    | OWL 220 0 100 special staples 1 
+1.75 fight  GEM 132 20 100 jump    | OWL 220 0 100 special staples 1 
+2.00 fight  GEM 156 36 100 jump    | OWL 220 0 100 idle    staples 1 
+2.25 fight  GEM 179 26 100 jump    | OWL 220 0 100 idle    staples 1 
+2.50 fight  GEM 195 4 100 jump    | OWL 231 0 82 hit     staples 1 
+2.75 fight  GEM 198 0 100 idle    | OWL 242 0 82 idle    staples 1 
+3.00 fight  GEM 198 0 100 idle    | OWL 229 0 82 walk    staples 0 
+3.25 fight  GEM 197 0 100 idle    | OWL 219 0 82 idle    staples 0 
+3.50 fight  GEM 196 0 80 hit     | OWL 219 0 82 kick    staples 0 
+3.75 fight  GEM 181 0 80 hit     | OWL 219 0 82 kick    staples 0 
+4.00 fight  GEM 180 0 80 special | OWL 219 0 82 idle    staples 0 
+4.25 fight  GEM 180 0 80 special | OWL 224 0 68 hit     staples 0 
+4.50 fight  GEM 180 0 80 idle    | OWL 236 0 68 hit     staples 0 
+4.75 fight  GEM 190 0 80 walk    | OWL 230 0 68 walk    staples 0 
+5.00 fight  GEM 199 0 80 walk    | OWL 221 0 68 walk    staples 0 
+5.25 fight  GEM 193 0 79 block   | OWL 221 0 68 punch   staples 0 
+5.50 fight  GEM 193 0 79 block   | OWL 221 0 68 idle    staples 0 
+5.75 fight  GEM 193 0 79 punch   | OWL 222 0 58 hit     staples 0 
+6.00 fight  GEM 193 0 79 punch   | OWL 225 0 58 hit     staples 0 
+6.25 fight  GEM 193 0 79 punch   | OWL 228 0 48 hit     staples 0 
+6.50 fight  GEM 193 0 79 kick    | OWL 231 0 32 hit     staples 0 
+6.75 fight  GEM 193 0 79 kick    | OWL 238 0 32 special staples 0 
+7.00 fight  GEM 202 22 79 jump    | OWL 238 0 32 special staples 1 
+7.25 fight  GEM 217 36 79 jump    | OWL 238 0 32 special staples 1 
+7.50 ko     GEM 231 26 79 jump    | OWL 240 3 0 ko      staples 0 GEM
+7.75 ko     GEM 234 21 79 jump    | OWL 245 7 0 ko      staples 0 GEM
+8.00 ko     GEM 239 10 79 jump    | OWL 252 14 0 ko      staples 0 GEM
+8.25 ko     GEM 243 0 79 land    | OWL 258 17 0 ko      staples 0 GEM
+8.50 ko     GEM 243 0 79 land    | OWL 263 17 0 ko      staples 0 GEM
+8.75 result GEM 243 0 79 win     | OWL 270 3 0 ko      staples 0 GEM
+9.00 result GEM 243 0 79 win     | OWL 275 0 0 ko      staples 0 GEM
+9.25 result GEM 243 0 79 win     | OWL 277 0 0 ko      staples 0 GEM
+9.50 result GEM 243 0 79 win     | OWL 278 0 0 ko      staples 0 GEM
+9.75 result GEM 243 0 79 win     | OWL 278 0 0 ko      staples 0 GEM
+errors: none
