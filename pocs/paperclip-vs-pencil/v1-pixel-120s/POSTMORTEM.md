@@ -75,3 +75,26 @@ Pozycje w scenariuszu liczyłem ręcznie. Asercja „każde trafienie ≤ 90 px�
 - `check.mjs`: uprząż v1 (`node check.mjs [--mp4] [--fps=30]`)
 - `events.json`, `trace.txt`, `sheet.png`, `phone.png`: wyniki ostatniego przebiegu
 - `paper-cuts.mp4`, `sheet-dense.png`: generowane lokalnie, **poza gitem** (rozmiar: ~39 MB i ~4 MB)
+
+## Feedback usera (2026-10-02)
+### Minusy
+| # | Uwaga | Diagnoza / lekcja |
+|---|---|---|
+| F1 | **Walka mało dynamiczna** | Rytm „jeden ruch co ~0,4–1 s” wygląda jak pokaz ciosów, nie walka. Potrzebne: wymiany seria-na-serię, nakładające się akcje obu stron, zmiany tempa (pauza → eksplozja). |
+| F2 | **Roll 360° mało naturalny** | Obrót całego świata nie ma uzasadnienia w fizyce kadru. Ruch kamery musi wynikać z akcji (np. podążanie za rzucanym) albo być krótki i „szarpnięty”, a nie pełny obrót. |
+| F3 | **Double K.O. „z dupy”** | Przyczyna (dźgnięcie w trakcie oplotu) była w scenariuszu, ale **nie była pokazana**: brak zbliżenia, napisu, reakcji. Lekcja: każdy zwrot akcji = **zapowiedź → moment → konsekwencja**, wszystkie trzy widoczne. |
+| F4 | **Język wygląda jak odklejające się usta** | Kształt i miejsce (elipsa przy kąciku ust) czytają się jako usta. Język potrzebuje wyraźnych ust (otwór), koloru i ruchu „zwisania”. |
+| F5 | **Lektor przeglądarkowy słaby** | `speechSynthesis` zależy od systemu i brzmi płasko. Potrzebny konkretny TTS (np. lokalny `say` z macOS albo chmurowy model TTS) wyrenderowany do pliku i osadzony. |
+| F6 | **Kolory groteskowe** | Nasycona, cukierkowa paleta. Następny PoC: **mroczny, poszarpany styl ninja**. |
+| F7 | **Rzutów nie widać** | Brakuje czytelnego chwytu (kontakt dłoni), zamachu (antycypacji), łuku lotu w kadrze i mocnego lądowania. Do tego oba ciała mają podobną skalę i kolory, więc w obrocie się zlewają. |
+| F8 | **Rzutu izometrycznego nie było** | Słusznie: w briefie wybraliśmy pseudo-3D (paralaksa, roll, orbita). Izometria wyszła tylko jako pytanie terminologiczne i nie była wymaganiem. |
+
+### Plusy (zachować)
+- Grymasy po otrzymaniu ciosów.
+- Ciosy specjalne (super flash, burza cięć, temperówka, rozprostowanie).
+- Intro (tytuł + VS).
+- Wierność stylowi gier z lat 90. (HUD, banery, licznik, combo, FIRST ATTACK).
+- Obrót postaci (zwroty, orbita zamieniająca strony).
+- Paralaksa.
+- Muzyka: „wierna, jak ze starych konsol, trochę męcząca, ale wiarygodna”.
+- Spójność całości, bez większych błędów.

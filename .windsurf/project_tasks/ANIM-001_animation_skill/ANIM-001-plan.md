@@ -12,6 +12,12 @@
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   Lekcje z feedbacku do Paper Cuts v1 (reguły dla skilla):
+    *   Zwrot akcji = zapowiedź → moment → konsekwencja, wszystkie widoczne (double K.O. bez pokazanej przyczyny = „z dupy”).
+    *   Rzut = chwyt (kontakt) → zamach (antycypacja) → łuk w kadrze → lądowanie z impaktem. Postacie muszą się wyraźnie różnić sylwetką lub kolorem.
+    *   Ruch kamery musi wynikać z akcji. Pełny roll 360° bez motywacji wygląda nienaturalnie.
+    *   Dynamika: serie na serie, nakładające się akcje, zmiany tempa (nie „jeden ruch co sekundę”).
+    *   Lektor: osadzony TTS (plik), nie `speechSynthesis`.
 *   Paper Cuts v1 (PLAY-001) to pierwszy przebieg przez bramki z Decision #3: pytania → brief → akceptacja → kod. Efekt: 16/16 asercji od pierwszego przebiegu, zero przepisywania. Wzorzec dla skilla: DSL scenariusza `at()/sys()`, kontrakt `window.anim`, `check.mjs` z autodetekcją Chrome, `--mp4`.
 *   Fabuła należy do scenariusza, nie do fizyki: hitstop rozjeżdżał zegary i finał tracił K.O. (patrz postmortem v2).
 *   Model widzi PNG, nie widzi ruchu. Głównym sygnałem jest trace/log (JSON), obraz służy do estetyki.
