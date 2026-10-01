@@ -13,7 +13,9 @@
 | **Python 3** | 3.14.3 | chirurgiczne podmiany bloków kodu w plikach | ✅ |
 | **Claude Artifacts** | — | publikacja animacji jako prywatnej strony | ✅ |
 | **Narzędzie `Read` (obrazy)** | — | „oczy” modelu: czyta PNG (arkusz klatek), nie czyta wideo | ✅ |
-| **ffmpeg / ffprobe** | 8.0.1 (Homebrew) | eksport MP4/GIF, cięcie na klatki, gęste arkusze, podkład audio | ⚠️ zainstalowane, jeszcze nieużyte |
+| **ffmpeg / ffprobe** | 8.0.1 (Homebrew) | eksport MP4 (skala 3× `neighbor`), gęsty arkusz z nagrania (`tile`) | ✅ używane (Paper Cuts v1) |
+| **Web Audio API** | (przeglądarka) | syntezowana muzyka chiptune i SFX z logu zdarzeń | ✅ (niezweryfikowane odsłuchem) |
+| **speechSynthesis** | (przeglądarka) | lektor („Round one”, „Fight!”) | ✅ (głos zależy od systemu) |
 
 ### Jak to się łączy
 ```
@@ -35,17 +37,18 @@ scenariusz (SCRIPT) ─► symulacja 60 Hz ─► Canvas ─► [post-process, n
 ## 3. Potrzeby do wypróbowania (backlog warsztatowy)
 
 ### Uprząż v1 (priorytet)
-- [ ] **Log zdarzeń:** animacja emituje `{t, type: 'hit'|'block'|'ko'|…, who}` zamiast próbkowania stanu.
-- [ ] **Asercje scenariusza:** np. `ko ∈ [7, 8] s`, `0 błędów konsoli`, `zwycięzca = GEM`.
-- [ ] **Arkusz z chwil zdarzeń:** klatka tuż przed, w trakcie i po każdym trafieniu.
-- [ ] **Generyczny kontrakt hooków:** `window.anim = { seek, state, events, duration }` dla każdej animacji.
-- [ ] **Autodetekcja Chrome** w `~/.cache/puppeteer` zamiast ścieżki na sztywno.
+- [x] **Log zdarzeń** (`events.json`) zamiast samego próbkowania stanu.
+- [x] **Asercje scenariusza:** 16 sprawdzeń w Paper Cuts v1.
+- [x] **Arkusz z kluczowych chwil** (24 nazwane momenty). Do zrobienia: automatycznie z logu zdarzeń.
+- [x] **Kontrakt hooków:** `window.anim = { seek, step, state, events, script, duration }`.
+- [x] **Autodetekcja Chrome** w `~/.cache/puppeteer`.
+- [ ] **Asercje czytelności:** bbox postaci w kadrze, brak zasłonięcia przez banery.
 - [ ] Jedna komenda: `anim-check <plik.html> --expect …`.
 
 ### Wideo i ruch (ffmpeg)
-- [ ] **Render do MP4:** `seek()` po każdej klatce → PNG → `ffmpeg -framerate 60 -i f%04d.png -pix_fmt yuv420p out.mp4`.
+- [x] **Render do MP4:** `step()` co klatkę → PNG → ffmpeg (120 s filmu w ~15 s).
 - [ ] **GIF z paletą:** `palettegen` + `paletteuse` (ładny GIF z ograniczoną paletą).
-- [ ] **Gęsty arkusz z nagrania:** `ffmpeg -i out.mp4 -vf fps=8,tile=8x5 sheet.png`, żeby ocenić płynność.
+- [x] **Gęsty arkusz z nagrania:** `ffmpeg -vf fps=1/3,tile=8x5` (40 klatek). Do spróbowania: gęściej per scena.
 - [ ] Porównać z `page.screencast()` z Puppeteera (nagrywanie na żywo; z pamięci wymaga ffmpeg, do weryfikacji).
 
 ### Jakość i regresja
@@ -54,10 +57,10 @@ scenariusz (SCRIPT) ─► symulacja 60 Hz ─► Canvas ─► [post-process, n
 - [ ] Widoki: desktop, telefon, motyw jasny i ciemny.
 
 ### Dźwięk
-- [ ] **Web Audio API:** syntezowane efekty chiptune (square/noise) i krótka muzyka.
+- [x] **Web Audio API:** syntezowane efekty chiptune (square/noise) i sekwencer muzyki.
 - [ ] **Głosy** („ROUND ONE”, „FIGHT!”, „K.O.”): `speechSynthesis` kontra próbki z modelu TTS osadzone jako data URI.
 - [ ] Blokada autoplay: przycisk „włącz dźwięk”. Sprawdzić, czy Web Audio działa w podglądzie artefaktu.
-- [ ] Render audio do pliku i zmiksowanie z MP4 (ffmpeg).
+- [ ] Render audio do pliku (`OfflineAudioContext`) i zmiksowanie z MP4 (ffmpeg): następna iteracja (decyzja ad5).
 
 ### Grafika (pod v3: Rayman × SSF2T)
 - [ ] Pseudo-3D w Canvas (skala, paralaksa, obrót sceny) kontra **WebGL / Three.js** (cdnjs) do obrotów kamery.

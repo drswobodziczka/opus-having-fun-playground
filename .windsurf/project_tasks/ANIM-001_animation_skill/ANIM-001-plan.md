@@ -12,6 +12,7 @@
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   Paper Cuts v1 (PLAY-001) to pierwszy przebieg przez bramki z Decision #3: pytania → brief → akceptacja → kod. Efekt: 16/16 asercji od pierwszego przebiegu, zero przepisywania. Wzorzec dla skilla: DSL scenariusza `at()/sys()`, kontrakt `window.anim`, `check.mjs` z autodetekcją Chrome, `--mp4`.
 *   Fabuła należy do scenariusza, nie do fizyki: hitstop rozjeżdżał zegary i finał tracił K.O. (patrz postmortem v2).
 *   Model widzi PNG, nie widzi ruchu. Głównym sygnałem jest trace/log (JSON), obraz służy do estetyki.
 *   `puppeteer-core` + Chrome z `~/.cache/puppeteer/chrome-headless-shell/mac_arm-131.0.6778.204/...` działa bez pobierania przeglądarki.
@@ -29,7 +30,7 @@
 
 ## ✅ Acceptance Criteria
 *   [ ] Skill (`SKILL.md` + szablon + uprząż) w tym repo (`skills/`), podlinkowany symlinkiem do `~/.claude/skills/`.
-*   [ ] Skill pyta o temat, styl, czas i tryb **przed** kodem, a potem proponuje narzędzia i scenariusz (beaty z czasami) do akceptacji.
+*   [ ] Skill zadaje ponumerowane pytania pogłębiające (liczba zależna od ciężaru zadania), potem przedstawia **brief preprodukcyjny** (scenariusz, sceny z czasami, styl, wykonanie, otwarte decyzje) i koduje dopiero po akceptacji (Decision #3).
 *   [ ] Uprząż: log zdarzeń, asercje scenariusza, arkusz klatek z chwil zdarzeń, błędy konsoli; opcjonalnie MP4/GIF (ffmpeg).
 *   [ ] v3 (spinacz vs ołówek, Rayman × SSF2T, zwroty akcji, 2 obroty kamery) zbudowana **skillem** i przechodzi asercje.
 *   [ ] Dokumentacja/wnioski przeniesione do Gamedev Universe Vault.
@@ -42,6 +43,13 @@
 *   **Context:** Potrzebna kontrola co do klatki, edytowalność i testowalność przez agenta.
 *   **Decision:** HTML + Canvas/JS, stały krok 60 Hz, scenariusz z czasami, hooki `seek/state`.
 *   **Consequence:** Pełna kontrola i testy w sekundach. Organiczny ruch trudniejszy niż w modelach wideo (np. fal.ai), co może być opcją do porównania.
+
+### Decision #3: Preprodukcja do akceptacji przed kodem (feedback usera 2026-10-02)
+*   **Context:** User ocenił najlepiej fazę pytań pogłębiających na starcie. v1 Clip Fightera powstała bez pytania o czas i trzeba ją było przepisać.
+*   **Decision:** Skill ma dwie bramki przed implementacją:
+    1. **Pytania pogłębiające**, ponumerowane (user odpowiada „ad1, ad2…”). Ich liczba zależy od ciężaru zadania: prosta animacja 2–3, duża produkcja 5–8.
+    2. **Brief preprodukcyjny do akceptacji:** scenariusz, rozkład scen z czasami, szczegóły stylu, sposób wykonania (technika, dźwięk, weryfikacja) i lista otwartych decyzji.
+*   **Consequence:** Kod powstaje dopiero po akceptacji briefu, a brief zostaje jako `BRIEF.md` w katalogu PoC-a.
 
 ### Decision #2: Wynik akcji zapisany w scenariuszu
 *   **Context:** Hitstop i slow-mo rozjeżdżały fizykę względem czasu fabuły (finał bez K.O.).

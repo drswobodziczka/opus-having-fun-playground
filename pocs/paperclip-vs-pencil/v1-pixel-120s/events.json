@@ -1,0 +1,798 @@
+[
+ {
+  "t": 0.017,
+  "type": "scene",
+  "name": "title"
+ },
+ {
+  "t": 6,
+  "type": "scene",
+  "name": "vs"
+ },
+ {
+  "t": 12,
+  "type": "scene",
+  "name": "fight"
+ },
+ {
+  "t": 12,
+  "type": "round",
+  "n": 1
+ },
+ {
+  "t": 12.3,
+  "type": "banner",
+  "text": "ROUND 1"
+ },
+ {
+  "t": 14.5,
+  "type": "banner",
+  "text": "FIGHT!"
+ },
+ {
+  "t": 16.517,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 94,
+  "dist": 43
+ },
+ {
+  "t": 16.967,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 88,
+  "dist": 51
+ },
+ {
+  "t": 17.417,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 8,
+  "hp": 80,
+  "dist": 59
+ },
+ {
+  "t": 19.55,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 8,
+  "hp": 92,
+  "dist": 43
+ },
+ {
+  "t": 20.283,
+  "type": "block",
+  "by": "GEM",
+  "to": "HB",
+  "dist": 56
+ },
+ {
+  "t": 21.017,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 74,
+  "dist": 55
+ },
+ {
+  "t": 21.417,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 7,
+  "hp": 67,
+  "dist": 63
+ },
+ {
+  "t": 23.4,
+  "type": "grab",
+  "by": "GEM",
+  "to": "HB",
+  "move": "lever"
+ },
+ {
+  "t": 24.083,
+  "type": "chip",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 10,
+  "hp": 82,
+  "dist": 30
+ },
+ {
+  "t": 25.483,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 10,
+  "hp": 57,
+  "dist": 30
+ },
+ {
+  "t": 26.367,
+  "type": "miss",
+  "by": "HB",
+  "to": "GEM",
+  "dist": 55
+ },
+ {
+  "t": 26.917,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 51,
+  "dist": 59
+ },
+ {
+  "t": 27.317,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 45,
+  "dist": 67
+ },
+ {
+  "t": 27.717,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 8,
+  "hp": 37,
+  "dist": 75
+ },
+ {
+  "t": 30.25,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 8,
+  "hp": 74,
+  "dist": 48
+ },
+ {
+  "t": 30.983,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 7,
+  "hp": 67,
+  "dist": 62
+ },
+ {
+  "t": 32.633,
+  "type": "erase",
+  "by": "HB",
+  "to": "GEM",
+  "dist": 42
+ },
+ {
+  "t": 34.883,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 10,
+  "hp": 27,
+  "dist": 32
+ },
+ {
+  "t": 35.617,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 21,
+  "dist": 49
+ },
+ {
+  "t": 36.017,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 15,
+  "dist": 57
+ },
+ {
+  "t": 36.417,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 8,
+  "hp": 7,
+  "dist": 65
+ },
+ {
+  "t": 38.85,
+  "type": "miss",
+  "by": "GEM",
+  "to": "HB",
+  "dist": 73
+ },
+ {
+  "t": 39.717,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 8,
+  "hp": 6,
+  "dist": 39
+ },
+ {
+  "t": 40.683,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 5,
+  "hp": 62,
+  "dist": 60
+ },
+ {
+  "t": 41.417,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 7,
+  "hp": 6,
+  "dist": 41
+ },
+ {
+  "t": 41.817,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 7,
+  "hp": 6,
+  "dist": 49
+ },
+ {
+  "t": 43.283,
+  "type": "ko",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 12,
+  "hp": 0,
+  "dist": 30
+ },
+ {
+  "t": 43.3,
+  "type": "banner",
+  "text": "K.O."
+ },
+ {
+  "t": 45,
+  "type": "banner",
+  "text": "HB WINS"
+ },
+ {
+  "t": 45,
+  "type": "roundwin",
+  "who": "HB"
+ },
+ {
+  "t": 46.6,
+  "type": "regrow"
+ },
+ {
+  "t": 47.6,
+  "type": "round",
+  "n": 2
+ },
+ {
+  "t": 49,
+  "type": "banner",
+  "text": "ROUND 2"
+ },
+ {
+  "t": 51.2,
+  "type": "banner",
+  "text": "FIGHT!"
+ },
+ {
+  "t": 53.983,
+  "type": "miss",
+  "by": "HB",
+  "to": "GEM",
+  "dist": 45
+ },
+ {
+  "t": 54.683,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 8,
+  "hp": 92,
+  "dist": 40
+ },
+ {
+  "t": 55.4,
+  "type": "grab",
+  "by": "GEM",
+  "to": "HB",
+  "move": "lever"
+ },
+ {
+  "t": 56.083,
+  "type": "chip",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 12,
+  "hp": 80,
+  "dist": 30
+ },
+ {
+  "t": 57.117,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 94,
+  "dist": 39
+ },
+ {
+  "t": 57.517,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 7,
+  "hp": 87,
+  "dist": 47
+ },
+ {
+  "t": 58.967,
+  "type": "miss",
+  "by": "HB",
+  "to": "GEM",
+  "dist": 44
+ },
+ {
+  "t": 60.05,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 8,
+  "hp": 72,
+  "dist": 47
+ },
+ {
+  "t": 60.883,
+  "type": "block",
+  "by": "GEM",
+  "to": "HB",
+  "dist": 58
+ },
+ {
+  "t": 61.883,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 10,
+  "hp": 77,
+  "dist": 48
+ },
+ {
+  "t": 63.683,
+  "type": "grab",
+  "by": "GEM",
+  "to": "HB",
+  "move": "suplex"
+ },
+ {
+  "t": 63.9,
+  "type": "camera",
+  "move": "roll"
+ },
+ {
+  "t": 65.15,
+  "type": "slam",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 18,
+  "hp": 54,
+  "dist": 34
+ },
+ {
+  "t": 67.317,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 7,
+  "hp": 70,
+  "dist": 27
+ },
+ {
+  "t": 67.717,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 7,
+  "hp": 63,
+  "dist": 35
+ },
+ {
+  "t": 68.167,
+  "type": "miss",
+  "by": "HB",
+  "to": "GEM",
+  "dist": 51
+ },
+ {
+  "t": 69.883,
+  "type": "block",
+  "by": "GEM",
+  "to": "HB",
+  "dist": 44
+ },
+ {
+  "t": 70.883,
+  "type": "snap",
+  "by": "HB",
+  "to": "GEM",
+  "dist": 34
+ },
+ {
+  "t": 73.45,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 8,
+  "hp": 46,
+  "dist": 43
+ },
+ {
+  "t": 74.183,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 7,
+  "hp": 39,
+  "dist": 56
+ },
+ {
+  "t": 74.917,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 2,
+  "hp": 57,
+  "dist": 41
+ },
+ {
+  "t": 75.8,
+  "type": "grab",
+  "by": "GEM",
+  "to": "HB",
+  "move": "lever"
+ },
+ {
+  "t": 76.483,
+  "type": "chip",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 10,
+  "hp": 29,
+  "dist": 30
+ },
+ {
+  "t": 78.883,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 6,
+  "hp": 23,
+  "dist": 90
+ },
+ {
+  "t": 80.25,
+  "type": "block",
+  "by": "GEM",
+  "to": "HB",
+  "dist": 47
+ },
+ {
+  "t": 80.917,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 2,
+  "hp": 55,
+  "dist": 39
+ },
+ {
+  "t": 82.85,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 8,
+  "hp": 15,
+  "dist": 36
+ },
+ {
+  "t": 83.517,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 2,
+  "hp": 53,
+  "dist": 43
+ },
+ {
+  "t": 84.483,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 4,
+  "hp": 11,
+  "dist": 54
+ },
+ {
+  "t": 85.1,
+  "type": "grab",
+  "by": "GEM",
+  "to": "HB",
+  "move": "spinthrow"
+ },
+ {
+  "t": 86.467,
+  "type": "ko",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 16,
+  "hp": 0,
+  "dist": 100
+ },
+ {
+  "t": 86.5,
+  "type": "banner",
+  "text": "K.O."
+ },
+ {
+  "t": 87.9,
+  "type": "banner",
+  "text": "GEM WINS"
+ },
+ {
+  "t": 87.9,
+  "type": "roundwin",
+  "who": "GEM"
+ },
+ {
+  "t": 89.8,
+  "type": "round",
+  "n": 3
+ },
+ {
+  "t": 90.2,
+  "type": "banner",
+  "text": "FINAL ROUND"
+ },
+ {
+  "t": 92.3,
+  "type": "banner",
+  "text": "FIGHT!"
+ },
+ {
+  "t": 93.3,
+  "type": "sharpen-start",
+  "who": "HB"
+ },
+ {
+  "t": 94.7,
+  "type": "sharpen",
+  "who": "HB"
+ },
+ {
+  "t": 95.6,
+  "type": "super",
+  "who": "HB"
+ },
+ {
+  "t": 95.983,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 94,
+  "dist": 15
+ },
+ {
+  "t": 96.233,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 88,
+  "dist": 36
+ },
+ {
+  "t": 96.483,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 82,
+  "dist": 20
+ },
+ {
+  "t": 96.733,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 76,
+  "dist": 33
+ },
+ {
+  "t": 96.983,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 70,
+  "dist": 24
+ },
+ {
+  "t": 97.25,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 64,
+  "dist": 27
+ },
+ {
+  "t": 97.5,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 58,
+  "dist": 31
+ },
+ {
+  "t": 97.75,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 6,
+  "hp": 52,
+  "dist": 23
+ },
+ {
+  "t": 99.283,
+  "type": "miss",
+  "by": "HB",
+  "to": "GEM",
+  "dist": 28
+ },
+ {
+  "t": 100.4,
+  "type": "grab",
+  "by": "GEM",
+  "to": "HB",
+  "move": "lever"
+ },
+ {
+  "t": 101.083,
+  "type": "chip",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 16,
+  "hp": 84,
+  "dist": 30
+ },
+ {
+  "t": 102.117,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 9,
+  "hp": 43,
+  "dist": 39
+ },
+ {
+  "t": 102.517,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 9,
+  "hp": 34,
+  "dist": 47
+ },
+ {
+  "t": 103.65,
+  "type": "hit",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 12,
+  "hp": 72,
+  "dist": 46
+ },
+ {
+  "t": 104,
+  "type": "camera",
+  "move": "orbit"
+ },
+ {
+  "t": 105.417,
+  "type": "camera",
+  "move": "orbit-end"
+ },
+ {
+  "t": 105.883,
+  "type": "hit",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 14,
+  "hp": 20,
+  "dist": 34
+ },
+ {
+  "t": 106.4,
+  "type": "super",
+  "who": "GEM"
+ },
+ {
+  "t": 107.6,
+  "type": "chip",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 14,
+  "hp": 58,
+  "dist": 54
+ },
+ {
+  "t": 108.2,
+  "type": "chip",
+  "by": "HB",
+  "to": "GEM",
+  "dmg": 30,
+  "hp": 6,
+  "dist": 54
+ },
+ {
+  "t": 109,
+  "type": "grab",
+  "by": "GEM",
+  "to": "HB",
+  "move": "spinthrow"
+ },
+ {
+  "t": 110.367,
+  "type": "cup",
+  "to": "HB"
+ },
+ {
+  "t": 110.367,
+  "type": "ko",
+  "by": "GEM",
+  "to": "HB",
+  "dmg": 24,
+  "hp": 0,
+  "dist": 114
+ },
+ {
+  "t": 110.7,
+  "type": "ko",
+  "to": "GEM",
+  "self": true
+ },
+ {
+  "t": 110.9,
+  "type": "banner",
+  "text": "DOUBLE K.O."
+ },
+ {
+  "t": 113.2,
+  "type": "banner",
+  "text": "DRAW GAME"
+ }
+]

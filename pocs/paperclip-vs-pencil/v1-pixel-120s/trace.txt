@@ -1,0 +1,120 @@
+  0.0 title cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  1.0 title cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  2.0 title cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  3.0 title cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  4.0 title cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  5.0 title cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  6.0 vs    cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  7.0 vs    cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  8.0 vs    cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+  9.0 vs    cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 10.0 vs    cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 11.0 vs    cam 320 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 12.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 13.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 14.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 15.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 16.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 391, 0 hp100 dash     
+ 17.0 fight cam 272 r0 o0 | GEM 241, 0 hp 88 hit       | HB 292, 0 hp100 slash    
+ 18.0 fight cam 257 r0 o0 | GEM 210, 1 hp 80 swim      | HB 300, 0 hp100 taunt    
+ 19.0 fight cam 271 r0 o0 | GEM 250, 0 hp 80 idle      | HB 300, 0 hp100 idle     
+ 20.0 fight cam 285 r0 o0 | GEM 260, 0 hp 80 lasso     | HB 316, 0 hp 92 block    
+ 21.0 fight cam 290 r0 o0 | GEM 260, 0 hp 80 idle      | HB 316, 0 hp 92 slash    
+ 22.0 fight cam 277 r0 o0 | GEM 230, 0 hp 67 idle      | HB 322, 0 hp 92 idle     
+ 23.0 fight cam 284 r0 o0 | GEM 260, 0 hp 67 idle      | HB 312, 0 hp 92 idle     
+ 24.0 fight cam 296 r0 o0 | GEM 282, 0 hp 67 lever     | HB 312, 0 hp 92 held     
+ 25.0 fight cam 300 r0 o0 | GEM 282, 0 hp 67 idle      | HB 329, 0 hp 82 hit      
+ 26.0 fight cam 288 r0 o0 | GEM 256, 0 hp 57 idle      | HB 312, 0 hp 82 idle     
+ 27.0 fight cam 277 r0 o0 | GEM 243, 0 hp 51 hit       | HB 304, 0 hp 82 slash    
+ 28.0 fight cam 265 r0 o0 | GEM 211, 0 hp 37 hit       | HB 312, 0 hp 82 idle     
+ 29.0 fight cam 264 r0 o0 | GEM 224,19 hp 37 swim      | HB 312, 0 hp 82 idle     
+ 30.0 fight cam 285 r0 o0 | GEM 262,36 hp 37 spring    | HB 312, 0 hp 82 idle     
+ 31.0 fight cam 296 r0 o0 | GEM 266, 0 hp 37 lasso     | HB 324, 0 hp 67 hit      
+ 32.0 fight cam 287 r0 o0 | GEM 266, 0 hp 37 idle      | HB 308, 0 hp 67 taunt    
+ 33.0 fight cam 287 r0 o0 | GEM 266, 0 hp 37 lasso     | HB 308, 0 hp 67 erase    
+ 34.0 fight cam 287 r0 o0 | GEM 266, 0 hp 37 shock     | HB 308, 0 hp 67 taunt    
+ 35.0 fight cam 282 r0 o0 | GEM 253, 0 hp 27 hit       | HB 298, 0 hp 67 thrust   
+ 36.0 fight cam 266 r0 o0 | GEM 234, 0 hp 21 idle      | HB 292, 0 hp 67 slash    
+ 37.0 fight cam 252 r0 o0 | GEM 202, 0 hp  7 idle      | HB 298, 0 hp 67 idle     
+ 38.0 fight cam 262 r0 o0 | GEM 239,10 hp  7 swim      | HB 298, 0 hp 67 idle     
+ 39.0 fight cam 282 r0 o0 | GEM 251,16 hp  7 spring    | HB 322, 0 hp 67 idle     
+ 40.0 fight cam 271 r0 o0 | GEM 239, 0 hp  6 hit       | HB 298, 0 hp 67 idle     
+ 41.0 fight cam 265 r0 o0 | GEM 238, 0 hp  6 lasso     | HB 286, 0 hp 62 hit      
+ 42.0 fight cam 255 r0 o0 | GEM 224, 0 hp  6 hit       | HB 281, 0 hp 62 slash    
+ 43.0 fight cam 247 r0 o0 | GEM 222, 0 hp  6 idle      | HB 264, 0 hp 62 thrust   
+ 44.0 fight cam 213 r0 o0 | GEM 155,30 hp  0 ko        | HB 252, 0 hp 62 idle     
+ 45.0 fight cam 198 r0 o0 | GEM 142, 0 hp  0 down      | HB 252, 0 hp 62 win      
+ 46.0 fight cam 197 r0 o0 | GEM 142, 0 hp  0 getup     | HB 252, 0 hp 62 win      
+ 47.0 fight cam 197 r0 o0 | GEM 142, 0 hp  0 idle      | HB 252, 0 hp 62 idle     
+ 48.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 49.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 50.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 51.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 52.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle     
+ 53.0 fight cam 320 r0 o0 | GEM 269,39 hp100 swim      | HB 370, 0 hp100 idle     
+ 54.0 fight cam 336 r0 o0 | GEM 316,20 hp100 swim      | HB 360, 0 hp100 thrust   
+ 55.0 fight cam 338 r0 o0 | GEM 320, 0 hp100 lasso     | HB 354, 0 hp 92 hit      
+ 56.0 fight cam 339 r0 o0 | GEM 324, 0 hp100 lever     | HB 354, 0 hp 92 held     
+ 57.0 fight cam 342 r0 o0 | GEM 324, 0 hp100 idle      | HB 369, 0 hp 80 slash    
+ 58.0 fight cam 336 r0 o0 | GEM 298, 0 hp 87 idle      | HB 370, 0 hp 80 idle     
+ 59.0 fight cam 318 r0 o0 | GEM 288, 0 hp 87 dodge     | HB 333, 0 hp 80 slash    
+ 60.0 fight cam 314 r0 o0 | GEM 292,42 hp 87 spring    | HB 340, 0 hp 80 idle     
+ 61.0 fight cam 328 r0 o0 | GEM 298, 0 hp 87 lasso     | HB 362, 0 hp 72 block    
+ 62.0 fight cam 323 r0 o0 | GEM 286, 0 hp 77 hit       | HB 346, 0 hp 72 thrust   
+ 63.0 fight cam 316 r0 o0 | GEM 296,12 hp 77 swim      | HB 346, 0 hp 72 idle     
+ 64.0 fight cam 332 r0.07 o0 | GEM 320, 0 hp 77 suplex    | HB 354,40 hp 72 thrown   
+ 65.0 fight cam 309 r5.99 o0 | GEM 320, 0 hp 77 suplex    | HB 286,36 hp 72 thrown   
+ 66.0 fight cam 303 r0 o0 | GEM 320, 0 hp 77 idle      | HB 286, 0 hp 54 down     
+ 67.0 fight cam 303 r0 o0 | GEM 320, 0 hp 77 idle      | HB 286, 0 hp 54 idle     
+ 68.0 fight cam 311 r0 o0 | GEM 337, 0 hp 63 dodge     | HB 286, 0 hp 54 idle     
+ 69.0 fight cam 318 r0 o0 | GEM 350, 0 hp 63 idle      | HB 288, 0 hp 54 dash     
+ 70.0 fight cam 327 r0 o0 | GEM 350, 0 hp 63 lasso     | HB 300, 0 hp 54 block    
+ 71.0 fight cam 331 r0 o0 | GEM 350, 0 hp 59 idle      | HB 316, 0 hp 54 thrust    blunt
+ 72.0 fight cam 328 r0 o0 | GEM 350, 0 hp 59 idle      | HB 304, 0 hp 54 panic     blunt
+ 73.0 fight cam 325 r0 o0 | GEM 350, 3 hp 59 spring    | HB 300, 0 hp 54 idle      blunt
+ 74.0 fight cam 314 r0 o0 | GEM 340, 0 hp 59 lasso     | HB 284, 0 hp 46 idle      blunt
+ 75.0 fight cam 318 r0 o0 | GEM 342, 0 hp 57 hit       | HB 300, 0 hp 39 slash     blunt
+ 76.0 fight cam 310 r0 o0 | GEM 322, 0 hp 57 lever     | HB 292, 0 hp 39 held      blunt
+ 77.0 fight cam 307 r0 o0 | GEM 322, 0 hp 57 lever     | HB 292, 0 hp 29 held      blunt
+ 78.0 fight cam 294 r0 o0 | GEM 322, 0 hp 57 idle      | HB 249, 0 hp 29 panic     blunt
+ 79.0 fight cam 280 r0 o0 | GEM 322, 0 hp 57 lasso     | HB 251, 0 hp 23 hit       blunt
+ 80.0 fight cam 291 r0 o0 | GEM 316,36 hp 57 spring    | HB 262, 0 hp 23 block     blunt
+ 81.0 fight cam 282 r0 o0 | GEM 304, 0 hp 55 hit       | HB 264, 0 hp 23 slash     blunt
+ 82.0 fight cam 280 r0 o0 | GEM 298, 7 hp 55 swim      | HB 256, 0 hp 23 idle      blunt
+ 83.0 fight cam 273 r0 o0 | GEM 291,16 hp 55 spring    | HB 245, 0 hp 15 hit       blunt
+ 84.0 fight cam 268 r0 o0 | GEM 294, 0 hp 53 idle      | HB 240, 0 hp 15 idle      blunt
+ 85.0 fight cam 270 r0 o0 | GEM 283, 0 hp 53 spinthrow | HB 250, 0 hp 11 idle      blunt
+ 86.0 fight cam 269 r0 o0 | GEM 280, 0 hp 53 spinthrow | HB 235,62 hp 11 flying    blunt
+ 87.0 fight cam 232 r0 o0 | GEM 280, 0 hp 53 idle      | HB 180, 0 hp  0 down      blunt
+ 88.0 fight cam 230 r0 o0 | GEM 280, 0 hp 53 win       | HB 180, 0 hp  0 down      blunt
+ 89.0 fight cam 230 r0 o0 | GEM 280, 0 hp 53 win       | HB 180, 0 hp  0 down      blunt
+ 90.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle      blunt
+ 91.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle      blunt
+ 92.0 fight cam 325 r0 o0 | GEM 250, 0 hp100 idle      | HB 400, 0 hp100 idle      blunt
+ 93.0 fight cam 368 r0 o0 | GEM 271,17 hp100 swim      | HB 492, 0 hp100 sharpen   blunt
+ 94.0 fight cam 391 r0 o0 | GEM 320, 0 hp100 idle      | HB 468, 0 hp100 sharpen   blunt
+ 95.0 fight cam 394 r0 o0 | GEM 320, 0 hp100 idle      | HB 468, 0 hp100 idle      SHARP
+ 96.0 fight cam 333 r0 o0 | GEM 320, 0 hp 94 idle      | HB 301, 0 hp100 super     SHARP
+ 97.0 fight cam 323 r0 o0 | GEM 320, 0 hp 70 idle      | HB 292, 0 hp100 super     SHARP
+ 98.0 fight cam 320 r0 o0 | GEM 320, 0 hp 52 idle      | HB 286, 0 hp100 super     SHARP
+ 99.0 fight cam 301 r0 o0 | GEM 320,18 hp 52 swim      | HB 281, 0 hp100 thrust    SHARP
+100.0 fight cam 306 r0 o0 | GEM 320, 0 hp 52 idle      | HB 292, 0 hp100 idle      SHARP
+101.0 fight cam 307 r0 o0 | GEM 322, 0 hp 52 lever     | HB 292, 0 hp100 held      SHARP
+102.0 fight cam 304 r0 o0 | GEM 322, 0 hp 52 idle      | HB 277, 0 hp 84 slash     SHARP
+103.0 fight cam 310 r0 o0 | GEM 348, 0 hp 34 idle      | HB 276, 0 hp 84 idle      SHARP
+104.0 fight cam 292 r0 o0 | GEM 308, 0 hp 34 taunt     | HB 260, 0 hp 72 taunt     SHARP
+105.0 fight cam 284 r0 o0.84 | GEM 308, 0 hp 34 taunt     | HB 260, 0 hp 72 taunt     SHARP
+106.0 fight cam 278 r0 o0 | GEM 249, 0 hp 20 hit       | HB 294, 0 hp 72 thrust    SHARP
+107.0 fight cam 267 r0 o0 | GEM 240, 0 hp 20 unbend    | HB 294, 0 hp 72 idle      SHARP
+108.0 fight cam 267 r0 o0 | GEM 240, 0 hp 20 wrap      | HB 294, 0 hp 58 stab      SHARP
+109.0 fight cam 272 r0 o0 | GEM 264, 0 hp  6 spinthrow | HB 294,22 hp 58 thrown    SHARP
+110.0 fight cam 265 r0 o0 | GEM 264, 0 hp  6 spinthrow | HB 238,89 hp 58 flying    SHARP
+111.0 fight cam 212 r0 o0 | GEM 274,29 hp  0 ko        | HB 150,34 hp  0 cupped    SHARP
+112.0 fight cam 217 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP
+113.0 fight cam 218 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP
+114.0 fight cam 218 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP
+115.0 fight cam 218 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP
+116.0 fight cam 218 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP
+117.0 fight cam 218 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP
+118.0 fight cam 218 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP
+119.0 fight cam 218 r0 o0 | GEM 286, 0 hp  0 down      | HB 150,34 hp  0 cupped    SHARP

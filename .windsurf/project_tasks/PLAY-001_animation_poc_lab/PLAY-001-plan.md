@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #2: bijatyka spinacz vs ołówek (Rayman × SSF2T)
-*   **Immediate Next Action:** Brief v3 z userem (czas, postacie i ciosy, kamera pseudo-3D czy WebGL, dźwięk tak/nie), potem build w `pocs/paperclip-vs-pencil/v1-*` i przebieg uprzęży.
+*   **Current Focus:** PoC #2 v1 gotowe (Paper Cuts Super Turbo V). Czekamy na feedback usera (obraz + DŹWIĘK)
+*   **Immediate Next Action:** Zebrać feedback do v1 (szczególnie dźwięk, którego model nie słyszy), potem zdecydować: v2 „malowana” grafika / MP4 z dźwiękiem / dopracowanie dystansów ciosów.
 
 ---
 
@@ -15,7 +15,8 @@
 *   Każdy PoC to katalog `pocs/<temat>/vN-<opis>/` z: `*.html`, uprzężą/wynikami testów, `POSTMORTEM.md`.
 *   Postmortem robimy **po każdej wersji**: narzędzia (kolejność, cel, czas), problemy prosto, lekcje.
 *   Wnioski przenoszone do skilla są śledzone w ANIM-001.
-*   ffmpeg 8.0.1 jest zainstalowany i jeszcze nie był użyty. Pierwszy kandydat: render MP4 + gęsty arkusz.
+*   ffmpeg działa: render przez `anim.step()` → PNG → MP4 (3× neighbor). 120 s filmu w ~15 s.
+*   Dźwięk w PoC #2 jest NIEZWERYFIKOWANY przez model (nie słyszy). Ocena po stronie usera.
 
 ---
 
@@ -23,12 +24,13 @@
 *   [`pocs/clip-fighter/v1-random-ai/`](../../../pocs/clip-fighter/v1-random-ai/): [postmortem](../../../pocs/clip-fighter/v1-random-ai/POSTMORTEM.md). Szybko, ale bez testów i bez pytania o czas.
 *   [`pocs/clip-fighter/v2-scripted-10s/`](../../../pocs/clip-fighter/v2-scripted-10s/): [postmortem](../../../pocs/clip-fighter/v2-scripted-10s/POSTMORTEM.md). Determinizm + trace złapały bug fabularny.
 *   [`docs/toolbox.md`](../../../docs/toolbox.md): narzędzia + backlog warsztatowy.
+*   [`pocs/paperclip-vs-pencil/`](../../../pocs/paperclip-vs-pencil/): [BRIEF](../../../pocs/paperclip-vs-pencil/BRIEF.md) · [postmortem v1](../../../pocs/paperclip-vs-pencil/v1-pixel-120s/POSTMORTEM.md). 16/16 asercji od pierwszego przebiegu, MP4 przez ffmpeg.
 
 ---
 
 ## ✅ Acceptance Criteria
 *   [ ] Co najmniej 3 PoC-e w różnych stylach (1-bit ✅, Rayman × SSF2T, trzeci do ustalenia), każdy z postmortemem.
-*   [ ] Co najmniej 3 pozycje z backlogu `docs/toolbox.md` wypróbowane i opisane (np. ffmpeg MP4, log zdarzeń + asercje, dźwięk).
+*   [x] Co najmniej 3 pozycje z backlogu `docs/toolbox.md` wypróbowane i opisane (ffmpeg MP4, log zdarzeń + asercje, dźwięk).
 *   [ ] Wnioski zebrane i przekazane do ANIM-001 (skill).
 
 ---
@@ -50,13 +52,14 @@
 - [x] `docs/toolbox.md`
 
 ### Phase 2: Paperclip vs Pencil (Rayman × SSF2T)
-- [ ] Brief: czas, postacie i ciosy, beaty scenariusza, 2 obroty kamery, dźwięk
-- [ ] Build v1 → uprząż → postmortem
-- [ ] Wypróbować ffmpeg: MP4 + gęsty arkusz
+- [x] Brief: czas, postacie i ciosy, beaty scenariusza, 2 obroty kamery, dźwięk (zaakceptowany)
+- [x] Build v1 → uprząż → postmortem
+- [x] Wypróbować ffmpeg: MP4 + gęsty arkusz
+- [ ] Feedback usera → v2 (malowana grafika / MP4 z dźwiękiem)
 
 ### Phase 3: Warsztat
-- [ ] Uprząż v1: log zdarzeń, asercje, arkusz z chwil zdarzeń
-- [ ] Dźwięk (Web Audio) w jednym PoC
+- [x] Uprząż v1: log zdarzeń, asercje, arkusz z kluczowych chwil, autodetekcja Chrome
+- [x] Dźwięk (Web Audio + speechSynthesis) w PoC #2 (niezweryfikowany odsłuchem)
 - [ ] Porównanie z modelem wideo (fal.ai), jeśli będzie klucz API
 
 ---
