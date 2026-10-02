@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** PoC #3 v1 gotowe (The Storm Chose Black). Czekamy na feedback usera
-*   **Immediate Next Action:** Feedback do PoC #3 (obraz, lektor, cisza w przejściu). Potem: skill (ANIM-001) z wzorcami z PoC #2/#3 albo kolejny PoC.
+*   **Immediate Next Action:** Przeczytać notatki usera (czat albo `FEEDBACK.md` w katalogach wersji, format `docs/EDIT-PROTOCOL.md`) → zastosować pętlę poprawek → arkusz PRZED/PO. Potem skill (ANIM-001).
 
 ---
 

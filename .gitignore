@@ -4,3 +4,5 @@ scratch/
 *.mp4
 frames/
 sheet-dense.png
+.before.html
+frames.png

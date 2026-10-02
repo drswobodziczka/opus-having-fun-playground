@@ -1249,6 +1249,7 @@
       return out;
     },
     events: () => EV.slice(),
+    script: () => S.map((e, i) => ({ id: 'E' + String(i).padStart(3, '0'), t: e.t, who: e.who, act: e.act, res: e.p.hit ? e.p.hit.res : undefined, dmg: e.p.hit ? e.p.hit.dmg : e.p.dmg, text: e.p.text, dx: e.p.dx, dur: e.p.dur })),
     renderAudio
   };
 
