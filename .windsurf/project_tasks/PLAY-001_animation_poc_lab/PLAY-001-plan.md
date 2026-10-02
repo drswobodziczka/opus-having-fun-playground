@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #2 v1 gotowe (Paper Cuts Super Turbo V). Czekamy na feedback usera (obraz + DŹWIĘK)
-*   **Immediate Next Action:** Zebrać feedback do v1 (szczególnie dźwięk, którego model nie słyszy), potem zdecydować: v2 „malowana” grafika / MP4 z dźwiękiem / dopracowanie dystansów ciosów.
+*   **Current Focus:** PoC #3 v1 gotowe (The Storm Chose Black). Czekamy na feedback usera
+*   **Immediate Next Action:** Feedback do PoC #3 (obraz, lektor, cisza w przejściu). Potem: skill (ANIM-001) z wzorcami z PoC #2/#3 albo kolejny PoC.
 
 ---
 
@@ -24,12 +24,13 @@
 *   [`pocs/clip-fighter/v1-random-ai/`](../../../pocs/clip-fighter/v1-random-ai/): [postmortem](../../../pocs/clip-fighter/v1-random-ai/POSTMORTEM.md). Szybko, ale bez testów i bez pytania o czas.
 *   [`pocs/clip-fighter/v2-scripted-10s/`](../../../pocs/clip-fighter/v2-scripted-10s/): [postmortem](../../../pocs/clip-fighter/v2-scripted-10s/POSTMORTEM.md). Determinizm + trace złapały bug fabularny.
 *   [`docs/toolbox.md`](../../../docs/toolbox.md): narzędzia + backlog warsztatowy.
+*   [`pocs/ninja-sandstorm/`](../../../pocs/ninja-sandstorm/): [BRIEF](../../../pocs/ninja-sandstorm/BRIEF.md) · [postmortem v1](../../../pocs/ninja-sandstorm/v1-ink-pixel-60s/POSTMORTEM.md). 32/32 (w tym asercje widzialności), MP4 z dźwiękiem z renderu offline.
 *   [`pocs/paperclip-vs-pencil/`](../../../pocs/paperclip-vs-pencil/): [BRIEF](../../../pocs/paperclip-vs-pencil/BRIEF.md) · [postmortem v1](../../../pocs/paperclip-vs-pencil/v1-pixel-120s/POSTMORTEM.md). 16/16 asercji od pierwszego przebiegu, MP4 przez ffmpeg.
 
 ---
 
 ## ✅ Acceptance Criteria
-*   [ ] Co najmniej 3 PoC-e w różnych stylach (1-bit ✅, Rayman × SSF2T, trzeci do ustalenia), każdy z postmortemem.
+*   [x] Co najmniej 3 PoC-e w różnych stylach (1-bit ✅, kolorowy pixel ✅, tusz + mroczny pixel ✅), każdy z postmortemem.
 *   [x] Co najmniej 3 pozycje z backlogu `docs/toolbox.md` wypróbowane i opisane (ffmpeg MP4, log zdarzeń + asercje, dźwięk).
 *   [ ] Wnioski zebrane i przekazane do ANIM-001 (skill).
 
@@ -55,7 +56,12 @@
 - [x] Brief: czas, postacie i ciosy, beaty scenariusza, 2 obroty kamery, dźwięk (zaakceptowany)
 - [x] Build v1 → uprząż → postmortem
 - [x] Wypróbować ffmpeg: MP4 + gęsty arkusz
-- [ ] Feedback usera → v2 (malowana grafika / MP4 z dźwiękiem)
+- [x] Feedback usera do PoC #2 (zapisany w postmortemie)
+
+### Phase 2b: Ninja Sandstorm (PoC #3)
+- [x] Pytania ad1–ad7 → brief → akceptacja
+- [x] Build v1 → uprząż v2 (widzialność) → MP4 z dźwiękiem → postmortem
+- [ ] Feedback usera
 
 ### Phase 3: Warsztat
 - [x] Uprząż v1: log zdarzeń, asercje, arkusz z kluczowych chwil, autodetekcja Chrome

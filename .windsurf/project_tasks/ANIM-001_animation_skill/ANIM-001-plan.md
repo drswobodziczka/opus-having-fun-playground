@@ -12,6 +12,7 @@
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   Z PoC #3 (ninja) do skilla: rig szkieletowy + IK chwytów; ujęcia kamery jako lista {t0,t1,in,out,f(k,V)}; audio jako kolejka sygnałów (live + OfflineAudioContext → WAV → ffmpeg); lektor `say` + ffmpeg osadzony base64; asercje widzialności (plan ogólny: całe ciała, zbliżenie: punkty kluczowe); pomiar głośności ffmpeg zamiast słuchu.
 *   Lekcje z feedbacku do Paper Cuts v1 (reguły dla skilla):
     *   Zwrot akcji = zapowiedź → moment → konsekwencja, wszystkie widoczne (double K.O. bez pokazanej przyczyny = „z dupy”).
     *   Rzut = chwyt (kontakt) → zamach (antycypacja) → łuk w kadrze → lądowanie z impaktem. Postacie muszą się wyraźnie różnić sylwetką lub kolorem.

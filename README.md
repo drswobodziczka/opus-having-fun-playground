@@ -18,6 +18,7 @@ Poligon do generowania animacji **kodem** przez agenta AI (Claude): temat i styl
 | [Clip Fighter v1](pocs/clip-fighter/v1-random-ai/) | 1-bit, dwa spinacze, losowe AI, mecz do 2 wygranych | [link](https://claude.ai/code/artifact/672d6377-e1c6-408c-8b70-f494e1560ff6) |
 | [Clip Fighter v2](pocs/clip-fighter/v2-scripted-10s/) | scenariusz 10 s, determinizm, suwak, uprząż `check.mjs` | [link](https://claude.ai/code/artifact/c7b43edd-a1ff-49a2-b674-86631529a9f1) |
 | [Paper Cuts Super Turbo V v1](pocs/paperclip-vs-pencil/v1-pixel-120s/) | 2:00, spinacz vs ołówek, pixel 384×224, 4 zwroty, 2 obroty kamery, Web Audio, uprząż v1 + MP4 | [link](https://claude.ai/code/artifact/7d5a22e9-28d4-4f72-a1e0-b7b8db8180a0) |
+| [The Storm Chose Black v1](pocs/ninja-sandstorm/v1-ink-pixel-60s/) | 1:00, dwóch ninja, tusz sumi-e → mroczny piksel, rig z IK, kamera z ujęciami, lektor `say`+ffmpeg, MP4 z dźwiękiem | [link](https://claude.ai/code/artifact/5dfacc58-2d7a-40aa-a5ae-83c6f9d9ee73) |
 
 Artefakty są prywatne. Kod każdej animacji to samowystarczalny plik HTML, który otworzysz lokalnie w przeglądarce.
 

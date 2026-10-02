@@ -42,7 +42,8 @@ scenariusz (SCRIPT) ─► symulacja 60 Hz ─► Canvas ─► [post-process, n
 - [x] **Arkusz z kluczowych chwil** (24 nazwane momenty). Do zrobienia: automatycznie z logu zdarzeń.
 - [x] **Kontrakt hooków:** `window.anim = { seek, step, state, events, script, duration }`.
 - [x] **Autodetekcja Chrome** w `~/.cache/puppeteer`.
-- [ ] **Asercje czytelności:** bbox postaci w kadrze, brak zasłonięcia przez banery.
+- [x] **Asercje widzialności** (PoC #3): postacie w kadrze przy każdym zwrocie; zbliżenia sprawdzają tylko punkty kluczowe.
+- [ ] **Asercje nakładania:** napisy kontra postacie i ważne elementy tła.
 - [ ] Jedna komenda: `anim-check <plik.html> --expect …`.
 
 ### Wideo i ruch (ffmpeg)
@@ -60,12 +61,19 @@ scenariusz (SCRIPT) ─► symulacja 60 Hz ─► Canvas ─► [post-process, n
 - [x] **Web Audio API:** syntezowane efekty chiptune (square/noise) i sekwencer muzyki.
 - [ ] **Głosy** („ROUND ONE”, „FIGHT!”, „K.O.”): `speechSynthesis` kontra próbki z modelu TTS osadzone jako data URI.
 - [ ] Blokada autoplay: przycisk „włącz dźwięk”. Sprawdzić, czy Web Audio działa w podglądzie artefaktu.
-- [ ] Render audio do pliku (`OfflineAudioContext`) i zmiksowanie z MP4 (ffmpeg): następna iteracja (decyzja ad5).
+- [x] Render audio offline (`OfflineAudioContext` z kolejki sygnałów) → WAV → MP4 (PoC #3).
+- [x] Pomiar głośności (`volumedetect`, `astats` RMS per sekunda): model „słyszy” liczby.
 
 ### Grafika (pod v3: Rayman × SSF2T)
 - [ ] Pseudo-3D w Canvas (skala, paralaksa, obrót sceny) kontra **WebGL / Three.js** (cdnjs) do obrotów kamery.
 - [ ] Malowane tła: gradienty i szum proceduralny kontra obrazki generowane modelem i osadzone w pliku.
 - [ ] Paleta „żywa”: walidacja kontrastu postać/tło.
+
+### Lektor TTS z chmury (backlog z PoC #3, ad7 b)
+- [ ] **ElevenLabs:** ~$0.10 / 1000 znaków (Multilingual v2/v3) albo ~$0.05 (Flash/Turbo); plany od $6/mies. Źródła podają różne liczby (stan 09.2026), więc przed budżetowaniem sprawdzić [oficjalny cennik](https://elevenlabs.io/pricing/api).
+- [ ] **OpenAI gpt-4o-mini-tts:** ~$0.015 za minutę audio (rozliczane tokenami: $0.60 / 1M wejścia, $12 / 1M wyjścia audio), styl głosu sterowany instrukcją ([model](https://developers.openai.com/api/docs/models/gpt-4o-mini-tts)).
+- [ ] Skala: lektor jednego filmu to ~15 kwestii (~250 znaków, ~20 s audio), czyli **ułamek centa** per film. Realny koszt to założenie konta i klucz API, nie samo użycie.
+- [x] Lokalnie i za darmo: macOS `say` + ffmpeg (pitch, kompresja, echo). Próbki: `pocs/ninja-sandstorm/voice-samples/`. Użyte w PoC #3 (głos Daniel).
 
 ### Do porównania
 - [ ] **Modele wideo (np. fal.ai):** ten sam brief, porównanie kontroli, powtarzalności, kosztu i stylu. Wymaga klucza API, niesprawdzone.
