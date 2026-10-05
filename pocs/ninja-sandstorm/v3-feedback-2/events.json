@@ -1,0 +1,860 @@
+[
+ {
+  "t": 0.017,
+  "type": "scene",
+  "name": "intro"
+ },
+ {
+  "t": 3,
+  "type": "scene",
+  "name": "fight"
+ },
+ {
+  "t": 3,
+  "type": "round",
+  "n": 1
+ },
+ {
+  "t": 3.1,
+  "type": "banner",
+  "text": "ROUND ONE"
+ },
+ {
+  "t": 4.3,
+  "type": "banner",
+  "text": "FIGHT!"
+ },
+ {
+  "t": 5.633,
+  "type": "clash"
+ },
+ {
+  "t": 6.3,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 34
+ },
+ {
+  "t": 6.567,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 36
+ },
+ {
+  "t": 6.833,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 96,
+  "dist": 41,
+  "move": "kick"
+ },
+ {
+  "t": 7.083,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 97,
+  "dist": 34,
+  "move": "jab"
+ },
+ {
+  "t": 7.317,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 4,
+  "hp": 93,
+  "dist": 39,
+  "move": "cross"
+ },
+ {
+  "t": 7.583,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 5,
+  "hp": 88,
+  "dist": 48,
+  "move": "kick"
+ },
+ {
+  "t": 8,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 48
+ },
+ {
+  "t": 8.283,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 5,
+  "hp": 83,
+  "dist": 28,
+  "move": "uppercut"
+ },
+ {
+  "t": 8.883,
+  "type": "miss",
+  "by": "A",
+  "to": "B",
+  "dist": 63
+ },
+ {
+  "t": 9.683,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 6,
+  "hp": 77,
+  "dist": 58,
+  "move": "jump"
+ },
+ {
+  "t": 10.217,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 33
+ },
+ {
+  "t": 10.45,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 74,
+  "dist": 34,
+  "move": "jab"
+ },
+ {
+  "t": 10.733,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 43
+ },
+ {
+  "t": 11.933,
+  "type": "grab",
+  "by": "B",
+  "to": "A",
+  "move": "choke"
+ },
+ {
+  "t": 12.183,
+  "type": "chip",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 71,
+  "move": "choke"
+ },
+ {
+  "t": 12.65,
+  "type": "chip",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 68,
+  "move": "choke"
+ },
+ {
+  "t": 13.1,
+  "type": "chip",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 65,
+  "move": "choke"
+ },
+ {
+  "t": 13.55,
+  "type": "chip",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 62,
+  "move": "choke"
+ },
+ {
+  "t": 14,
+  "type": "chip",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 59,
+  "move": "choke"
+ },
+ {
+  "t": 14.217,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 6,
+  "hp": 90,
+  "dist": 15,
+  "move": "elbow"
+ },
+ {
+  "t": 14.217,
+  "type": "choke-break",
+  "by": "A"
+ },
+ {
+  "t": 15.117,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 36
+ },
+ {
+  "t": 15.35,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 56,
+  "dist": 34,
+  "move": "jab"
+ },
+ {
+  "t": 15.567,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 4,
+  "hp": 52,
+  "dist": 39,
+  "move": "cross"
+ },
+ {
+  "t": 15.9,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 6,
+  "hp": 46,
+  "dist": 49,
+  "move": "highkick"
+ },
+ {
+  "t": 16.5,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 3,
+  "hp": 87,
+  "dist": 34,
+  "move": "jab"
+ },
+ {
+  "t": 16.767,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 37
+ },
+ {
+  "t": 17.033,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 5,
+  "hp": 41,
+  "dist": 42,
+  "move": "kick"
+ },
+ {
+  "t": 17.333,
+  "type": "miss",
+  "by": "A",
+  "to": "B",
+  "dist": 39
+ },
+ {
+  "t": 18.333,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 6,
+  "hp": 35,
+  "dist": 41,
+  "move": "jump"
+ },
+ {
+  "t": 18.867,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 18
+ },
+ {
+  "t": 19.1,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 32,
+  "dist": 23,
+  "move": "jab"
+ },
+ {
+  "t": 19.3,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 3,
+  "hp": 84,
+  "dist": 30,
+  "move": "jab"
+ },
+ {
+  "t": 19.517,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 4,
+  "hp": 28,
+  "dist": 36,
+  "move": "cross"
+ },
+ {
+  "t": 19.783,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 44
+ },
+ {
+  "t": 20.083,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 5,
+  "hp": 23,
+  "dist": 46,
+  "move": "kick"
+ },
+ {
+  "t": 21.067,
+  "type": "parry",
+  "by": "A",
+  "to": "B"
+ },
+ {
+  "t": 21.183,
+  "type": "catch",
+  "by": "A",
+  "to": "B"
+ },
+ {
+  "t": 21.467,
+  "type": "armlock",
+  "by": "A",
+  "to": "B"
+ },
+ {
+  "t": 22.55,
+  "type": "special",
+  "text": "BLACK MONSOON"
+ },
+ {
+  "t": 22.633,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 80,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 22.767,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 76,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 22.9,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 72,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.033,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 68,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.167,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 64,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.283,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 60,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.417,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 56,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.55,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 52,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.683,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 48,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.817,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 44,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 23.933,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 4,
+  "hp": 40,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 24.067,
+  "type": "ko",
+  "by": "A",
+  "to": "B",
+  "dmg": 12,
+  "hp": 0,
+  "dist": 30,
+  "move": "monsoon"
+ },
+ {
+  "t": 24.067,
+  "type": "ko",
+  "by": "A",
+  "to": "B",
+  "move": "monsoon"
+ },
+ {
+  "t": 24.5,
+  "type": "banner",
+  "text": "K.O."
+ },
+ {
+  "t": 25.067,
+  "type": "land",
+  "who": "B"
+ },
+ {
+  "t": 25.6,
+  "type": "roundwin",
+  "who": "A"
+ },
+ {
+  "t": 26.4,
+  "type": "transition"
+ },
+ {
+  "t": 30,
+  "type": "style",
+  "style": "b"
+ },
+ {
+  "t": 30,
+  "type": "round",
+  "n": 2
+ },
+ {
+  "t": 30.7,
+  "type": "banner",
+  "text": "ROUND TWO"
+ },
+ {
+  "t": 31.3,
+  "type": "lightning"
+ },
+ {
+  "t": 32,
+  "type": "banner",
+  "text": "FIGHT!"
+ },
+ {
+  "t": 33.1,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 97,
+  "dist": 34,
+  "move": "jab"
+ },
+ {
+  "t": 33.317,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 94,
+  "dist": 39,
+  "move": "cross"
+ },
+ {
+  "t": 33.583,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 4,
+  "hp": 90,
+  "dist": 48,
+  "move": "kick"
+ },
+ {
+  "t": 33.9,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 34
+ },
+ {
+  "t": 34.133,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 4,
+  "hp": 86,
+  "dist": 28,
+  "move": "uppercut"
+ },
+ {
+  "t": 34.467,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 5,
+  "hp": 95,
+  "dist": 36,
+  "move": "cross"
+ },
+ {
+  "t": 34.7,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 83,
+  "dist": 34,
+  "move": "jab"
+ },
+ {
+  "t": 34.933,
+  "type": "miss",
+  "by": "A",
+  "to": "B",
+  "dist": 51
+ },
+ {
+  "t": 35.983,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 5,
+  "hp": 78,
+  "dist": 53,
+  "move": "jump"
+ },
+ {
+  "t": 36.517,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 5,
+  "hp": 90,
+  "dist": 24,
+  "move": "knee"
+ },
+ {
+  "t": 36.75,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 75,
+  "dist": 31,
+  "move": "jab"
+ },
+ {
+  "t": 36.967,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 72,
+  "dist": 39,
+  "move": "cross"
+ },
+ {
+  "t": 37.2,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 34
+ },
+ {
+  "t": 37.3,
+  "type": "lightning"
+ },
+ {
+  "t": 37.55,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 4,
+  "hp": 68,
+  "dist": 39,
+  "move": "highkick"
+ },
+ {
+  "t": 38.017,
+  "type": "block",
+  "by": "A",
+  "to": "B",
+  "dist": 36
+ },
+ {
+  "t": 38.283,
+  "type": "hit",
+  "by": "B",
+  "to": "A",
+  "dmg": 3,
+  "hp": 65,
+  "dist": 41,
+  "move": "kick"
+ },
+ {
+  "t": 39.283,
+  "type": "grab",
+  "by": "B",
+  "to": "A",
+  "move": "throw"
+ },
+ {
+  "t": 39.583,
+  "type": "release",
+  "by": "B"
+ },
+ {
+  "t": 40.133,
+  "type": "impact",
+  "by": "B",
+  "to": "A",
+  "dmg": 40,
+  "hp": 25,
+  "dist": 34,
+  "move": "throw"
+ },
+ {
+  "t": 40.133,
+  "type": "throw-impact",
+  "by": "B",
+  "to": "A",
+  "x": 491
+ },
+ {
+  "t": 40.717,
+  "type": "topple",
+  "to": "A"
+ },
+ {
+  "t": 45.117,
+  "type": "blink",
+  "who": "A",
+  "side": "back"
+ },
+ {
+  "t": 45.283,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 8,
+  "hp": 82,
+  "dist": 36,
+  "move": "blink"
+ },
+ {
+  "t": 45.617,
+  "type": "blink",
+  "who": "A",
+  "side": "front"
+ },
+ {
+  "t": 45.783,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 8,
+  "hp": 74,
+  "dist": 36,
+  "move": "blink"
+ },
+ {
+  "t": 46.117,
+  "type": "blink",
+  "who": "A",
+  "side": "above"
+ },
+ {
+  "t": 46.333,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 10,
+  "hp": 64,
+  "dist": 8,
+  "move": "blink"
+ },
+ {
+  "t": 46.7,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 6,
+  "hp": 58,
+  "dist": 18,
+  "move": "jab"
+ },
+ {
+  "t": 46.95,
+  "type": "hit",
+  "by": "A",
+  "to": "B",
+  "dmg": 7,
+  "hp": 51,
+  "dist": 28,
+  "move": "cross"
+ },
+ {
+  "t": 47.233,
+  "type": "stun",
+  "by": "A",
+  "to": "B",
+  "dmg": 99,
+  "hp": 0,
+  "dist": 31,
+  "move": "uppercut"
+ },
+ {
+  "t": 48,
+  "type": "lightning"
+ },
+ {
+  "t": 49.3,
+  "type": "banner",
+  "text": "FINISH HIM!"
+ },
+ {
+  "t": 50,
+  "type": "lightning"
+ },
+ {
+  "t": 51.283,
+  "type": "heart",
+  "by": "A",
+  "to": "B"
+ },
+ {
+  "t": 51.8,
+  "type": "heart-out",
+  "by": "A"
+ },
+ {
+  "t": 53.683,
+  "type": "fall",
+  "who": "B"
+ },
+ {
+  "t": 53.8,
+  "type": "bury"
+ },
+ {
+  "t": 54,
+  "type": "banner",
+  "text": "FATALITY"
+ },
+ {
+  "t": 56.583,
+  "type": "winpose",
+  "who": "A"
+ },
+ {
+  "t": 56.8,
+  "type": "banner",
+  "text": "ALAMANDRO WINS"
+ },
+ {
+  "t": 56.8,
+  "type": "roundwin",
+  "who": "A"
+ },
+ {
+  "t": 57.9,
+  "type": "banner",
+  "text": "THE STORM CHOSE BLACK."
+ }
+]

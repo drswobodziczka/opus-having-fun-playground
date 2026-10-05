@@ -6,7 +6,7 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #3 v2 (feedback 1) gotowe: czeka na ocenę usera (porównanie v1 | v2)
+*   **Current Focus:** PoC #3 v3 (feedback 2) gotowe: czeka na ocenę usera (porównanie v2 | v3)
 *   **Immediate Next Action:** Ocena v2 przez usera → ewentualna runda 2 przez `EDIT-PROTOCOL`. Potem: (2) TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
 
 ---
@@ -66,7 +66,8 @@
 - [x] Pytania ad1–ad7 → brief → akceptacja
 - [x] Build v1 → uprząż v2 (widzialność) → MP4 z dźwiękiem → postmortem
 - [x] Feedback 1 (8 uwag) → v2-feedback-1, 35/35, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v2-feedback-1/CHANGES.md)
-- [ ] Ocena v2 przez usera
+- [x] Feedback 2 (S6 parowanie + dźwignia, S10 suplex, salta) + skan klatka po klatce → v3-feedback-2, 39/39, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v3-feedback-2/CHANGES.md)
+- [ ] Ocena v3 przez usera
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF

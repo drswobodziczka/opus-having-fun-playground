@@ -123,6 +123,9 @@ Rodzaje dziś:
 | widzialność | „obie postacie w kadrze w 40,95 s” | `view()` (pozycje kości → ekran) |
 | dynamika | „≥ 36 starć w trzech wymianach” | `events()` |
 | technika | „0 błędów konsoli” | konsola przeglądarki |
+| **ciągłość (klatka po klatce)** | „żadna kość nie skacze ≥ 60 px między klatkami”, „brak NaN” | `advance(1)` + `joints()` dla **wszystkich** 3600 klatek |
+
+**Skan klatka po klatce** (od v3 ninja) przechodzi przez cały film krok po kroku i mierzy, jak daleko przesunęła się każda kość między sąsiednimi klatkami. Duży skok bez powodu (nie cięcie, nie teleport fabularny) oznacza przeskok pozy, chwytu albo odwrócenia, czyli „fizyka leży”. W v3 znalazł ~300 takich miejsc, których nie widziały ani asercje, ani arkusze.
 
 ## 7. Elementy silnika (co robi każdy klocek)
 | Element | Co robi | Analogia | W kodzie (PoC #3) |

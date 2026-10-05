@@ -12,6 +12,8 @@
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   DECYZJA usera (2026-10-06): **analiza klatka po klatce = stała cecha uprzęży**. Warstwy walidacji: (1) zgodność ze scenariuszem (log zdarzeń), (2) ciągłość i fizyka (skan kości co klatkę, a dalej stopy, przenikanie), (3) kadr (widzialność per ujęcie), (4) styl (napisy, paleta), (5) ocena wzrokowa (gęste arkusze per scena). Skill ma uruchamiać to przed oddaniem filmu userowi.
+*   Lekcje silnika z ninja v3 (do szablonu): płynne przejścia póz (adaptacyjne 0,07–0,2 s), kąty po najkrótszym łuku, obrót postaci w czasie (spinX), chwyty z dojściem i płynnym puszczeniem, każdy ruch akrobatyczny musi mieć powód (unik przed konkretnym ciosem).
 *   Pętla poprawek (prośba usera 2026-10-02): user podaje `@sekunda co zmienić` (albo ID zdarzenia), a skill: lokalizuje w TIMELINE → zmienia → check → arkusz PRZED/PO → ten sam link artefaktu → commit. Rozpiska sekunda po sekundzie (dope sheet) jest GENEROWANA z animacji (`tools/timeline.mjs`), nie pisana ręcznie; brief to plan, timeline to stan faktyczny. Kontrakt: `window.anim = { duration, seek, state, events, script }`. Skill ma to mieć wbudowane.
 *   Z PoC #3 (ninja) do skilla: rig szkieletowy + IK chwytów; ujęcia kamery jako lista {t0,t1,in,out,f(k,V)}; audio jako kolejka sygnałów (live + OfflineAudioContext → WAV → ffmpeg); lektor `say` + ffmpeg osadzony base64; asercje widzialności (plan ogólny: całe ciała, zbliżenie: punkty kluczowe); pomiar głośności ffmpeg zamiast słuchu.
 *   Lekcje z feedbacku do Paper Cuts v1 (reguły dla skilla):

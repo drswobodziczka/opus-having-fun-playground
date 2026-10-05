@@ -44,8 +44,9 @@ scenariusz (SCRIPT) ─► symulacja 60 Hz ─► Canvas ─► [post-process, n
 - [x] **Autodetekcja Chrome** w `~/.cache/puppeteer`.
 - [x] **Asercje widzialności** (PoC #3): postacie w kadrze przy każdym zwrocie; zbliżenia sprawdzają tylko punkty kluczowe.
 - [ ] **Asercje nakładania:** napisy kontra postacie i ważne elementy tła.
-- [ ] **Kontrole co klatkę (uprząż v3):** skoki kości > X px/klatkę (teleport), postać poza kadrem w planie ogólnym, nakładanie napisów. Obraz tylko dla klatek, które kontrola oznaczy.
-- [ ] **Autoreview per scena przed oddaniem:** gęsty arkusz każdej sceny (np. 4 kl./s) + kontrole co klatkę, żeby user dostawał film po mojej własnej rundzie poprawek.
+- [x] **Skan ciągłości co klatkę** (ninja v3): skoki kości między klatkami + NaN, z listą znanych cięć. Znalazł ~300 przeskoków póz.
+- [ ] **Dalsze warstwy skanu:** kontakt stóp z ziemią (ślizganie), przenikanie ciał, postać poza kadrem w planie ogólnym, nakładanie napisów, zgodność palety ze stylem sceny.
+- [~] **Autoreview per scena przed oddaniem:** zrobione dla zmienianych scen (gęste arkusze S6/S10 + skan całości). Do zrobienia: automatycznie dla każdej sceny z `SCENES`.
 - [ ] Jedna komenda: `anim-check <plik.html> --expect …`.
 
 ### Wideo i ruch (ffmpeg)
