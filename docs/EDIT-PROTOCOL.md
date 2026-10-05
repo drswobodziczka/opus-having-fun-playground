@@ -9,14 +9,30 @@ Jedna linia = jedna zmiana. Czas w sekundach filmu (z suwaka albo z [TIMELINE](.
 @41.2 rzut wyżej i wolniej
 @12-15 kamera bliżej twarzy
 @33.5 [dźwięk] cios głośniejszy
-@50 [styl] więcej krwi
+@50 [efekty] więcej krwi
+S7 [montaż] wyciąć
 E087 usuń
 @0-3 [tekst] tytuł większy
 ```
 
 - `@41.2`: konkretny moment. `@12-15`: zakres.
 - `E087`: ID zdarzenia ze scenariusza (kolumna „Scenariusz” w `TIMELINE.md`). Najbardziej precyzyjne, ale niewymagane.
-- Opcjonalny tag: `[ruch]` `[kamera]` `[dźwięk]` `[styl]` `[tekst]` `[tempo]`. Bez tagu sam ocenię, czego dotyczy.
+- Opcjonalne tagi (można kilka naraz, np. `@40.5 [ruch][kamera] …`). Bez tagu sam ocenię, czego dotyczy, a w razie wątpliwości dopytam:
+
+| Tag | Czego dotyczy | Gdzie w silniku |
+|---|---|---|
+| `[fabuła]` | kto co robi, wynik, kolejność zwrotów | scenariusz |
+| `[ruch]` | pozy, płynność, siła ciosu, fizyka | symulacja, rig |
+| `[postać]` | sylwetka, strój, twarz, mimika | render (postacie) |
+| `[kamera]` | kadr, zoom, obrót, co jest w ujęciu | kamera |
+| `[tło]` | scenografia, pogoda, paralaksa | render (tło) |
+| `[efekty]` | krew, iskry, piasek, błyskawice, przejścia | render (efekty), cząsteczki |
+| `[styl]` | paleta, kreska, nastrój całości | render (style) |
+| `[tekst]` | napisy, HUD, banery | render (HUD) |
+| `[dźwięk]` | muzyka, efekty, lektor, głośność, synchronizacja | kolejka audio |
+| `[tempo]` | długość, rytm, za szybko / za wolno | scenariusz (czasy) |
+| `[montaż]` | kolejność scen, cięcia, przejścia | scenariusz (sceny) |
+| `[bug]` | coś jest ewidentnie zepsute | dowolne |
 - Możesz wkleić kilka linii naraz (paczka). Zrobię je w jednym przebiegu.
 - Kanał: **czat**. Forma może być luźna, ja ją znormalizuję i dopytam ponumerowanymi pytaniami. (`FEEDBACK.md` wycofany jako nieefektywny. Docelowo: [reżyserka](ideas-director.md).)
 - Sekundę i scenę widać w lewym dolnym rogu kadru (`S10 · 40.5 s · ZWROT 3: rzut`), przełącznik: klawisz `T`.
