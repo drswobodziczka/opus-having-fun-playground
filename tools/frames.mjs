@@ -1,5 +1,5 @@
 // Renders a labeled contact sheet of given moments, optionally BEFORE vs AFTER (git ref).
-// Usage: node tools/frames.mjs <anim.html> <t1> [t2 ...] [--before=HEAD] [--out=file.png]
+// Usage: node tools/frames.mjs <anim.html> <t1> [t2 ...] [--before=HEAD | --vs=other.html] [--out=file.png]
 import puppeteer from 'puppeteer-core';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -20,7 +20,9 @@ function findChrome() {
   }
   throw new Error('No chrome-headless-shell in ~/.cache/puppeteer');
 }
-const sources = [['AFTER', html]];
+const vs = (args.find(a => a.startsWith('--vs=')) || '').split('=')[1];
+const sources = [[vs ? path.basename(path.dirname(html)) : 'AFTER', html]];
+if (vs) sources.unshift([path.basename(path.dirname(path.resolve(vs))), path.resolve(vs)]);
 if (before) {
   const repo = execFileSync('git', ['rev-parse', '--show-toplevel'], { cwd: path.dirname(html) }).toString().trim();
   const old = execFileSync('git', ['show', `${before}:${path.relative(repo, html)}`], { cwd: repo, maxBuffer: 64 << 20 });

@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Feedback do PoC #3 + TIMELINE v2 (sceny S1..Sn: CO/JAK/PO CO, 1-1 z BRIEF)
-*   **Immediate Next Action:** DECYZJA usera: feedback do PoC #3 teraz (czat, ze znacznikiem `S10 · 40.5 s` w kadrze) czy dopiero w reżyserce (`docs/ideas-director.md`). Potem: (1) puścić notatki przez `docs/EDIT-PROTOCOL.md`; (2) TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
+*   **Current Focus:** PoC #3 v2 (feedback 1) gotowe: czeka na ocenę usera (porównanie v1 | v2)
+*   **Immediate Next Action:** Ocena v2 przez usera → ewentualna runda 2 przez `EDIT-PROTOCOL`. Potem: (2) TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
 
 ---
 
@@ -18,6 +18,7 @@
 *   ffmpeg działa: render przez `anim.step()` → PNG → MP4 (3× neighbor). 120 s filmu w ~15 s.
 *   Dźwięk: model nie słyszy. PoC #2 niezweryfikowany, PoC #3 zmierzony (`volumedetect`/RMS), ale barwę i miks ocenia user.
 *   Protokół poprawek działa dla PoC #2 i #3 (mają `script()`, TIMELINE, FEEDBACK). Clip Fighter v1/v2 są poza protokołem (zamknięte prototypy).
+*   Test protokołu (feedback 1): 6/8 uwag na poziomie sceny → reżyserka musi mieć wygodny pasek scen.
 *   2026-10-06: `FEEDBACK.md` wycofany (user: nieefektywny). Kanał: czat, docelowo reżyserka. W kadrze ninja jest znacznik sceny i sekundy (klawisz T); sceny S1..S13 są w kodzie (`SCENES`).
 *   BRIEF ≠ scenariusz w kodzie ≠ TIMELINE: brief ma sceny z zakresami czasu, kod płaską listę zdarzeń `E0xx`, a brakuje wspólnego ID sceny (TODO usera).
 
@@ -64,7 +65,8 @@
 ### Phase 2b: Ninja Sandstorm (PoC #3)
 - [x] Pytania ad1–ad7 → brief → akceptacja
 - [x] Build v1 → uprząż v2 (widzialność) → MP4 z dźwiękiem → postmortem
-- [ ] Feedback usera (zapowiedziany „jutro”, 2026-10-02)
+- [x] Feedback 1 (8 uwag) → v2-feedback-1, 35/35, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v2-feedback-1/CHANGES.md)
+- [ ] Ocena v2 przez usera
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
