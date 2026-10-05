@@ -6,7 +6,9 @@ Poligon do generowania animacji **kodem** przez agenta AI (Claude): temat i styl
 | Ścieżka | Co tam jest |
 |---|---|
 | `pocs/<temat>/<vN-opis>/` | kolejne PoC-e: animacja (`*.html`), uprząż testowa, wyniki testów, `POSTMORTEM.md` |
+| `docs/HOW-IT-WORKS.md` | **jak to działa**: diagram procesu, silnika i pętli poprawek + toolset |
 | `docs/toolbox.md` | narzędzia w użyciu + backlog warsztatowy (czego chcemy spróbować) |
+| `docs/ideas-director.md` | koncepcja **reżyserki**: odtwarzacz + sceny + notatki w bazie artefaktu |
 | `docs/ideas-webgl.md` | backlog pomysłów na prawdziwe 3D |
 | `docs/EDIT-PROTOCOL.md` | **szybkie poprawki:** `@41.2 co zmienić` → zmiana → asercje → arkusz PRZED/PO |
 | `tools/timeline.mjs` | generuje `TIMELINE.md` (sekunda po sekundzie) z samej animacji |

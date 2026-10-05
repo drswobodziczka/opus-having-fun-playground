@@ -67,7 +67,7 @@
       <button id="restart" type="button" class="ghost">OD POCZĄTKU</button>
       <button id="sound" type="button" class="ghost" aria-pressed="false">DŹWIĘK: WYŁ.</button>
       <output id="tc" for="scrub">00.0 / 60.0 s</output>
-      <span class="keys"><kbd>Spacja</kbd> pauza · <kbd>R</kbd> od początku · <kbd>M</kbd> dźwięk</span>
+      <span class="keys"><kbd>Spacja</kbd> pauza · <kbd>R</kbd> od początku · <kbd>M</kbd> dźwięk · <kbd>T</kbd> sekundy i sceny</span>
     </div>
     <div class="scrub">
       <div class="marks" aria-hidden="true">
@@ -403,6 +403,15 @@
   sys(57.7, 'banner', { text: 'THE STORM CHOSE BLACK.', vo: 'storm', dur: 1.8, small: true });
   sys(59.3, 'fade', { dur: 0.7 });
   S.sort((a, b) => a.t - b.t);
+
+  // Scenes S1..S13: same IDs as the scene table in BRIEF.md (used by the timecode overlay and TIMELINE)
+  const SCENES = [
+    ['S1', 0, 3, 'Intro'], ['S2', 3, 5, 'Round one'], ['S3', 5, 11, 'Wymiana (a)'], ['S4', 11, 15, 'ZWROT 1: duszenie'],
+    ['S5', 15, 21, 'Wymiana (a)'], ['S6', 21, 26.4, 'ZWROT 2: monsun'], ['S7', 26.4, 30, 'Przejście'], ['S8', 30, 33, 'Round two'],
+    ['S9', 33, 39, 'Wymiana (b)'], ['S10', 39, 44, 'ZWROT 3: rzut'], ['S11', 44, 50, 'Kontra'], ['S12', 50, 56, 'ZWROT 4: serce'], ['S13', 56, 60, 'Wygrana']
+  ];
+  const sceneAt = t => SCENES.find(s => t >= s[1] && t < s[2]) || SCENES[SCENES.length - 1];
+  let showTC = true;
 
   const SHOTS = [
     { t0: 11.8, t1: 14.3, in: 0.35, out: 0.25, f: (k, V) => ({ x: V.A.head[0], y: V.A.head[1] + 12, zoom: 1.8, rot: 0 }) },
@@ -1170,6 +1179,13 @@
     else { drawWorld(); hud(); drawBanners(); }
     drawTransition();
     for (const o of overlays) { const k = clamp01((T - o.t0) / o.dur); g.globalAlpha = k; g.fillStyle = o.color; g.fillRect(0, 0, W, H); g.globalAlpha = 1; }
+    if (showTC) {
+      const sc = sceneAt(T), label = `${sc[0]} · ${T.toFixed(1)} s · ${sc[3]}`;
+      g.font = '11px ui-monospace, Menlo, monospace'; g.textAlign = 'left'; g.textBaseline = 'middle';
+      const w = g.measureText(label).width + 10;
+      g.fillStyle = 'rgba(0,0,0,.62)'; g.fillRect(4, H - 18, w, 14);
+      g.fillStyle = '#ffffff'; g.fillText(label, 9, H - 11);
+    }
   }
 
   /* ================= offline audio render (for MP4) ================= */
@@ -1226,6 +1242,7 @@
     if (e.code === 'Space' && !(e.target instanceof HTMLButtonElement)) { e.preventDefault(); setRunning(!running); }
     if (e.key === 'r' || e.key === 'R') { seek(0); setRunning(true); }
     if (e.key === 'm' || e.key === 'M') setSound(!audioOn);
+    if (e.key === 't' || e.key === 'T') { showTC = !showTC; render(); }
   });
 
   function toScreen(p) {
@@ -1249,6 +1266,8 @@
       return out;
     },
     events: () => EV.slice(),
+    scenes: () => SCENES.map(([id, t0, t1, name]) => ({ id, t0, t1, name })),
+    setTimecode: v => { showTC = !!v; render(); },
     script: () => S.map((e, i) => ({ id: 'E' + String(i).padStart(3, '0'), t: e.t, who: e.who, act: e.act, res: e.p.hit ? e.p.hit.res : undefined, dmg: e.p.hit ? e.p.hit.dmg : e.p.dmg, text: e.p.text, dx: e.p.dx, dur: e.p.dur })),
     renderAudio
   };

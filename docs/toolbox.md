@@ -44,12 +44,14 @@ scenariusz (SCRIPT) ─► symulacja 60 Hz ─► Canvas ─► [post-process, n
 - [x] **Autodetekcja Chrome** w `~/.cache/puppeteer`.
 - [x] **Asercje widzialności** (PoC #3): postacie w kadrze przy każdym zwrocie; zbliżenia sprawdzają tylko punkty kluczowe.
 - [ ] **Asercje nakładania:** napisy kontra postacie i ważne elementy tła.
+- [ ] **Kontrole co klatkę (uprząż v3):** skoki kości > X px/klatkę (teleport), postać poza kadrem w planie ogólnym, nakładanie napisów. Obraz tylko dla klatek, które kontrola oznaczy.
+- [ ] **Autoreview per scena przed oddaniem:** gęsty arkusz każdej sceny (np. 4 kl./s) + kontrole co klatkę, żeby user dostawał film po mojej własnej rundzie poprawek.
 - [ ] Jedna komenda: `anim-check <plik.html> --expect …`.
 
 ### Wideo i ruch (ffmpeg)
 - [x] **Render do MP4:** `step()` co klatkę → PNG → ffmpeg (120 s filmu w ~15 s).
 - [ ] **GIF z paletą:** `palettegen` + `paletteuse` (ładny GIF z ograniczoną paletą).
-- [x] **Gęsty arkusz z nagrania:** `ffmpeg -vf fps=1/3,tile=8x5` (40 klatek). Do spróbowania: gęściej per scena.
+- [x] ~~Gęsty arkusz z nagrania (ffmpeg z MP4)~~ **wycofany**: MP4 powstaje z tych samych klatek, które uprząż bierze prosto z animacji, więc nic nie wnosi. Zamiast tego gęste arkusze per scena prosto z `seek()`.
 - [ ] Porównać z `page.screencast()` z Puppeteera (nagrywanie na żywo; z pamięci wymaga ffmpeg, do weryfikacji).
 
 ### Jakość i regresja
@@ -74,6 +76,10 @@ scenariusz (SCRIPT) ─► symulacja 60 Hz ─► Canvas ─► [post-process, n
 - [ ] **OpenAI gpt-4o-mini-tts:** ~$0.015 za minutę audio (rozliczane tokenami: $0.60 / 1M wejścia, $12 / 1M wyjścia audio), styl głosu sterowany instrukcją ([model](https://developers.openai.com/api/docs/models/gpt-4o-mini-tts)).
 - [ ] Skala: lektor jednego filmu to ~15 kwestii (~250 znaków, ~20 s audio), czyli **ułamek centa** per film. Realny koszt to założenie konta i klucz API, nie samo użycie.
 - [x] Lokalnie i za darmo: macOS `say` + ffmpeg (pitch, kompresja, echo). Próbki: `pocs/ninja-sandstorm/voice-samples/`. Użyte w PoC #3 (głos Daniel).
+
+### Narzędzia animacyjne (do rozważenia)
+- [ ] **Blender w trybie headless (Python):** 3D, światło, fizyka, render klatek. Największy skok jakości, ale wynik to wideo, a nie interaktywny artefakt.
+- [ ] **Lottie / Rive / Spine:** formaty animacji 2D z krzywymi i rigami, odtwarzane w przeglądarce (np. `lottie-web` z cdnjs). Lepszy ruch, ale trudniej generować kodem niż Canvas.
 
 ### Do porównania
 - [ ] **Modele wideo (np. fal.ai):** ten sam brief, porównanie kontroli, powtarzalności, kosztu i stylu. Wymaga klucza API, niesprawdzone.

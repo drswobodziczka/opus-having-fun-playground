@@ -18,7 +18,9 @@ E087 usuń
 - `E087`: ID zdarzenia ze scenariusza (kolumna „Scenariusz” w `TIMELINE.md`). Najbardziej precyzyjne, ale niewymagane.
 - Opcjonalny tag: `[ruch]` `[kamera]` `[dźwięk]` `[styl]` `[tekst]` `[tempo]`. Bez tagu sam ocenię, czego dotyczy.
 - Możesz wkleić kilka linii naraz (paczka). Zrobię je w jednym przebiegu.
-- Notatki „na jutro” możesz też wpisać do `FEEDBACK.md` w katalogu wersji. Przeczytam je stamtąd.
+- Kanał: **czat**. Forma może być luźna, ja ją znormalizuję i dopytam ponumerowanymi pytaniami. (`FEEDBACK.md` wycofany jako nieefektywny. Docelowo: [reżyserka](ideas-director.md).)
+- Sekundę i scenę widać w lewym dolnym rogu kadru (`S10 · 40.5 s · ZWROT 3: rzut`), przełącznik: klawisz `T`.
+- Poziomy: `[film] …` (cały film), `S6 …` (scena z tabeli w BRIEF), `@41.2 …` (sekunda).
 
 ## 2. Co robię z każdą paczką
 1. **Lokalizuję:** czas → wiersz w `TIMELINE.md` → zdarzenia scenariusza (ID) i kod rysowania.

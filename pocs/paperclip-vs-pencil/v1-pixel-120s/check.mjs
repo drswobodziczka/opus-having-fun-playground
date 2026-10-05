@@ -108,7 +108,6 @@ if (wantMp4) {
   mp4 = path.join(here, 'paper-cuts.mp4');
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(fps), '-i', path.join(frames, 'f%05d.png'),
     '-vf', 'scale=iw*3:ih*3:flags=neighbor', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', mp4]);
-  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', mp4, '-vf', 'fps=1/3,scale=384:-1:flags=neighbor,tile=8x5', '-frames:v', '1', path.join(here, 'sheet-dense.png')]);
   fs.rmSync(frames, { recursive: true, force: true });
 }
 

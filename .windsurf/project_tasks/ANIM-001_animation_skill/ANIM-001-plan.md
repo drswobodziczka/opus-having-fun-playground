@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Phase 2: brief v3 (spinacz vs ołówek, Rayman × SSF2T) + uprząż testowa v1
-*   **Immediate Next Action:** Uzgodnić z userem brief v3 (postacie, scenariusz ~beatów, czas, dźwięk tak/nie, czy jest ffmpeg) i dopiero potem pisać kod. Każda wersja jako osobny katalog `pocs/<temat>/vN-*`.
+*   **Current Focus:** Phase 3: skill. Wzorce są zebrane z 3 PoC-ów (PLAY-001), czekają na spisanie w `SKILL.md` i szablon
+*   **Immediate Next Action:** Po feedbacku do PoC #3 i TIMELINE v2 (PLAY-001): szkic `skills/code-animation/SKILL.md` (workflow: pytania → brief ze scenami S1..Sn → build z szablonu → check → TIMELINE → publish → pętla poprawek → postmortem) + wydzielenie szablonu silnika ze `storm.html`.
 
 ---
 
@@ -23,7 +23,8 @@
 *   Paper Cuts v1 (PLAY-001) to pierwszy przebieg przez bramki z Decision #3: pytania → brief → akceptacja → kod. Efekt: 16/16 asercji od pierwszego przebiegu, zero przepisywania. Wzorzec dla skilla: DSL scenariusza `at()/sys()`, kontrakt `window.anim`, `check.mjs` z autodetekcją Chrome, `--mp4`.
 *   Fabuła należy do scenariusza, nie do fizyki: hitstop rozjeżdżał zegary i finał tracił K.O. (patrz postmortem v2).
 *   Model widzi PNG, nie widzi ruchu. Głównym sygnałem jest trace/log (JSON), obraz służy do estetyki.
-*   `puppeteer-core` + Chrome z `~/.cache/puppeteer/chrome-headless-shell/mac_arm-131.0.6778.204/...` działa bez pobierania przeglądarki.
+*   `puppeteer-core` + Chrome headless shell z cache (`~/.cache/puppeteer`): uprząż v1+ ma autodetekcję wersji.
+*   TODO usera (2026-10-02): TIMELINE ma mówić CO/JAK/PO CO i mieć 1-1 powiązanie ze scenami z BRIEF. Skill ma od razu nadawać scenom ID (S1..Sn) wspólne dla BRIEF, kodu i TIMELINE.
 *   Zadanie przeniesione 2026-10-02 z ai-central do repo `opus-having-fun-playground` (razem z PoC-ami). Seria PoC-ów jest w PLAY-001.
 *   Na koniec: przeniesienie dokumentacji do sejfu Gamedev Universe Vault (prośba usera).
 
@@ -33,14 +34,16 @@
 *   Postmortemy: [v1](../../../pocs/clip-fighter/v1-random-ai/POSTMORTEM.md) · [v2](../../../pocs/clip-fighter/v2-scripted-10s/POSTMORTEM.md). Bug złapany trace’em, usterki arkuszem klatek.
 *   [`pocs/clip-fighter/v1-random-ai/`](../../../pocs/clip-fighter/v1-random-ai/): v1, [artefakt](https://claude.ai/code/artifact/672d6377-e1c6-408c-8b70-f494e1560ff6)
 *   [`pocs/clip-fighter/v2-scripted-10s/`](../../../pocs/clip-fighter/v2-scripted-10s/): v2 + `check.mjs`, [artefakt](https://claude.ai/code/artifact/c7b43edd-a1ff-49a2-b674-86631529a9f1)
+*   Wzorce do skilla: [Paper Cuts v1](../../../pocs/paperclip-vs-pencil/v1-pixel-120s/) (DSL `at()/sys()`, uprząż v1, MP4) · [Storm v1](../../../pocs/ninja-sandstorm/v1-ink-pixel-60s/) (rig+IK, ujęcia kamery, audio-cue + offline, asercje widzialności) · [`docs/EDIT-PROTOCOL.md`](../../../docs/EDIT-PROTOCOL.md) · [`tools/`](../../../tools/)
 
 ---
 
 ## ✅ Acceptance Criteria
 *   [ ] Skill (`SKILL.md` + szablon + uprząż) w tym repo (`skills/`), podlinkowany symlinkiem do `~/.claude/skills/`.
 *   [ ] Skill zadaje ponumerowane pytania pogłębiające (liczba zależna od ciężaru zadania), potem przedstawia **brief preprodukcyjny** (scenariusz, sceny z czasami, styl, wykonanie, otwarte decyzje) i koduje dopiero po akceptacji (Decision #3).
-*   [ ] Uprząż: log zdarzeń, asercje scenariusza, arkusz klatek z chwil zdarzeń, błędy konsoli; opcjonalnie MP4/GIF (ffmpeg).
-*   [ ] v3 (spinacz vs ołówek, Rayman × SSF2T, zwroty akcji, 2 obroty kamery) zbudowana **skillem** i przechodzi asercje.
+*   [ ] Uprząż **jako część skilla** (generyczna, nie per-PoC): log zdarzeń, asercje scenariusza i widzialności, arkusze, błędy konsoli, MP4 z dźwiękiem. *Prototypy działają w PoC #2/#3.*
+*   [ ] Pętla poprawek wbudowana w skill: `@sekunda` → TIMELINE → zmiana → check → PRZED/PO (prototyp: `docs/EDIT-PROTOCOL.md`, `tools/`).
+*   [ ] Kolejny PoC zbudowany **skillem** (od pytań do MP4) i przechodzi asercje.
 *   [ ] Dokumentacja/wnioski przeniesione do Gamedev Universe Vault.
 
 ---
@@ -75,15 +78,17 @@
 - [x] Odtworzenie v1 jako osobnego pliku/artefaktu
 - [x] Postmortemy v1 i v2 (obok PoC-ów)
 
-### Phase 2: Brief v3 + uprząż v1
-- [ ] Brief v3 z userem: postacie (spinacz, ołówek), beaty, czas, kamera (2 obroty), dźwięk
+### Phase 2: Poligon PoC #2/#3 (realizowane w PLAY-001)
+- [x] Brief PoC #2 (spinacz vs ołówek) i PoC #3 (ninja) z bramkami Decision #3
 - [x] ffmpeg 8.0.1 jest (`/opt/homebrew/bin/ffmpeg`)
-- [ ] Uprząż v1: log zdarzeń, asercje, arkusz z chwil zdarzeń, MP4/GIF
+- [x] Uprząż v1/v2: log zdarzeń, asercje (fabuła + widzialność), arkusze, MP4 z dźwiękiem
+- [x] Pętla poprawek: `tools/timeline.mjs`, `tools/frames.mjs`, `docs/EDIT-PROTOCOL.md`
 
 ### Phase 3: Skill
-- [ ] `SKILL.md`: pytania wejściowe → dobór narzędzi → scenariusz → build → check → publish
-- [ ] Szablon HTML (pętla, scenariusz, kamera, hooki) + biblioteka efektów (hitstop, shake, slow-mo)
-- [ ] Zbudować v3 skillem, zebrać wnioski, poprawić skill
+- [ ] `SKILL.md`: pytania → brief ze scenami S1..Sn → dobór narzędzi → build → check → TIMELINE → publish → pętla poprawek → postmortem
+- [ ] Szablon HTML (pętla 60 Hz, DSL scenariusza ze scenami, kamera z ujęciami, audio-cue, kontrakt `window.anim`) + biblioteka efektów (shake, iskry, krew, banery)
+- [ ] Generyczna uprząż (asercje deklarowane obok scenariusza)
+- [ ] Zbudować kolejny PoC skillem, zebrać wnioski, poprawić skill
 
 ### Phase 4: Domknięcie
 - [ ] Przenieść dokumentację do Gamedev Universe Vault
@@ -92,7 +97,8 @@
 ---
 
 ## 🔮 Options for Evolution / Refactor
-- [ ] Dźwięk: Web Audio chiptune + głosy (TTS / `speechSynthesis`)
+- [x] Dźwięk: Web Audio chiptune + lektor (`say` + ffmpeg) — zrobione w PoC #2/#3
+- [ ] Chmurowy TTS (ElevenLabs/OpenAI) jako opcja skilla
 - [ ] Porównanie z generacją wideo (fal.ai) na tym samym briefie
 - [ ] Tryb interaktywny (gra 1P vs CPU)
 
@@ -100,4 +106,4 @@
 
 ## 🐛 Open Issues & Architectural Concerns
 - [ ] Web Audio w podglądzie artefaktu: nieweryfikowane.
-- [ ] Obroty kamery w 2D: pseudo-3D (skalowanie/parallaksa) czy WebGL? Do decyzji w briefie v3.
+- [x] Obroty kamery w 2D: rozstrzygnięte, pseudo-3D (roll, fałszywa orbita, ujęcia). WebGL w `docs/ideas-webgl.md`.

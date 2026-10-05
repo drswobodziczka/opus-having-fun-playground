@@ -1,6 +1,6 @@
 // Harness v2: story + visibility assertions, twist sheet (setup/moment/payoff), story sheet,
 // optional MP4 with audio rendered offline in the page (OfflineAudioContext -> WAV -> ffmpeg).
-// Usage: node check.mjs [--mp4] [--fps=30]
+// Usage: node check.mjs [--mp4] [--fps=30] [--tc]   (--tc burns scene + second into sheets and MP4, for review)
 import puppeteer from 'puppeteer-core';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -33,6 +33,8 @@ page.on('pageerror', e => errors.push(e.message));
 page.on('console', m => m.type() === 'error' && errors.push(m.text()));
 await page.goto('file://' + html + '?t=0', { waitUntil: 'networkidle0' });
 await page.evaluate(() => document.fonts.ready);
+const wantTC = args.includes('--tc');
+await page.evaluate(v => window.anim.setTimecode(v), wantTC);
 
 const ev = await page.evaluate(() => { window.anim.seek(59.9); return window.anim.events(); });
 const first = pred => ev.find(pred);
