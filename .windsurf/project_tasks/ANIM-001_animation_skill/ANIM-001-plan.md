@@ -7,12 +7,11 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Phase 3: skill. Wzorce są zebrane z 3 PoC-ów (PLAY-001), czekają na spisanie w `SKILL.md` i szablon
-*   **Immediate Next Action:** Po feedbacku do PoC #3 i TIMELINE v2 (PLAY-001): szkic `skills/code-animation/SKILL.md` (workflow: pytania → brief ze scenami S1..Sn → build z szablonu → check → TIMELINE → publish → pętla poprawek → postmortem) + wydzielenie szablonu silnika ze `storm.html`.
+*   **Immediate Next Action:** Po zamknięciu rund feedbacku do ninja i TIMELINE v2 (PLAY-001): szkic `skills/code-animation/SKILL.md` (workflow: pytania → brief ze scenami S1..Sn → build z szablonu → check → TIMELINE → publish → pętla poprawek → postmortem) + wydzielenie szablonu silnika ze `storm.html`.
 
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
-*   DECYZJA usera (2026-10-06): **analiza klatka po klatce = stała cecha uprzęży**. Warstwy walidacji: (1) zgodność ze scenariuszem (log zdarzeń), (2) ciągłość i fizyka (skan kości co klatkę, a dalej stopy, przenikanie), (3) kadr (widzialność per ujęcie), (4) styl (napisy, paleta), (5) ocena wzrokowa (gęste arkusze per scena). Skill ma uruchamiać to przed oddaniem filmu userowi.
 *   Lekcje silnika z ninja v3 (do szablonu): płynne przejścia póz (adaptacyjne 0,07–0,2 s), kąty po najkrótszym łuku, obrót postaci w czasie (spinX), chwyty z dojściem i płynnym puszczeniem, każdy ruch akrobatyczny musi mieć powód (unik przed konkretnym ciosem).
 *   Pętla poprawek (prośba usera 2026-10-02): user podaje `@sekunda co zmienić` (albo ID zdarzenia), a skill: lokalizuje w TIMELINE → zmienia → check → arkusz PRZED/PO → ten sam link artefaktu → commit. Rozpiska sekunda po sekundzie (dope sheet) jest GENEROWANA z animacji (`tools/timeline.mjs`), nie pisana ręcznie; brief to plan, timeline to stan faktyczny. Kontrakt: `window.anim = { duration, seek, state, events, script }`. Skill ma to mieć wbudowane.
 *   Z PoC #3 (ninja) do skilla: rig szkieletowy + IK chwytów; ujęcia kamery jako lista {t0,t1,in,out,f(k,V)}; audio jako kolejka sygnałów (live + OfflineAudioContext → WAV → ffmpeg); lektor `say` + ffmpeg osadzony base64; asercje widzialności (plan ogólny: całe ciała, zbliżenie: punkty kluczowe); pomiar głośności ffmpeg zamiast słuchu.
@@ -36,6 +35,7 @@
 *   Postmortemy: [v1](../../../pocs/clip-fighter/v1-random-ai/POSTMORTEM.md) · [v2](../../../pocs/clip-fighter/v2-scripted-10s/POSTMORTEM.md). Bug złapany trace’em, usterki arkuszem klatek.
 *   [`pocs/clip-fighter/v1-random-ai/`](../../../pocs/clip-fighter/v1-random-ai/): v1, [artefakt](https://claude.ai/code/artifact/672d6377-e1c6-408c-8b70-f494e1560ff6)
 *   [`pocs/clip-fighter/v2-scripted-10s/`](../../../pocs/clip-fighter/v2-scripted-10s/): v2 + `check.mjs`, [artefakt](https://claude.ai/code/artifact/c7b43edd-a1ff-49a2-b674-86631529a9f1)
+*   Ninja v3 (wzorzec silnika po poprawkach ciągłości): [`pocs/ninja-sandstorm/v3-feedback-2/`](../../../pocs/ninja-sandstorm/v3-feedback-2/), [CHANGES](../../../pocs/ninja-sandstorm/v3-feedback-2/CHANGES.md)
 *   Wzorce do skilla: [Paper Cuts v1](../../../pocs/paperclip-vs-pencil/v1-pixel-120s/) (DSL `at()/sys()`, uprząż v1, MP4) · [Storm v1](../../../pocs/ninja-sandstorm/v1-ink-pixel-60s/) (rig+IK, ujęcia kamery, audio-cue + offline, asercje widzialności) · [`docs/EDIT-PROTOCOL.md`](../../../docs/EDIT-PROTOCOL.md) · [`tools/`](../../../tools/)
 
 ---
@@ -43,7 +43,7 @@
 ## ✅ Acceptance Criteria
 *   [ ] Skill (`SKILL.md` + szablon + uprząż) w tym repo (`skills/`), podlinkowany symlinkiem do `~/.claude/skills/`.
 *   [ ] Skill zadaje ponumerowane pytania pogłębiające (liczba zależna od ciężaru zadania), potem przedstawia **brief preprodukcyjny** (scenariusz, sceny z czasami, styl, wykonanie, otwarte decyzje) i koduje dopiero po akceptacji (Decision #3).
-*   [ ] Uprząż **jako część skilla** (generyczna, nie per-PoC): log zdarzeń, asercje scenariusza i widzialności, arkusze, błędy konsoli, MP4 z dźwiękiem. *Prototypy działają w PoC #2/#3.*
+*   [ ] Uprząż **jako część skilla** (generyczna, nie per-PoC) z 5 warstwami z Decision #4: zgodność ze scenariuszem, ciągłość (skan co klatkę), kadr, styl, wzrok; + błędy konsoli, MP4 z dźwiękiem. *Prototypy działają w PoC #2/#3 (warstwy 1–3 i częściowo 5).*
 *   [ ] Pętla poprawek wbudowana w skill: `@sekunda` → TIMELINE → zmiana → check → PRZED/PO (prototyp: `docs/EDIT-PROTOCOL.md`, `tools/`).
 *   [ ] Kolejny PoC zbudowany **skillem** (od pytań do MP4) i przechodzi asercje.
 *   [ ] Dokumentacja/wnioski przeniesione do Gamedev Universe Vault.
@@ -63,6 +63,11 @@
     1. **Pytania pogłębiające**, ponumerowane (user odpowiada „ad1, ad2…”). Ich liczba zależy od ciężaru zadania: prosta animacja 2–3, duża produkcja 5–8.
     2. **Brief preprodukcyjny do akceptacji:** scenariusz, rozkład scen z czasami, szczegóły stylu, sposób wykonania (technika, dźwięk, weryfikacja) i lista otwartych decyzji.
 *   **Consequence:** Kod powstaje dopiero po akceptacji briefu, a brief zostaje jako `BRIEF.md` w katalogu PoC-a.
+
+### Decision #4: Analiza klatka po klatce jako stała cecha uprzęży (user, 2026-10-06)
+*   **Context:** Skan wszystkich klatek w ninja v3 znalazł ~300 przeskoków póz, których nie widziały ani asercje (fabuła), ani arkusze (pojedyncze kadry).
+*   **Decision:** Uprząż skilla ma 5 warstw walidacji uruchamianych przed oddaniem filmu: (1) zgodność ze scenariuszem (log zdarzeń), (2) ciągłość i fizyka (skan kości co klatkę, a dalej stopy, przenikanie), (3) kadr (widzialność per ujęcie: `both` / `key` / zbliżenie), (4) styl (napisy, paleta), (5) wzrok (gęste arkusze per scena).
+*   **Consequence:** Film dociera do usera po mojej własnej rundzie poprawek. Warstwy 4 i 5 (automatycznie per scena) są jeszcze do zbudowania.
 
 ### Decision #2: Wynik akcji zapisany w scenariuszu
 *   **Context:** Hitstop i slow-mo rozjeżdżały fizykę względem czasu fabuły (finał bez K.O.).
