@@ -82,3 +82,15 @@ Paski HP w stylu bijatyk z lat 90., imiona, licznik, combo („12 HITS”), bane
 2. Głos: **Daniel** (macOS `say`) po obróbce w ffmpeg.
 3. Nazwy ciosów: **SAND COBRA, BLACK MONSOON, DUNE BREAKER, HEART OF THE STORM**.
 4. Tytuł filmu: **„THE STORM CHOSE BLACK”**.
+
+## 8. Rewizje (zmiany decyzji po feedbacku)
+> Brief opisuje aktualny film. Każda runda, która zmienia decyzję z sekcji 1–7, dopisuje się tutaj. Szczegóły zmian są w `CHANGES.md` danej wersji.
+
+| Wersja | Zmiana decyzji | Zastępuje |
+|---|---|---|
+| v2 | S3: salto to **unik w zwolnieniu**; S4: **piruet z kamerą + prawdziwe duszenie**; S6: **sparowanie** przed chwytem; S10: rzut z zamachem i ślizgiem; S12: **zbliżenie na pięść** (drży, rozwiera się, zbiera energię); S13: **lądowanie superbohatera** | sceny 3, 4, 6, 10, 12, 13 w tabeli §3 |
+| v3 | S6: uchylenie + **widoczne odbicie ręki** + chwyt + **dźwignia na rękę**; S10: **suplex przez głowę na głowę**; każde salto BISHUKIJA = unik przed konkretnym ciosem | S6, S10 z v2 |
+| v4 | **Styl (ad2):** cały film w **kresce tuszu**; runda 2 to **tusz nocą** (ciemny laserunek, księżyc z papieru, pioruny jako jasne pęknięcia, poświata na postaciach) | „0–30 s tusz, 30–60 s mroczny piksel” |
+| v4 | S3 @9: zamiast salta **kucnięcie pod kopnięciem + podcięcie z pełnym obrotem**, ALAMANDRO pada i wstaje | S3 z v2/v3 |
+| v4 | **Zwrot 4 (fatality):** **SPINE OF THE STORM**, czyli głowa wyrwana razem z kręgosłupem (stylizowany łańcuch kręgów), trofeum w pozie zwycięzcy | HEART OF THE STORM (wyrwanie serca) |
+| v4 | **Muzyka (§5):** zamiast chiptune'u **syntezowany zespół w stylu chińskim**: guzheng/pipa (model struny Karplusa-Stronga), erhu (smyczek z wibratem), bęben tanggu, woodblock, gong; pentatonika D | „chiptune, moll frygijski, taiko z szumu” |

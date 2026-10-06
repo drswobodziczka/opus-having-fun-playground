@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #3 v3 (feedback 2) gotowe: czeka na ocenę usera (porównanie v2 | v3)
-*   **Immediate Next Action:** Ocena v3 przez usera → ewentualna runda 3 przez `EDIT-PROTOCOL`. Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
+*   **Current Focus:** PoC #3 v4 (feedback 3) gotowe: czeka na ocenę usera (styl, podcięcie, muzyka, fatality)
+*   **Immediate Next Action:** Ocena v4 (szczególnie muzyki, której model nie słyszy); decyzja o lektorze z ElevenLabs (klucz API) → ewentualna runda 4. Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
 
 ---
 
@@ -18,6 +18,7 @@
 *   ffmpeg działa: render przez `anim.step()` → PNG → MP4 (3× neighbor). 120 s filmu w ~15 s.
 *   Dźwięk: model nie słyszy. PoC #2 niezweryfikowany, PoC #3 zmierzony (`volumedetect`/RMS), ale barwę i miks ocenia user.
 *   Protokół poprawek działa dla PoC #2 i #3 (mają `script()` i TIMELINE). Clip Fighter v1/v2 są poza protokołem (zamknięte prototypy).
+*   Zmiana decyzji z briefu (styl, fatality, muzyka) = wpis w BRIEF §8 „Rewizje” w tej samej rundzie (lekcja z v4: wcześniej pominięte).
 *   Ninja v2/v3: każda runda feedbacku to nowy katalog `vN-feedback-K/` + nowy artefakt + `CHANGES.md` + porównanie `compare-vX-vY.png` (`tools/frames.mjs --vs`).
 *   Test protokołu (feedback 1): 6/8 uwag na poziomie sceny → reżyserka musi mieć wygodny pasek scen.
 *   2026-10-06: `FEEDBACK.md` wycofany (user: nieefektywny). Kanał: czat, docelowo reżyserka. W kadrze ninja jest znacznik sceny i sekundy (klawisz T); sceny S1..S13 są w kodzie (`SCENES`).
@@ -69,7 +70,8 @@
 - [x] Build v1 → uprząż v2 (widzialność) → MP4 z dźwiękiem → postmortem
 - [x] Feedback 1 (8 uwag) → v2-feedback-1, 35/35, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v2-feedback-1/CHANGES.md)
 - [x] Feedback 2 (S6 parowanie + dźwignia, S10 suplex, salta) + skan klatka po klatce → v3-feedback-2, 39/39, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v3-feedback-2/CHANGES.md)
-- [ ] Ocena v3 przez usera
+- [x] Feedback 3 (styl tuszu + noc, podcięcie, muzyka chińska, kręgosłup) → v4-feedback-3, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v4-feedback-3/CHANGES.md); BRIEF §8 Rewizje
+- [ ] Ocena v4 przez usera
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
