@@ -94,3 +94,6 @@ Paski HP w stylu bijatyk z lat 90., imiona, licznik, combo („12 HITS”), bane
 | v4 | S3 @9: zamiast salta **kucnięcie pod kopnięciem + podcięcie z pełnym obrotem**, ALAMANDRO pada i wstaje | S3 z v2/v3 |
 | v4 | **Zwrot 4 (fatality):** **SPINE OF THE STORM**, czyli głowa wyrwana razem z kręgosłupem (stylizowany łańcuch kręgów), trofeum w pozie zwycięzcy | HEART OF THE STORM (wyrwanie serca) |
 | v4 | **Muzyka (§5):** zamiast chiptune'u **syntezowany zespół w stylu chińskim**: guzheng/pipa (model struny Karplusa-Stronga), erhu (smyczek z wibratem), bęben tanggu, woodblock, gong; pentatonika D | „chiptune, moll frygijski, taiko z szumu” |
+| v5 | **Postacie:** jeden projekt w całym filmie (pędzel + obwódka, jasnoszary BISHUKIJ, czarny ALAMANDRO) | osobny wygląd dzienny i nocny z v4 |
+| v5 | S3: podcięcie **wolniej, na obu dłoniach** | szybkie podcięcie z v4 |
+| v5 | **Muzyka (§5):** **perkusyjna, adaptacyjna** (taiko, tomy, talerze, bordun, gong; tryb wg sceny, akcenty na zdarzeniach, werbel do fatality), bez melodii | zespół chiński z melodią erhu (v4) |

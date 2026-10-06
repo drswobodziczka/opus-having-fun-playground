@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #3 v4 (feedback 3) gotowe: czeka na ocenę usera (styl, podcięcie, muzyka, fatality)
-*   **Immediate Next Action:** Ocena v4 (szczególnie muzyki, której model nie słyszy); decyzja o lektorze z ElevenLabs (klucz API) → ewentualna runda 4. Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
+*   **Current Focus:** PoC #3 v5 (feedback 4) gotowe: czeka na ocenę usera (postacie, podcięcie, muzyka adaptacyjna)
+*   **Immediate Next Action:** Ocena v5 (muzyka i obrót podcięcia: model ich nie widzi/nie słyszy). ElevenLabs: user dodaje klucz do Keychain (`docs/elevenlabs.md`) → test kosztu → 3 próbki głosów → wymiana lektora. Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
 
 ---
 
@@ -71,7 +71,10 @@
 - [x] Feedback 1 (8 uwag) → v2-feedback-1, 35/35, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v2-feedback-1/CHANGES.md)
 - [x] Feedback 2 (S6 parowanie + dźwignia, S10 suplex, salta) + skan klatka po klatce → v3-feedback-2, 39/39, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v3-feedback-2/CHANGES.md)
 - [x] Feedback 3 (styl tuszu + noc, podcięcie, muzyka chińska, kręgosłup) → v4-feedback-3, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v4-feedback-3/CHANGES.md); BRIEF §8 Rewizje
-- [ ] Ocena v4 przez usera
+- [x] Feedback 4 (jeden wygląd postaci, wolniejsze podcięcie na dłoniach, muzyka adaptacyjna) → v5-feedback-4, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v5-feedback-4/CHANGES.md)
+- [ ] Ocena v5 przez usera
+- [x] Research + samouczek ElevenLabs: [`docs/elevenlabs.md`](../../../docs/elevenlabs.md)
+- [ ] Lektor z ElevenLabs (czeka na klucz w Keychain)
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
