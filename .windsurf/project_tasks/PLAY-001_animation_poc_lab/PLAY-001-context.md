@@ -1,36 +1,52 @@
 # PLAY-001: Kontekst
 
 > **Rola:** Żywy Brief. Zakres biznesowy, wymagania, kluczowe pliki, dane referencyjne.
+> Aktualizacja: 2026-10-07.
 
 ## Opis Zadania
-Seria PoC-ów animacji generowanych **kodem** przez agenta (Claude). Zabawa z celem: sprawdzić różne style, narzędzia i techniki weryfikacji, a wnioski przekazać do skilla (ANIM-001).
+Seria PoC-ów animacji generowanych **kodem** przez agenta (Claude). Zabawa z celem: sprawdzić style, techniki, narzędzia i sposoby walidacji oraz wypracować z userem wygodny proces (bramki, pętla poprawek), a wnioski przekazać do skilla (ANIM-001).
 
 ## Wymagania
-- Każdy PoC: samowystarczalny HTML (Canvas/JS, ewentualnie biblioteka z cdnjs), publikowany jako artefakt Claude.
-- Deterministyczny, jeśli ma scenariusz (stały krok, `seek/state`).
-- Po każdej wersji: `POSTMORTEM.md` (narzędzia w kolejności z celem i czasem, problemy prosto, lekcje).
-- Repo publiczne: bez prywatnych ścieżek, kluczy i danych osobowych.
+- Każdy PoC: samowystarczalny HTML (Canvas/JS, ewentualnie biblioteka z cdnjs), publikowany jako artefakt Claude. **Każda wersja ma osobny link**, żeby dało się porównywać.
+- Przed kodem: pytania pogłębiające → `BRIEF.md` z tabelą scen → akceptacja.
+- Deterministyczny (stały krok, `seek`/`state`/`events`/`script`), ze znacznikiem sceny i sekundy w kadrze.
+- Walidacja przed oddaniem: asercje fabuły i widzialności, skan klatka po klatce, gęste arkusze zmienianych scen.
+- Feedback: czat w formacie `docs/EDIT-PROTOCOL.md` (`[film]` / `S6` / `@41.2` + tagi). Runda feedbacku = `vN-feedback-K/` z `CHANGES.md`, `TIMELINE.md` i porównaniem z poprzednią wersją.
+- Po każdej wersji `POSTMORTEM.md` albo `CHANGES.md` (co, dlaczego, jak sprawdzone).
+- Repo publiczne: bez prywatnych ścieżek, kluczy i danych osobowych. Push kontem `drswobodziczka`.
 
 ---
 
 ## Kluczowe Pliki
 
-### Pliki implementacji
+### PoC-e
 ```bash
-pocs/clip-fighter/v1-random-ai/clip-fighter-v1.html    # PoC 1, wersja 1
-pocs/clip-fighter/v2-scripted-10s/clip-fighter.html    # PoC 1, wersja 2
-pocs/clip-fighter/v2-scripted-10s/check.mjs            # uprząż v0
+pocs/clip-fighter/v1-random-ai/            # PoC 1: 1-bit, losowe AI (zamknięty, poza protokołem)
+pocs/clip-fighter/v2-scripted-10s/         # PoC 1: scenariusz 10 s, uprząż v0 (zamknięty)
+pocs/paperclip-vs-pencil/BRIEF.md          # PoC 2: brief (spinacz vs ołówek)
+pocs/paperclip-vs-pencil/v1-pixel-120s/    # PoC 2: 2:00, pixel, uprząż v1, MP4, TIMELINE, feedback w POSTMORTEM
+pocs/ninja-sandstorm/BRIEF.md              # PoC 3: brief (ninja, 60 s), sceny S1..S13
+pocs/ninja-sandstorm/v1-ink-pixel-60s/     # PoC 3 v1: tusz → pixel, rig+IK, lektor, MP4 z dźwiękiem
+pocs/ninja-sandstorm/v2-feedback-1/        # PoC 3 v2: runda 1 (8 uwag), CHANGES, porównanie v1|v2
+pocs/ninja-sandstorm/v3-feedback-2/        # PoC 3 v3: runda 2 (S6, S10, salta) + skan klatka po klatce, CHANGES
 ```
 
-### Pliki referencyjne
+### Narzędzia i dokumenty
 ```bash
-docs/toolbox.md                                        # narzędzia + backlog warsztatowy
-pocs/clip-fighter/*/POSTMORTEM.md                      # postmortemy
-.windsurf/project_tasks/ANIM-001_animation_skill/      # zadanie: skill
+tools/timeline.mjs           # TIMELINE.md (sekunda po sekundzie) z animacji
+tools/frames.mjs             # arkusze: PRZED|PO (--before=HEAD) albo wersja|wersja (--vs=...)
+docs/EDIT-PROTOCOL.md        # format uwag i pętla poprawek
+docs/HOW-IT-WORKS.md         # diagramy procesu, silnika, pętli, asercji; toolset
+docs/toolbox.md              # narzędzia + backlog warsztatowy
+docs/ideas-director.md       # reżyserka (koncepcja)
+docs/ideas-webgl.md          # pomysły na 3D
+pocs/GLOSSARY.md             # słowniczek
+.windsurf/project_tasks/ANIM-001_animation_skill/   # zadanie: skill
 ```
 
 ---
 
 ## Dane Przykładowe / Screenshoty
-- `pocs/clip-fighter/v2-scripted-10s/sheet.png`: arkusz 16 klatek
-- `pocs/clip-fighter/v2-scripted-10s/trace.txt`: trace liczbowy
+- Ninja v3: https://claude.ai/code/artifact/b3b82263-0c8a-4856-b229-96069f5e3bd9 · porównanie `pocs/ninja-sandstorm/v3-feedback-2/compare-v2-v3.png` · arkusze `sheet-s6.png`, `sheet-s10.png` · skan `scan.txt`
+- Paper Cuts v1: https://claude.ai/code/artifact/7d5a22e9-28d4-4f72-a1e0-b7b8db8180a0
+- Feedback 1 (test protokołu): 8 uwag, 6 na poziomie sceny, 0 dopytań → `pocs/ninja-sandstorm/v2-feedback-1/CHANGES.md`
