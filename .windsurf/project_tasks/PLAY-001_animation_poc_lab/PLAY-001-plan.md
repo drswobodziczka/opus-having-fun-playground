@@ -12,6 +12,8 @@
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   HANDOVER 2026-10-07: od następnej sesji pracujemy **w tym repo** (wcześniej sesja żyła w `title-master`). Konwencje i komendy: `CLAUDE.md` w root repo. Pamięć agenta (bramki preprodukcji, konto do pushowania) skopiowana do projektu playgroundu.
+*   Stan ninja: v1 → v5 (`pocs/ninja-sandstorm/v5-feedback-4/`, artefakt https://claude.ai/code/artifact/c62a9c64-1114-4cef-9c01-d2480995bd54). Do oceny przez usera: muzyka adaptacyjna (perkusyjna) i czytelność obrotu w podcięciu S3.
 *   Każdy PoC to katalog `pocs/<temat>/vN-<opis>/` z: `*.html`, uprzężą/wynikami testów, `POSTMORTEM.md`.
 *   Postmortem robimy **po każdej wersji**: narzędzia (kolejność, cel, czas), problemy prosto, lekcje.
 *   Wnioski przenoszone do skilla są śledzone w ANIM-001.

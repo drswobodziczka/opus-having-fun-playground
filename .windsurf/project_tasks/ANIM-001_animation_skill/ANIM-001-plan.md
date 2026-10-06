@@ -12,6 +12,7 @@
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   HANDOVER 2026-10-07: dalsza praca w tym repo (`CLAUDE.md`). Najpełniejszy wzorzec silnika i uprzęży to teraz **ninja v5** (`pocs/ninja-sandstorm/v5-feedback-4/`): + adaptacyjna muzyka sterowana zdarzeniami (`SCENE_MODE`, `STINGERS`), limiter na wyjściu, jeden projekt postaci (obwódka zależna od tła), IK do podłoża (`groundF/B`).
 *   Lekcje silnika z ninja v3 (do szablonu): płynne przejścia póz (adaptacyjne 0,07–0,2 s), kąty po najkrótszym łuku, obrót postaci w czasie (spinX), chwyty z dojściem i płynnym puszczeniem, każdy ruch akrobatyczny musi mieć powód (unik przed konkretnym ciosem).
 *   Pętla poprawek (prośba usera 2026-10-02): user podaje `@sekunda co zmienić` (albo ID zdarzenia), a skill: lokalizuje w TIMELINE → zmienia → check → arkusz PRZED/PO → ten sam link artefaktu → commit. Rozpiska sekunda po sekundzie (dope sheet) jest GENEROWANA z animacji (`tools/timeline.mjs`), nie pisana ręcznie; brief to plan, timeline to stan faktyczny. Kontrakt: `window.anim = { duration, seek, state, events, script }`. Skill ma to mieć wbudowane.
 *   Z PoC #3 (ninja) do skilla: rig szkieletowy + IK chwytów; ujęcia kamery jako lista {t0,t1,in,out,f(k,V)}; audio jako kolejka sygnałów (live + OfflineAudioContext → WAV → ffmpeg); lektor `say` + ffmpeg osadzony base64; asercje widzialności (plan ogólny: całe ciała, zbliżenie: punkty kluczowe); pomiar głośności ffmpeg zamiast słuchu.
@@ -35,7 +36,7 @@
 *   Postmortemy: [v1](../../../pocs/clip-fighter/v1-random-ai/POSTMORTEM.md) · [v2](../../../pocs/clip-fighter/v2-scripted-10s/POSTMORTEM.md). Bug złapany trace’em, usterki arkuszem klatek.
 *   [`pocs/clip-fighter/v1-random-ai/`](../../../pocs/clip-fighter/v1-random-ai/): v1, [artefakt](https://claude.ai/code/artifact/672d6377-e1c6-408c-8b70-f494e1560ff6)
 *   [`pocs/clip-fighter/v2-scripted-10s/`](../../../pocs/clip-fighter/v2-scripted-10s/): v2 + `check.mjs`, [artefakt](https://claude.ai/code/artifact/c7b43edd-a1ff-49a2-b674-86631529a9f1)
-*   Ninja v3 (wzorzec silnika po poprawkach ciągłości): [`pocs/ninja-sandstorm/v3-feedback-2/`](../../../pocs/ninja-sandstorm/v3-feedback-2/), [CHANGES](../../../pocs/ninja-sandstorm/v3-feedback-2/CHANGES.md)
+*   Ninja v5 (aktualny wzorzec): [`pocs/ninja-sandstorm/v5-feedback-4/`](../../../pocs/ninja-sandstorm/v5-feedback-4/) · Ninja v3 (wzorzec silnika po poprawkach ciągłości): [`pocs/ninja-sandstorm/v3-feedback-2/`](../../../pocs/ninja-sandstorm/v3-feedback-2/), [CHANGES](../../../pocs/ninja-sandstorm/v3-feedback-2/CHANGES.md)
 *   Wzorce do skilla: [Paper Cuts v1](../../../pocs/paperclip-vs-pencil/v1-pixel-120s/) (DSL `at()/sys()`, uprząż v1, MP4) · [Storm v1](../../../pocs/ninja-sandstorm/v1-ink-pixel-60s/) (rig+IK, ujęcia kamery, audio-cue + offline, asercje widzialności) · [`docs/EDIT-PROTOCOL.md`](../../../docs/EDIT-PROTOCOL.md) · [`tools/`](../../../tools/)
 
 ---
