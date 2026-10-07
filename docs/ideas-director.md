@@ -20,6 +20,7 @@
 - Podgląd kolejnej sceny i renderowanie sceny „w locie” po zmianie parametrów (np. suwak tempa sceny).
 - Edycja briefu i scenariusza z poziomu reżyserki.
 - Eksport notatek jako paczki do commita.
+- **Panel dźwięku** (prośba usera, 2026-10-07, po muzyce kung-fu v6): partytura jest już danymi (`music/score.mjs`: tempo, skala, instrumenty GM, wzory perkusji, frazy, akcenty na zdarzeniach), a soundfont da się zagrać w przeglądarce (`spessasynth_core` ma też wersję na Web Audio). Panel mógłby: (1) suwaki miksu (muzyka / lektor / efekty) i wyciszanie instrumentów (solo/mute), (2) wybór instrumentu dla roli (koto ↔ pipa, flet ↔ shakuhachi), tempo, tonacja, (3) siatka kroków (step sequencer) dla perkusji i ostinata w scenie, edycja fraz fletu, (4) akcenty przypięte do zdarzeń, (5) lektor: wybór ujęcia z kilku (odsłuch), przesunięcie w czasie. Zapis zmian w bazie artefaktu; agent przenosi je do `score.mjs` i renderuje MP4. Rozważyć osobny moduł „mikser”, żeby nie przeciążać MVP.
 
 ## Do sprawdzenia przed budową
 - Dostępność capability `db` (i ewentualnie `assets`) w artefaktach tego konta.

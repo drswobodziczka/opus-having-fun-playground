@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #3 v6 (feedback 5) gotowe: lektor Harry (ElevenLabs v3) + muzyka kung-fu z soundfontu; czeka na ocenę usera
-*   **Immediate Next Action:** Ocena v6 uchem (barwa lektora, muzyka, miks lektor/muzyka; model tego nie słyszy). Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
+*   **Current Focus:** v7 (feedback 6) w toku: poprawka resetu po powtórce (`deflectT`/`lastHitT`/`lagWait`) + test regresji „replay”, lektor Harry v3 na `stability 0` (3 ujęcia/kwestię, wybór po głośności, limity slotów) — `pocs/ninja-sandstorm/v7-feedback-6/`, niescommitowane
+*   **Immediate Next Action:** user podnosi limit kredytów klucza API ElevenLabs (był 1000, wyczerpany) → `node vo/make.mjs` (cały lektor od nowa, ~1300 kredytów) → `node embed.mjs` → `node check.mjs --mp4` → CHANGES/TIMELINE/artefakt v7. Potem TIMELINE v2.
 
 ---
 
@@ -81,7 +81,8 @@
 - [x] Próbki 3 głosy × 3 kwestie: `pocs/ninja-sandstorm/voice-samples/el-*-REEL.mp3` (łącznie zużyto 95/10 000 kredytów)
 - [x] Wybór głosu: Harry (2026-10-07); do wyboru model v2/v4/v3
 - [x] Feedback 5 (lektor Harry v3, szalony śmiech, muzyka kung-fu z soundfontu) → v6-feedback-5, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v6-feedback-5/CHANGES.md); BRIEF §8
-- [ ] Ocena v6 przez usera
+- [x] Ocena v6: muzyka „rewelacja”; głos OK, ale część kwestii mniej emocjonalna; bug po powtórce (BISHUKIJ z ręką w górze)
+- [ ] Feedback 6 → v7 (lektor bardziej ekspresyjny, poprawka resetu)
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
