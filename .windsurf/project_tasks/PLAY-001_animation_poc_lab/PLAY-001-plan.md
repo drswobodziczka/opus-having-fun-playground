@@ -6,14 +6,15 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** v7 (feedback 6) w toku: poprawka resetu po powtórce (`deflectT`/`lastHitT`/`lagWait`) + test regresji „replay”, lektor Harry v3 na `stability 0` (3 ujęcia/kwestię, wybór po głośności, limity slotów) — `pocs/ninja-sandstorm/v7-feedback-6/`, niescommitowane
-*   **Immediate Next Action:** user podnosi limit kredytów klucza API ElevenLabs (był 1000, wyczerpany) → `node vo/make.mjs` (cały lektor od nowa, ~1300 kredytów) → `node embed.mjs` → `node check.mjs --mp4` → CHANGES/TIMELINE/artefakt v7. Potem TIMELINE v2.
+*   **Current Focus:** PoC #3 v7 (feedback 6) gotowe: lektor w stylu MK + głosy postaci, poprawka powtórki; czeka na ocenę usera
+*   **Immediate Next Action:** Ocena v7 uchem (lektor MK, Harry, Callum). Potem TIMELINE v2: znaczniki scen `scene(id, t0, t1, cel)` zgodne z BRIEF, generator grupuje po scenach (CO/JAK/PO CO).
 
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
 *   HANDOVER 2026-10-07: od następnej sesji pracujemy **w tym repo** (wcześniej sesja żyła w `title-master`). Konwencje i komendy: `CLAUDE.md` w root repo. Pamięć agenta (bramki preprodukcji, konto do pushowania) skopiowana do projektu playgroundu.
-*   Stan ninja: v1 → v6 (`pocs/ninja-sandstorm/v6-feedback-5/`, artefakt https://claude.ai/code/artifact/d33f1513-81fc-42a0-87b0-9215922a3fe4). Do oceny: lektor Harry, muzyka kung-fu, miks.
+*   Stan ninja: v1 → v7 (`pocs/ninja-sandstorm/v7-feedback-6/`, artefakt https://claude.ai/code/artifact/89d0d482-499c-4268-b6ce-5c3b47909a52). Muzyka v6 zaakceptowana („rewelacja”). Do oceny: głosy v7.
+*   Lektor generuje `vo/make.mjs` (obsada, ujęcia, STT, limity slotów); pliki `vo/*.mp3` są w repo per wersja, regenerować tylko zmienione kwestie (`node vo/make.mjs <nazwa>`). Klucz API ma własny limit kredytów (ustawiany w dashboardzie), niezależny od limitu konta.
 *   Muzyka z soundfontu: partytura w kodzie → MIDI → GeneralUser GS → `spessasynth_core` (JS), samouczek [`docs/soundfont-fluidsynth.md`](../../../docs/soundfont-fluidsynth.md). Mowę weryfikuję transkrypcją ElevenLabs (Scribe), muzykę spektrogramem.
 *   Każdy PoC to katalog `pocs/<temat>/vN-<opis>/` z: `*.html`, uprzężą/wynikami testów, `POSTMORTEM.md`.
 *   Postmortem robimy **po każdej wersji**: narzędzia (kolejność, cel, czas), problemy prosto, lekcje.
@@ -82,7 +83,8 @@
 - [x] Wybór głosu: Harry (2026-10-07); do wyboru model v2/v4/v3
 - [x] Feedback 5 (lektor Harry v3, szalony śmiech, muzyka kung-fu z soundfontu) → v6-feedback-5, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v6-feedback-5/CHANGES.md); BRIEF §8
 - [x] Ocena v6: muzyka „rewelacja”; głos OK, ale część kwestii mniej emocjonalna; bug po powtórce (BISHUKIJ z ręką w górze)
-- [ ] Feedback 6 → v7 (lektor bardziej ekspresyjny, poprawka resetu)
+- [x] Feedback 6 → v7-feedback-6, 41/41 (nowy test „Replay”), [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7-feedback-6/CHANGES.md); BRIEF §8
+- [ ] Ocena v7 przez usera
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
@@ -102,6 +104,9 @@
 ## 🔮 Options for Evolution / Refactor
 - [ ] Trzeci styl PoC-a (np. wektorowy flat, papierowy cut-out, CRT neon)
 - [ ] Galeria PoC-ów jako jeden artefakt
+- [ ] **Wymiana postaci w tej samej walce:** scenariusz bez zmian, ale postać ma inny styl walki i zachowanie (np. „zawodnik” jako moduł: pozy, ruchy specjalne, temperament, głos), wybór obsady przed renderem
+- [ ] **Wymiana stylu całego filmu:** styl jako moduł (paleta, render postaci, tło, efekty, typografia, muzyka), ten sam scenariusz
+- [ ] **Ładniejszy render (WebGL):** spike PixiJS/three.js + shadery (tusz, papier, poświata) przy zachowaniu silnika symulacji; porównać z Remotion / Motion Canvas / Revideo / Theatre.js (licencje, determinizm, render MP4)
 - [ ] [Reżyserka](../../../docs/ideas-director.md): odtwarzacz + pasek scen + notatki w bazie artefaktu (6/8 uwag z feedbacku 1 było na poziomie sceny)
 
 ---
