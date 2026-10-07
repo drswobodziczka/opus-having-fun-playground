@@ -21,7 +21,7 @@ flowchart TD
   subgraph FILE["Plik HTML = cały film (np. storm.html)"]
     CODE["Scenariusz<br/>at(t, kto, akcja, wynik), sys(t, ...), SCENES"]
     ENG["Silnik<br/>(szczegóły niżej)"]
-    API["window.anim<br/>seek / step / joints / events / script / renderAudio"]
+    API["window.anim<br/>panel serwisowy dla narzędzi<br/>(słowniczek pod diagramem)"]
     CODE --> ENG --> API
   end
 
@@ -39,6 +39,39 @@ flowchart TD
   MP4 --> U
   U -->|"film / S6 / @41.2: co zmienić"| C
 ```
+
+### Główne komponenty (krótko)
+| Komponent | Czym jest | Zadania | Fizycznie |
+|---|---|---|---|
+| **Bramki (1 i 2)** | punkty kontrolne przed kodem | 1: pytania pogłębiające (ad1..adN); 2: Twoja akceptacja briefu | rozmowa w czacie |
+| **BRIEF** | umowa o filmie | sceny S1..Sn, zwroty akcji, styl, dźwięk, czas; §8 zapisuje zmiany decyzji | `pocs/<temat>/BRIEF.md` |
+| **Scenariusz** | fabuła jako dane | „w chwili t kto robi co z jakim wynikiem” + tabela scen | funkcje `at()` / `sys()` i `SCENES` w HTML |
+| **Silnik** | „projektor”, który odtwarza scenariusz | symulacja, rig, kamera, render, dźwięk (sekcja 2) | kod JS w tym samym pliku HTML |
+| **Plik HTML** | cały film w jednym pliku | działa w każdej przeglądarce bez serwera; audio osadzone wewnątrz | `vN-…/storm.html` (~1,4 MB) |
+| **`window.anim`** | panel serwisowy filmu dla narzędzi | przewijanie, odczyt stanu i zdarzeń, render audio (słowniczek niżej) | obiekt JS na dole pliku |
+| **Uprząż** | stanowisko testowe filmu | otwiera film bez okna, przewija, sprawdza asercje, skanuje każdą klatkę, robi arkusze PNG i MP4 | `check.mjs` (Node + Puppeteer + headless Chrome) w katalogu wersji |
+| **Asercje** | sprawdzenia „czy film robi to, co obiecuje brief” | fabuła, widzialność, ciągłość klatek, powtórka | lista w `check.mjs`, wynik PASS/FAIL |
+| **Arkusz klatek** | „wzrok” Claude'a | siatka kadrów z wybranych chwil do obejrzenia jednym `Read` | `sheet-*.png` |
+| **TIMELINE** | rozpiska sekunda po sekundzie | adres sceny dla Ciebie, ID zdarzeń dla mnie | `TIMELINE.md` z `tools/timeline.mjs` |
+| **Audio poza plikiem** | produkcja dźwięku | głosy (ElevenLabs), muzyka (partytura → MIDI → soundfont), osadzenie | `vo/`, `music/`, `embed.mjs` |
+| **Artefakt** | publikacja filmu | strona na claude.ai, film liczy się na żywo w przeglądarce widza | link na wersję |
+| **MP4** | film do obejrzenia gdziekolwiek | klatki z uprzęży + dźwięk z renderu offline, sklejone ffmpeg | `storm.mp4`, lokalnie (poza git) |
+
+### `window.anim`: słowniczek
+| Metoda | Co robi | Kto używa |
+|---|---|---|
+| `duration` | długość filmu w sekundach | uprząż, TIMELINE |
+| `seek(t)` | przewija do sekundy t (od zera, krok po kroku, więc zawsze ta sama klatka) | wszystkie narzędzia |
+| `step(n)` | n kroków symulacji (1 krok = 1/60 s) i rysuje klatkę | render klatek do MP4 |
+| `advance(n)` | n kroków bez rysowania (szybko) | skan klatka po klatce |
+| `joints()` | pozycje wszystkich kości obu postaci + bieżące akcje | skan klatek, test powtórki |
+| `state()` | skrót stanu: czas, scena, styl, kamera, pozycje, HP, akcje | trace, TIMELINE |
+| `view()` | gdzie postacie są **na ekranie** i czy mieszczą się w kadrze | asercje widzialności |
+| `events()` | log zdarzeń: co się wydarzyło i kiedy (trafienie, chwyt, K.O.) | asercje fabuły, TIMELINE, partytura |
+| `scenes()` | tabela scen S1..Sn z czasami | TIMELINE, znacznik w kadrze |
+| `script()` | scenariusz z ID zdarzeń (`E042`) | TIMELINE, pętla poprawek |
+| `setTimecode(v)` | włącza/wyłącza znacznik „scena · sekunda” w kadrze | arkusze i MP4 do przeglądu (`--tc`) |
+| `renderAudio()` | renderuje całą ścieżkę dźwiękową offline do WAV | MP4 z dźwiękiem |
 
 **Wersje:** każda runda feedbacku to nowy katalog `pocs/<temat>/vN-feedback-K/` (kopia poprzedniej), nowy artefakt, `CHANGES.md` i nowy TIMELINE. Zmiana decyzji z briefu trafia do BRIEF §8 „Rewizje”.
 

@@ -40,6 +40,16 @@ Film (PoC) zawiera wtedy **tylko to, co jego**: scenariusz, postacie/styl (rende
 3. `templates/` + `new-film.mjs` + `SKILL.md`. **Test skilla = nowy, mały film od zera** (np. 20 s, inny temat) tylko z kitu.
 4. Postać i styl jako moduły, potem PixiJS.
 
+## Otwarte: jeden skill czy wiele (do decyzji przy architekturze skilla)
+User (2026-10-08): jeden skill może nie wystarczyć, np. montaż wideo, dźwiękowiec, dialogi i głosy, reżyser, scenarzysta, fizyka ruchu, stylistyka, render obrazu i wideo zewnętrznymi modelami.
+
+**Przeczucie agenta (nie decyzja):**
+- **Jeden skill-producent na start** (przepis od pomysłu do MP4) + **kit z klockami**. Specjaliści wydzielają się, gdy dany obszar ma **własne narzędzia, własny sposób weryfikacji i drugie zastosowanie** poza jednym filmem.
+- Pierwsi kandydaci na osobne skille: **dźwięk** (głosy: obsada, ujęcia, STT, sloty; muzyka: partytura, soundfont, spektrogram), bo ma inne narzędzia i inną weryfikację niż obraz i przyda się poza bijatykami; **styl/render** (PixiJS, shadery, palety), gdy ruszy Faza 4; **modele generatywne** (obraz/wideo), gdy pojawi się klucz i pierwszy PoC.
+- **Fizyka ruchu, kamera, rig** to raczej **kod w kicie** niż skill: to biblioteka, nie procedura.
+- **Scenarzysta / reżyser** to role w przepisie producenta (bramki, BRIEF, tabela scen, pętla feedbacku), nie osobne skille, dopóki nie urosną.
+- Ryzyko wielu skilli: rozjazd kontraktów. Wspólny język (sceny S1..Sn, `window.anim`, `events.json`, katalog wersji) musi być jeden, w kicie.
+
 ## Ryzyka
 - Przedwczesna abstrakcja: mamy 1 dojrzały film (ninja) i 2 starsze. Dlatego krok 3 to od razu nowy film jako sprawdzian.
 - Jeden plik HTML dla artefaktu: potrzebny prosty bundler (sklejanie), bez npm w przeglądarce.

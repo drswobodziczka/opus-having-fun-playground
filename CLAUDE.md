@@ -31,4 +31,4 @@ Chrome: headless shell z `~/.cache/puppeteer` (autodetekcja). ffmpeg 8 (Homebrew
 - MP4 i `frames/` są w `.gitignore` (rozmiar).
 
 ## Mapa
-`pocs/` (PoC-e i wersje) · `tools/` (TIMELINE, frames) · `docs/` (HOW-IT-WORKS, EDIT-PROTOCOL, toolbox, elevenlabs, ideas-*) · `pocs/GLOSSARY.md`
+[`BACKLOG.md`](BACKLOG.md) (globalny backlog, kandydaci na nowe zadania) · `pocs/` (PoC-e i wersje) · `tools/` (TIMELINE, frames) · `docs/` (HOW-IT-WORKS, EDIT-PROTOCOL, toolbox, elevenlabs, ideas-*) · `pocs/GLOSSARY.md`

@@ -33,5 +33,8 @@ Uzasadnienie:
 - Wynik: arkusz klatek **v7 (Canvas 2D) | spike (WebGL)** z tych samych chwil, wydajność na żywo, rozmiar pliku, działanie w headless Chrome (WebGL w trybie programowym, SwiftShader) do MP4.
 - Kryterium sukcesu: user widzi wyraźny skok jakości, a uprząż przechodzi bez zmian w asercjach.
 
+## Zobacz też
+- [`docs/ideas-webgl.md`](../../../../docs/ideas-webgl.md): wcześniejszy backlog pomysłów WebGL/3D z PoC #2 (orbita, 2.5D, shadery, cząsteczki).
+
 ## Źródła
 - [Remotion: LICENSE.md](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md) · [Motion Canvas](https://github.com/motion-canvas/motion-canvas) · [Theatre.js](https://github.com/theatre-js/theatre) · [PixiJS](https://github.com/pixijs/pixijs) (licencje i aktywność z API GitHuba, 2026-10-07)

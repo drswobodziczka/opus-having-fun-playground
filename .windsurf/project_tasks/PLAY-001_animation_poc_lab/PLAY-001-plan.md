@@ -106,11 +106,7 @@
 ---
 
 ## 🔮 Options for Evolution / Refactor
-- [ ] Trzeci styl PoC-a (np. wektorowy flat, papierowy cut-out, CRT neon)
-- [ ] Galeria PoC-ów jako jeden artefakt
-- [ ] **Wymiana postaci w tej samej walce:** scenariusz bez zmian, ale postać ma inny styl walki i zachowanie (np. „zawodnik” jako moduł: pozy, ruchy specjalne, temperament, głos), wybór obsady przed renderem
-- [ ] **Wymiana stylu całego filmu:** styl jako moduł (paleta, render postaci, tło, efekty, typografia, muzyka), ten sam scenariusz
-- [ ] [Reżyserka](../../../docs/ideas-director.md): odtwarzacz + pasek scen + notatki w bazie artefaktu (6/8 uwag z feedbacku 1 było na poziomie sceny)
+- Przeniesione 2026-10-08 do globalnego [`BACKLOG.md`](../../../BACKLOG.md) (B2–B6: wymiana postaci, wymiana stylu, reżyserka, galeria, trzeci styl).
 
 ---
 
