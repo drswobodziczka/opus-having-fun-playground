@@ -70,6 +70,8 @@ Tak samo jak teraz `say`: skrypt generuje `vo/*.mp3` (te same nazwy: `round1`, `
 - **Głosy z Voice Library przez API wymagają płatnego planu:** HTTP 402 `paid_plan_required` („Free users cannot use library voices via the API”), także dla głosów już dodanych do „My Voices”. Na darmowym planie działają tylko głosy **premade** (`category: premade`).
 - Próbki 3 głosy × 3 kwestie (`Fight!`, `Finish him!`, `Fatality.`; stability 0,35, similarity 0,75, style 0,5): `pocs/ninja-sandstorm/voice-samples/el-<Głos>-REEL.mp3`. Harry (Fierce Warrior), Adam (Dominant, Firm), Brian (Deep, Resonant).
 - Głośność próbek waha się od −12,5 dB (Adam) do −27,4 dB (mean): przy wymianie lektora trzeba je **znormalizować** (np. `loudnorm`).
+- **Modele TTS** (z `GET /v1/models`, 2026-10-07): `eleven_v4` (najnowszy, „najbardziej emocjonalny i najszybszy”, 85 języków, 1 kr/znak), `eleven_v4_turbo` (to samo, niższe opóźnienie, 0,5 kr/znak), `eleven_v3` (bardzo ekspresyjny, tagi audio typu `[shouting]`, „wymaga więcej prompt engineeringu”; `stability` tylko 0 / 0,5 / 1), `eleven_multilingual_v2` (dotychczasowy domyślny, stabilny, do lektora i audiobooków), `flash`/`turbo` v2.x (niskie opóźnienie, do rozmów, 0,5 kr/znak). Próbki Harry'ego na trzech modelach: `el-Harry-REEL.mp3` (v2), `el-Harry-v4-REEL.mp3`, `el-Harry-v3-REEL.mp3` (z `[shouting]`).
+- **„Słuch” dla mowy:** Speech-to-Text (`POST /v1/speech-to-text`, `model_id=scribe_v1`) działa na darmowym planie. Transkrypcja pozwala sprawdzić, *co* zostało powiedziane (np. czy tag nie został przeczytany), ale nie barwę.
 
 ## Źródła
 - [Cennik API](https://elevenlabs.io/pricing/api) · [Cennik planów](https://elevenlabs.io/pricing) · [Pay As You Go (dokumentacja)](https://elevenlabs.io/docs/overview/administration/pay-as-you-go)
