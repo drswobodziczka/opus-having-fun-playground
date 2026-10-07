@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** PoC #3 v5 (feedback 4) gotowe: czeka na ocenę usera (postacie, podcięcie, muzyka adaptacyjna)
-*   **Immediate Next Action:** Ocena v5 (muzyka i obrót podcięcia: model ich nie widzi/nie słyszy). ElevenLabs: user dodaje klucz do Keychain (`docs/elevenlabs.md`) → test kosztu → 3 próbki głosów → wymiana lektora. Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
+*   **Immediate Next Action:** Ocena v5 (muzyka i obrót podcięcia: model ich nie widzi/nie słyszy). ElevenLabs: user wybiera głos uchem z `pocs/ninja-sandstorm/voice-samples/el-*-REEL.mp3` (Harry / Adam / Brian) → generuję 13 kwestii (~250 kredytów) do `vo/` + normalizacja głośności → wymiana lektora w nowej wersji. Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
 
 ---
 
@@ -76,7 +76,9 @@
 - [x] Feedback 4 (jeden wygląd postaci, wolniejsze podcięcie na dłoniach, muzyka adaptacyjna) → v5-feedback-4, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v5-feedback-4/CHANGES.md)
 - [ ] Ocena v5 przez usera
 - [x] Research + samouczek ElevenLabs: [`docs/elevenlabs.md`](../../../docs/elevenlabs.md)
-- [ ] Lektor z ElevenLabs (czeka na klucz w Keychain)
+- [x] Test kosztu ElevenLabs: TTS zużywa kredyty z planu (17 znaków = 17 kredytów). Głosy z Voice Library przez API = płatny plan (402), działają tylko premade. Wyniki: [`docs/elevenlabs.md`](../../../docs/elevenlabs.md) §4
+- [x] Próbki 3 głosy × 3 kwestie: `pocs/ninja-sandstorm/voice-samples/el-*-REEL.mp3` (łącznie zużyto 95/10 000 kredytów)
+- [ ] Wybór głosu przez usera → lektor z ElevenLabs w nowej wersji
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF

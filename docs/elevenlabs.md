@@ -29,6 +29,11 @@
    - `-a "$USER"`: nazwa konta (ty), `-s elevenlabs-api`: etykieta, po której go znajdziemy
    - `-w` bez wartości: **zapyta o klucz**, więc ten nie trafia do historii terminala ani do żadnego pliku
 4. Odczyt (tak będą go pobierać skrypty): `security find-generic-password -s elevenlabs-api -w`
+5. **Pułapka (2026-10-07):** zapisz **klucz** (`sk_…`), nie jego **ID** z listy kluczy w dashboardzie. Klucz jest widoczny tylko raz, przy tworzeniu albo rotacji. Objaw złego wpisu: `invalid_api_key` / `api_key_id_used_as_api_key`. Naprawa: utwórz albo zrotuj klucz, skopiuj `sk_…` i nadpisz wpis (`-U` aktualizuje istniejący):
+   ```bash
+   security add-generic-password -U -a "$USER" -s elevenlabs-api -w
+   ```
+   Szybki test bez wypisywania klucza: `security find-generic-password -s elevenlabs-api -w | cut -c1-3` powinno dać `sk_`.
 
 **Dlaczego nie `.env`:** `.env` to zwykły tekst w katalogu projektu, a nasze repo jest **publiczne**: jeden przypadkowy commit i klucz wycieka. Keychain nigdy nie leży w repo.
 
@@ -59,6 +64,12 @@ Potem zajrzyj do dashboardu (Usage), czy ubyło ~17 kredytów.
 
 ### 3.5. Jak to wejdzie do filmu
 Tak samo jak teraz `say`: skrypt generuje `vo/*.mp3` (te same nazwy: `round1`, `fight`, `ko`, `finish`, `fatality`, `spine`, …), a potem osadzamy je w HTML i miksujemy do MP4. Zmienia się tylko źródło głosu. Ewentualnie zostawiamy obróbkę ffmpeg (lekkie echo).
+
+## 4. Wyniki praktyczne (2026-10-07)
+- **Koszt rozstrzygnięty:** `Round one. Fight!` (17 znaków, `eleven_multilingual_v2`) zużyło **17 kredytów z planu**, a nie dolary. Licznik `/v1/user/subscription` aktualizuje się z opóźnieniem kilkunastu sekund.
+- **Głosy z Voice Library przez API wymagają płatnego planu:** HTTP 402 `paid_plan_required` („Free users cannot use library voices via the API”), także dla głosów już dodanych do „My Voices”. Na darmowym planie działają tylko głosy **premade** (`category: premade`).
+- Próbki 3 głosy × 3 kwestie (`Fight!`, `Finish him!`, `Fatality.`; stability 0,35, similarity 0,75, style 0,5): `pocs/ninja-sandstorm/voice-samples/el-<Głos>-REEL.mp3`. Harry (Fierce Warrior), Adam (Dominant, Firm), Brian (Deep, Resonant).
+- Głośność próbek waha się od −12,5 dB (Adam) do −27,4 dB (mean): przy wymianie lektora trzeba je **znormalizować** (np. `loudnorm`).
 
 ## Źródła
 - [Cennik API](https://elevenlabs.io/pricing/api) · [Cennik planów](https://elevenlabs.io/pricing) · [Pay As You Go (dokumentacja)](https://elevenlabs.io/docs/overview/administration/pay-as-you-go)
