@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** PoC #3 v5 (feedback 4) gotowe: czeka na ocenę usera (postacie, podcięcie, muzyka adaptacyjna)
-*   **Immediate Next Action:** Ocena v5 (muzyka i obrót podcięcia: model ich nie widzi/nie słyszy). ElevenLabs: user wybiera głos uchem z `pocs/ninja-sandstorm/voice-samples/el-*-REEL.mp3` (Harry / Adam / Brian) → generuję 13 kwestii (~250 kredytów) do `vo/` + normalizacja głośności → wymiana lektora w nowej wersji. Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
+*   **Immediate Next Action:** Ocena v5 (muzyka i obrót podcięcia: model ich nie widzi/nie słyszy). Feedback 5 (v5 → v6): lektor **Harry** (user wybiera model: v2 / v4 / v3 z `voice-samples/el-Harry-*REEL.mp3`), muzyka v5 „prawie jak v1” → energiczne kung-fu (talerze, flety, harfy); user decyduje o narzędziu (soundfont + fluidsynth / lepsza synteza / ElevenLabs Music). Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
 
 ---
 
@@ -78,7 +78,8 @@
 - [x] Research + samouczek ElevenLabs: [`docs/elevenlabs.md`](../../../docs/elevenlabs.md)
 - [x] Test kosztu ElevenLabs: TTS zużywa kredyty z planu (17 znaków = 17 kredytów). Głosy z Voice Library przez API = płatny plan (402), działają tylko premade. Wyniki: [`docs/elevenlabs.md`](../../../docs/elevenlabs.md) §4
 - [x] Próbki 3 głosy × 3 kwestie: `pocs/ninja-sandstorm/voice-samples/el-*-REEL.mp3` (łącznie zużyto 95/10 000 kredytów)
-- [ ] Wybór głosu przez usera → lektor z ElevenLabs w nowej wersji
+- [x] Wybór głosu: Harry (2026-10-07); do wyboru model v2/v4/v3
+- [ ] Feedback 5 → v6: lektor Harry + muzyka kung-fu (narzędzie do decyzji)
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
