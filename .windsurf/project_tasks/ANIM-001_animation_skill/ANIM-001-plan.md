@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Phase 3: skill. Wzorce są zebrane z 3 PoC-ów (PLAY-001), czekają na spisanie w `SKILL.md` i szablon
-*   **Immediate Next Action:** Akceptacja usera dla propozycji [`options/reusable-kit.md`](options/reusable-kit.md) (`kit/` engine/harness/audio/templates + `SKILL.md`, test = nowy mały film od zera). Potem krok 1: wydzielić `kit/harness` + `kit/audio` z ninja v7.
+*   **Immediate Next Action:** Wydzielić `kit/harness` + `kit/audio` z ninja v7; dowód: uprząż z kitu na niezmienionym `v7-feedback-6/storm.html` daje 41/41 i te same zdarzenia. Szablon briefu: [`kit/templates/BRIEF.md`](../../../kit/templates/BRIEF.md) (do iteracji przy następnym PoC-u).
 
 ---
 
@@ -54,6 +54,11 @@
 ---
 
 ## 🏗️ Architectural Decisions (ADR Log)
+
+### Decision #5: Kit i skill modelujemy w trakcie PoC-ów (2026-10-08)
+*   **Context:** User: „szkoda marnować doświadczeń”; czekanie z frameworkiem do końca PoC-ów gubi lekcje i mnoży kopie kodu.
+*   **Decision:** Zbieranie na bieżąco: ogólne klocki lądują w `kit/` w repo playgroundu (root), skill w `skills/code-animation/` (symlink do `~/.claude/skills`). Kolejne wersje PoC-ów używają klocków z kitu. **Sprawdzian końcowy** (nowy mały film od zera tylko z kitu) planujemy po postępie we wszystkich PoC-ach.
+*   **Consequence:** Każda runda PoC-a pyta „co z tego jest ogólne?”. Kit rośnie małymi krokami, z dowodem (uprząż przechodzi tak samo).
 
 ### Decision #1: Animacja = deterministyczny program, nie wideo
 *   **Context:** Potrzebna kontrola co do klatki, edytowalność i testowalność przez agenta.
