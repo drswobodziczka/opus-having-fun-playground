@@ -99,6 +99,10 @@
 - [x] Znacznik sceny i sekundy w kadrze, klik/strzałki (ninja v2+)
 - [ ] Porównanie z modelem wideo (fal.ai), jeśli będzie klucz API
 
+### Phase 4: Ładniejszy render (WebGL)
+- [x] Decyzja: własny silnik symulacji + render **PixiJS** z shaderami; Remotion / Motion Canvas odrzucone (rama czasu i MP4 już są, uroda to sprawa renderu). Notatka: [`options/webgl-render.md`](options/webgl-render.md)
+- [ ] Spike: scena S6 z v7 w PixiJS (papier, pędzel, poświata, krew-tusz) → arkusz v7 | WebGL + wydajność + MP4 z headless Chrome
+
 ---
 
 ## 🔮 Options for Evolution / Refactor
@@ -106,7 +110,6 @@
 - [ ] Galeria PoC-ów jako jeden artefakt
 - [ ] **Wymiana postaci w tej samej walce:** scenariusz bez zmian, ale postać ma inny styl walki i zachowanie (np. „zawodnik” jako moduł: pozy, ruchy specjalne, temperament, głos), wybór obsady przed renderem
 - [ ] **Wymiana stylu całego filmu:** styl jako moduł (paleta, render postaci, tło, efekty, typografia, muzyka), ten sam scenariusz
-- [ ] **Ładniejszy render (WebGL):** spike PixiJS/three.js + shadery (tusz, papier, poświata) przy zachowaniu silnika symulacji; porównać z Remotion / Motion Canvas / Revideo / Theatre.js (licencje, determinizm, render MP4)
 - [ ] [Reżyserka](../../../docs/ideas-director.md): odtwarzacz + pasek scen + notatki w bazie artefaktu (6/8 uwag z feedbacku 1 było na poziomie sceny)
 
 ---

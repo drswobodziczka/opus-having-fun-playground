@@ -1,36 +1,46 @@
 # Jak to działa: proces animacji (high level)
 
-> Do zrozumienia i edukacji, nie jako dokumentacja na zawsze. Stan: PoC #3 (The Storm Chose Black).
+> Do zrozumienia i edukacji, nie jako dokumentacja na zawsze. Stan: PoC #3 v7 (The Storm Chose Black), 2026-10-07.
 
 ## 1. Proces od pomysłu do filmu
 
 ```mermaid
 flowchart TD
   U(["Ty"]) -->|"temat, styl, czas"| Q["Bramka 1: pytania pogłębiające<br/>(ad1..adN)"]
-  Q --> BR["BRIEF.md<br/>sceny S1..Sn, zwroty, styl, decyzje"]
+  Q --> BR["BRIEF.md<br/>sceny S1..Sn, zwroty, styl, decyzje<br/>§8 Rewizje"]
   BR -->|"Bramka 2: akceptacja"| CODE
 
+  subgraph AUD["Audio poza plikiem (skrypty w katalogu wersji)"]
+    VOS["vo/make.mjs<br/>ElevenLabs: obsada, ujęcia, STT"] --> VOF["vo/*.mp3"]
+    SCO["music/score.mjs<br/>partytura jako kod"] --> MID["score.mid"] --> REN["music/render.mjs<br/>soundfont GeneralUser GS"] --> MUS["music.mp3"]
+  end
+  VOF --> EMB["embed.mjs<br/>mp3 → base64 w HTML"]
+  MUS --> EMB
+  EMB --> FILE
+
   subgraph FILE["Plik HTML = cały film (np. storm.html)"]
-    CODE["Scenariusz<br/>at(t, kto, akcja, wynik), sys(t, ...)"]
+    CODE["Scenariusz<br/>at(t, kto, akcja, wynik), sys(t, ...), SCENES"]
     ENG["Silnik<br/>(szczegóły niżej)"]
-    API["window.anim<br/>seek / step / state / events / script / scenes"]
+    API["window.anim<br/>seek / step / joints / events / script / renderAudio"]
     CODE --> ENG --> API
   end
 
   API --> H["Uprząż: check.mjs<br/>Node + Puppeteer + headless Chrome"]
-  H --> AS["Asercje<br/>fabuła + widzialność"]
+  H --> AS["Asercje<br/>fabuła, widzialność, skan klatek, powtórka"]
   H --> SH["Arkusze klatek PNG"]
   H --> TL["TIMELINE.md<br/>(tools/timeline.mjs)"]
   AS --> C(("Claude"))
   SH -->|"Read = wzrok"| C
   C -->|"poprawki"| CODE
 
-  H -->|"klatki + WAV z renderu offline"| FF["ffmpeg"] --> MP4["MP4 z dźwiękiem"]
-  FILE -->|"Artifact"| ART["Artefakt na claude.ai<br/>(przeglądarka liczy klatki na żywo)"]
+  H -->|"klatki + WAV z renderu offline"| FF["ffmpeg"] --> MP4["MP4 z dźwiękiem<br/>(lokalnie, poza git)"]
+  FILE -->|"Artifact: nowy link na wersję"| ART["Artefakt na claude.ai<br/>(przeglądarka liczy klatki na żywo)"]
   ART --> U
   MP4 --> U
   U -->|"film / S6 / @41.2: co zmienić"| C
 ```
+
+**Wersje:** każda runda feedbacku to nowy katalog `pocs/<temat>/vN-feedback-K/` (kopia poprzedniej), nowy artefakt, `CHANGES.md` i nowy TIMELINE. Zmiana decyzji z briefu trafia do BRIEF §8 „Rewizje”.
 
 ## 2. Co to jest „silnik”
 Silnik to część pliku HTML, która **zamienia scenariusz w obraz i dźwięk**. Nie jest osobnym programem. Każdy PoC ma własną kopię silnika, a skill ma go kiedyś ujednolicić.
@@ -42,13 +52,37 @@ flowchart LR
   SIM --> RIG["Rig szkieletowy + IK<br/>pozy, chwyty"]
   SIM --> CAM["Kamera<br/>śledzenie + ujęcia: najazd, odjazd, obrót"]
   SIM --> LOG["Log zdarzeń<br/>(dla testów i TIMELINE)"]
-  SIM --> CUE["Kolejka sygnałów audio"]
+  SIM --> CUE["Kolejka sygnałów audio<br/>efekty, lektor"]
   RIG --> RND["Render Canvas 2D<br/>tło, paralaksa, postacie, efekty, HUD"]
   CAM --> RND
   CUE --> LIVE["Web Audio na żywo<br/>(artefakt)"]
   CUE --> OFF["OfflineAudioContext<br/>→ WAV → MP4"]
-  VO["Lektor: say + ffmpeg<br/>mp3 osadzone w pliku"] --> CUE
+  VO["VO: mp3 w pliku<br/>(3 głosy)"] --> CUE
+  MUSIC["MUSIC: gotowa ścieżka<br/>(mp3 w pliku)"] -->|"syncMusic: gra od sekundy T,<br/>restart przy przewijaniu"| LIVE
+  MUSIC -->|"od 0 pod wszystkim"| OFF
 ```
+
+Od v6 muzyka **nie jest syntezowana na żywo**. To gotowa ścieżka wyrenderowana z partytury, która czyta te same czasy scen i zdarzeń co animacja, więc dalej „reaguje” na walkę. Efekty (ciosy, wiatr, pioruny) nadal powstają w przeglądarce z kolejki sygnałów.
+
+## 2a. Dźwięk: skąd się bierze
+```mermaid
+flowchart LR
+  subgraph V["Lektor i głosy postaci"]
+    L["LINES + CAST<br/>(kwestia, kto, limit czasu)"] --> TTS["ElevenLabs eleven_v3<br/>2 ujęcia na kwestię"]
+    TTS --> STT["Scribe (STT)<br/>czy słowa się zgadzają"]
+    STT --> PICK["wybór: mieści się w czasie,<br/>najgłośniejsze = krzyk"]
+    PICK --> FX["ffmpeg: przycięcie ciszy,<br/>obróbka (lektor MK: −3 półtony + pogłos),<br/>loudnorm"]
+  end
+  subgraph M["Muzyka"]
+    S["score.mjs<br/>SCENES + events.json"] --> MD["MIDI<br/>(nuty, instrumenty GM)"]
+    MD --> SY["spessasynth_core<br/>+ soundfont (próbki)"]
+    SY --> W["WAV → loudnorm → mp3"]
+  end
+  FX --> E["embed.mjs → storm.html"]
+  W --> E
+```
+- **Weryfikacja bez słuchu:** mowa przez transkrypcję (STT), muzyka przez spektrogram (`showspectrumpic` → PNG) i głośność w czasie. Barwę i miks ocenia człowiek.
+- Samouczki: [`elevenlabs.md`](elevenlabs.md), [`soundfont-fluidsynth.md`](soundfont-fluidsynth.md).
 
 ## 3. Pętla poprawek
 
@@ -60,12 +94,12 @@ sequenceDiagram
   participant H as Uprząż (headless Chrome)
   U->>C: S10 rzut za szybki · @51 kamera za blisko
   C->>C: TIMELINE: sekunda/scena → zdarzenia w scenariuszu
-  C->>F: zmiana scenariusza / kamery / rysowania
-  C->>H: check.mjs
-  H-->>C: asercje + arkusze PNG
-  C->>H: frames.mjs --before=HEAD
+  C->>F: nowy katalog vN-feedback-K (kopia) + zmiana scenariusza / kamery / rysowania / audio
+  C->>H: check.mjs [--mp4]
+  H-->>C: asercje + arkusze PNG + MP4
+  C->>H: frames.mjs --vs=poprzednia wersja
   H-->>C: arkusz PRZED | PO
-  C->>U: co zmieniłem + PRZED/PO + ten sam link artefaktu
+  C->>U: CHANGES.md + PRZED/PO + nowy link artefaktu + MP4
 ```
 
 ## 4. Toolset: czego używam i po co
@@ -76,12 +110,15 @@ sequenceDiagram
 | **`Read`** | czytam pliki i **obrazy PNG**, czyli mój „wzrok” | ocena arkuszy klatek |
 | **`Artifact`** | publikuję film jako stronę na claude.ai | po każdej wersji/poprawce |
 | **Przeglądarka: Canvas 2D** | rysowanie klatek | w artefakcie i w testach |
-| **Przeglądarka: Web Audio / OfflineAudioContext** | synteza muzyki i SFX, render ścieżki do MP4 | dźwięk |
+| **Przeglądarka: Web Audio / OfflineAudioContext** | synteza efektów (SFX), odtwarzanie lektora i ścieżki muzycznej, render audio do MP4 | dźwięk |
 | **Node.js + `puppeteer-core`** | steruje przeglądarką bez okna | uprząż, TIMELINE, PRZED/PO |
 | **Chrome headless shell** | przeglądarka bez okna (z cache Puppeteera) | jw. |
-| **ffmpeg / ffprobe** | klatki → MP4, miks audio, obróbka głosu, pomiar głośności | eksport, lektor |
-| **macOS `say`** | synteza mowy (lektor) | nagranie kwestii |
-| **python3** | chirurgiczne podmiany w kodzie, osadzanie mp3 jako base64 | poprawki |
+| **ffmpeg / ffprobe** | klatki → MP4, obróbka głosu, `loudnorm`, pomiar głośności, spektrogram | eksport, lektor, weryfikacja dźwięku |
+| **ElevenLabs API** (TTS `eleven_v3` + Scribe STT) | głosy lektora i postaci; transkrypcja jako „słuch” do sprawdzenia słów | nagranie i weryfikacja kwestii |
+| **`spessasynth_core` + soundfont GeneralUser GS** | gra partyturę MIDI próbkami instrumentów (60 s w ~3 s) | muzyka |
+| *macOS `say`* | *synteza mowy do v5 (zastąpiona przez ElevenLabs)* | — |
+| **python3** | chirurgiczne podmiany w kodzie | poprawki |
+| **`embed.mjs`** | osadza `vo/*.mp3` i `music.mp3` w HTML jako base64 | po zmianie audio |
 | **git / gh** | wersje, PRZED (`--before=HEAD`), GitHub | commit, push |
 | **Google Fonts** | fonty strony (pędzel, piksel) | ładowane przez przeglądarkę |
 | `WebSearch` / `WebFetch` | research (np. ceny TTS) | **nie** do samej animacji |
@@ -123,6 +160,7 @@ Rodzaje dziś:
 | widzialność | „obie postacie w kadrze w 40,95 s” | `view()` (pozycje kości → ekran) |
 | dynamika | „≥ 36 starć w trzech wymianach” | `events()` |
 | technika | „0 błędów konsoli” | konsola przeglądarki |
+| **powtórka (replay)** | „pozy po pełnym przebiegu = pozy na świeżej stronie” (łapie stan nieczyszczony przy restarcie, bug v6) | `seek()` + `joints()` w 8 chwilach |
 | **ciągłość (klatka po klatce)** | „żadna kość nie skacze ≥ 60 px między klatkami”, „brak NaN” | `advance(1)` + `joints()` dla **wszystkich** 3600 klatek |
 
 **Skan klatka po klatce** (od v3 ninja) przechodzi przez cały film krok po kroku i mierzy, jak daleko przesunęła się każda kość między sąsiednimi klatkami. Duży skok bez powodu (nie cięcie, nie teleport fabularny) oznacza przeskok pozy, chwytu albo odwrócenia, czyli „fizyka leży”. W v3 znalazł ~300 takich miejsc, których nie widziały ani asercje, ani arkusze.
@@ -137,6 +175,8 @@ Rodzaje dziś:
 | **Kamera** | śledzi walczących, a w ujęciach robi najazd, odjazd albo obrót | operator | `updateCamera()`, `SHOTS` |
 | **Render** | rysuje klatkę: tło i paralaksa, postacie w stylu (a) lub (b), efekty, HUD, napisy, znacznik sekundy | malarz | `render()`, `drawWorld()`, `drawFighter()` |
 | **Kolejka audio** | symulacja zgłasza „tu cios”, „tu lektor”. Na żywo gra od razu, do MP4 renderuje się offline | dźwiękowiec | `cue()`, `playCue()`, `renderAudio()` |
+| **Ścieżka muzyczna** | gotowe mp3 z partytury; na żywo zsynchronizowane z czasem filmu, w MP4 od zera | taśma z orkiestrą | `MUSIC`, `syncMusic()`, `music/score.mjs` |
+| **Stan postaci + reset** | wszystko, co postać pamięta (czas trafienia, odbicia, chwyty); restart musi to wyczyścić | charakteryzacja przed dublem | `mk()`, `resetFighters()`, `newRun()` |
 | **Log zdarzeń** | zapisuje, co się faktycznie wydarzyło (dla asercji i TIMELINE) | kronikarz | `log()`, `EV` |
 | **`window.anim`** | „okienko” dla narzędzi: przewiń, podaj stan, zdarzenia, sceny | panel serwisowy | na dole pliku |
 

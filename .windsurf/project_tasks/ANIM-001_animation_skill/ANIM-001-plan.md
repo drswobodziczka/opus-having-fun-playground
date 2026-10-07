@@ -7,11 +7,12 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Phase 3: skill. Wzorce są zebrane z 3 PoC-ów (PLAY-001), czekają na spisanie w `SKILL.md` i szablon
-*   **Immediate Next Action:** Po zamknięciu rund feedbacku do ninja i TIMELINE v2 (PLAY-001): szkic `skills/code-animation/SKILL.md` (workflow: pytania → brief ze scenami S1..Sn → build z szablonu → check → TIMELINE → publish → pętla poprawek → postmortem) + wydzielenie szablonu silnika ze `storm.html`.
+*   **Immediate Next Action:** Akceptacja usera dla propozycji [`options/reusable-kit.md`](options/reusable-kit.md) (`kit/` engine/harness/audio/templates + `SKILL.md`, test = nowy mały film od zera). Potem krok 1: wydzielić `kit/harness` + `kit/audio` z ninja v7.
 
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   2026-10-07: wzorzec silnika/uprzęży/audio to teraz **ninja v7** (`pocs/ninja-sandstorm/v7-feedback-6/`): + `vo/make.mjs` (ElevenLabs, obsada, STT, sloty), `music/score.mjs` → MIDI → soundfont (spessasynth_core), `embed.mjs`, `syncMusic`, test „Replay” (reset stanu postaci). User pyta o framework do powtarzalnych filmów → [`options/reusable-kit.md`](options/reusable-kit.md).
 *   HANDOVER 2026-10-07: dalsza praca w tym repo (`CLAUDE.md`). Najpełniejszy wzorzec silnika i uprzęży to teraz **ninja v5** (`pocs/ninja-sandstorm/v5-feedback-4/`): + adaptacyjna muzyka sterowana zdarzeniami (`SCENE_MODE`, `STINGERS`), limiter na wyjściu, jeden projekt postaci (obwódka zależna od tła), IK do podłoża (`groundF/B`).
 *   Lekcje silnika z ninja v3 (do szablonu): płynne przejścia póz (adaptacyjne 0,07–0,2 s), kąty po najkrótszym łuku, obrót postaci w czasie (spinX), chwyty z dojściem i płynnym puszczeniem, każdy ruch akrobatyczny musi mieć powód (unik przed konkretnym ciosem).
 *   Pętla poprawek (prośba usera 2026-10-02): user podaje `@sekunda co zmienić` (albo ID zdarzenia), a skill: lokalizuje w TIMELINE → zmienia → check → arkusz PRZED/PO → ten sam link artefaktu → commit. Rozpiska sekunda po sekundzie (dope sheet) jest GENEROWANA z animacji (`tools/timeline.mjs`), nie pisana ręcznie; brief to plan, timeline to stan faktyczny. Kontrakt: `window.anim = { duration, seek, state, events, script }`. Skill ma to mieć wbudowane.
