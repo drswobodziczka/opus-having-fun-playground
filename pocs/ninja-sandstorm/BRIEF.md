@@ -97,3 +97,5 @@ Paski HP w stylu bijatyk z lat 90., imiona, licznik, combo („12 HITS”), bane
 | v5 | **Postacie:** jeden projekt w całym filmie (pędzel + obwódka, jasnoszary BISHUKIJ, czarny ALAMANDRO) | osobny wygląd dzienny i nocny z v4 |
 | v5 | S3: podcięcie **wolniej, na obu dłoniach** | szybkie podcięcie z v4 |
 | v5 | **Muzyka (§5):** **perkusyjna, adaptacyjna** (taiko, tomy, talerze, bordun, gong; tryb wg sceny, akcenty na zdarzeniach, werbel do fatality), bez melodii | zespół chiński z melodią erhu (v4) |
+| v6 | **Lektor (§5):** ElevenLabs, głos **Harry**, model `eleven_v3` (krzyk przez tagi); śmiech przy 44 s długi i szalony | `say` Daniel + ffmpeg |
+| v6 | **Muzyka (§5):** **energiczne kung-fu z próbek instrumentów** (partytura w kodzie → MIDI → soundfont GeneralUser GS): koto, flet, shamisen, taiko, woodblocki, chińskie talerze, smyczki; melodia pentatoniczna wraca; adaptacyjność w partyturze | perkusja z oscylatorów bez melodii (v5) |

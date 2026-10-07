@@ -6,14 +6,15 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #3 v5 (feedback 4) gotowe: czeka na ocenę usera (postacie, podcięcie, muzyka adaptacyjna)
-*   **Immediate Next Action:** Ocena v5 (muzyka i obrót podcięcia: model ich nie widzi/nie słyszy). Feedback 5 (v5 → v6): lektor **Harry** (user wybiera model: v2 / v4 / v3 z `voice-samples/el-Harry-*REEL.mp3`), muzyka v5 „prawie jak v1” → energiczne kung-fu (talerze, flety, harfy); user decyduje o narzędziu (soundfont + fluidsynth / lepsza synteza / ElevenLabs Music). Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
+*   **Current Focus:** PoC #3 v6 (feedback 5) gotowe: lektor Harry (ElevenLabs v3) + muzyka kung-fu z soundfontu; czeka na ocenę usera
+*   **Immediate Next Action:** Ocena v6 uchem (barwa lektora, muzyka, miks lektor/muzyka; model tego nie słyszy). Potem TIMELINE v2: dodać do scenariusza znaczniki scen `scene(id, t0, t1, cel)` zgodne z tabelą w BRIEF, a generator ma grupować po scenach i pokazywać CO/JAK/PO CO.
 
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
 *   HANDOVER 2026-10-07: od następnej sesji pracujemy **w tym repo** (wcześniej sesja żyła w `title-master`). Konwencje i komendy: `CLAUDE.md` w root repo. Pamięć agenta (bramki preprodukcji, konto do pushowania) skopiowana do projektu playgroundu.
-*   Stan ninja: v1 → v5 (`pocs/ninja-sandstorm/v5-feedback-4/`, artefakt https://claude.ai/code/artifact/c62a9c64-1114-4cef-9c01-d2480995bd54). Do oceny przez usera: muzyka adaptacyjna (perkusyjna) i czytelność obrotu w podcięciu S3.
+*   Stan ninja: v1 → v6 (`pocs/ninja-sandstorm/v6-feedback-5/`, artefakt https://claude.ai/code/artifact/d33f1513-81fc-42a0-87b0-9215922a3fe4). Do oceny: lektor Harry, muzyka kung-fu, miks.
+*   Muzyka z soundfontu: partytura w kodzie → MIDI → GeneralUser GS → `spessasynth_core` (JS), samouczek [`docs/soundfont-fluidsynth.md`](../../../docs/soundfont-fluidsynth.md). Mowę weryfikuję transkrypcją ElevenLabs (Scribe), muzykę spektrogramem.
 *   Każdy PoC to katalog `pocs/<temat>/vN-<opis>/` z: `*.html`, uprzężą/wynikami testów, `POSTMORTEM.md`.
 *   Postmortem robimy **po każdej wersji**: narzędzia (kolejność, cel, czas), problemy prosto, lekcje.
 *   Wnioski przenoszone do skilla są śledzone w ANIM-001.
@@ -74,12 +75,13 @@
 - [x] Feedback 2 (S6 parowanie + dźwignia, S10 suplex, salta) + skan klatka po klatce → v3-feedback-2, 39/39, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v3-feedback-2/CHANGES.md)
 - [x] Feedback 3 (styl tuszu + noc, podcięcie, muzyka chińska, kręgosłup) → v4-feedback-3, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v4-feedback-3/CHANGES.md); BRIEF §8 Rewizje
 - [x] Feedback 4 (jeden wygląd postaci, wolniejsze podcięcie na dłoniach, muzyka adaptacyjna) → v5-feedback-4, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v5-feedback-4/CHANGES.md)
-- [ ] Ocena v5 przez usera
+- [x] Ocena v5 przez usera (→ feedback 5)
 - [x] Research + samouczek ElevenLabs: [`docs/elevenlabs.md`](../../../docs/elevenlabs.md)
 - [x] Test kosztu ElevenLabs: TTS zużywa kredyty z planu (17 znaków = 17 kredytów). Głosy z Voice Library przez API = płatny plan (402), działają tylko premade. Wyniki: [`docs/elevenlabs.md`](../../../docs/elevenlabs.md) §4
 - [x] Próbki 3 głosy × 3 kwestie: `pocs/ninja-sandstorm/voice-samples/el-*-REEL.mp3` (łącznie zużyto 95/10 000 kredytów)
 - [x] Wybór głosu: Harry (2026-10-07); do wyboru model v2/v4/v3
-- [ ] Feedback 5 → v6: lektor Harry + muzyka kung-fu (narzędzie do decyzji)
+- [x] Feedback 5 (lektor Harry v3, szalony śmiech, muzyka kung-fu z soundfontu) → v6-feedback-5, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v6-feedback-5/CHANGES.md); BRIEF §8
+- [ ] Ocena v6 przez usera
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
