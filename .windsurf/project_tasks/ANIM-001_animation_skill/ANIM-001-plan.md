@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Phase 3: skill. Wzorce są zebrane z 3 PoC-ów (PLAY-001), czekają na spisanie w `SKILL.md` i szablon
-*   **Immediate Next Action:** Wydzielić `kit/harness` + `kit/audio` z ninja v7; dowód: uprząż z kitu na niezmienionym `v7-feedback-6/storm.html` daje 41/41 i te same zdarzenia. Szablon briefu: [`kit/templates/BRIEF.md`](../../../kit/templates/BRIEF.md) (do iteracji przy następnym PoC-u).
+*   **Immediate Next Action:** `kit/harness` ✅ (dowód na v7: identyczne wyniki). Dalej: używać go w spike'u WebGL (`pocs/ninja-webgl/`), potem wydzielić `kit/audio`. Szablon briefu: [`kit/templates/BRIEF.md`](../../../kit/templates/BRIEF.md) (pierwsze użycie: brief ninja-webgl).
 
 ---
 

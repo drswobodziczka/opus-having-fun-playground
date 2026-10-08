@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** PoC #3 v7 (feedback 6) gotowe: lektor w stylu MK + głosy postaci, poprawka powtórki; czeka na ocenę usera
-*   **Immediate Next Action:** Ocena v7 uchem (lektor MK, Harry, Callum). Potem TIMELINE v2: znaczniki scen `scene(id, t0, t1, cel)` zgodne z BRIEF, generator grupuje po scenach (CO/JAK/PO CO).
+*   **Current Focus:** Faza 4: spike WebGL. Brief [`pocs/ninja-webgl/BRIEF.md`](../../../pocs/ninja-webgl/BRIEF.md) (S6 + S8, „kinowo”, 1280×720) czeka na akceptację; `kit/harness` gotowy (ANIM-001)
+*   **Immediate Next Action:** Akceptacja briefu ninja-webgl → render PixiJS dla S6 i S8–S9a → uprząż z kitu → arkusz v7 | WebGL + MP4 720p + pomiary. W tle: ocena v7 uchem.
 
 ---
 
@@ -101,7 +101,9 @@
 
 ### Phase 4: Ładniejszy render (WebGL)
 - [x] Decyzja: własny silnik symulacji + render **PixiJS** z shaderami; Remotion / Motion Canvas odrzucone (rama czasu i MP4 już są, uroda to sprawa renderu). Notatka: [`options/webgl-render.md`](options/webgl-render.md)
-- [ ] Spike: scena S6 z v7 w PixiJS (papier, pędzel, poświata, krew-tusz) → arkusz v7 | WebGL + wydajność + MP4 z headless Chrome
+- [x] Pytania ad1–ad3 (S6 + S8, kinowo, 720p) → brief [`pocs/ninja-webgl/BRIEF.md`](../../../pocs/ninja-webgl/BRIEF.md)
+- [ ] Akceptacja briefu
+- [ ] Spike `pocs/ninja-webgl/v1-spike-s6-s8/`: render PixiJS → arkusz v7 | WebGL + wydajność + MP4 720p
 
 ---
 
