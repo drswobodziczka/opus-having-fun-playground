@@ -1,7 +1,7 @@
 // kit/harness: shared test-harness blocks for code-animated films (contract: window.anim in the page).
 // A film's check.mjs keeps only its assertions and calls these blocks. Backbone: frameScan (every tick, every joint).
 // Required window.anim: duration, seek(t), step(n), advance(n), joints(), state(), events()
-// Optional: view(), script(), setTimecode(v), renderAudio(rate), capture() -> dataURL (WebGL canvases)
+// Optional: view(), script(), setTimecode(v), renderAudio(rate), capture() -> dataURL (WebGL canvases), ready (Promise)
 import puppeteer from 'puppeteer-core';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -24,14 +24,17 @@ export function cliArgs(argv = process.argv.slice(2)) {
 }
 
 // open the film in headless Chrome; collects page/console errors
-export async function openFilm(html, { tc = false, chromeArgs = [] } = {}) {
-  const browser = await puppeteer.launch({ executablePath: findChrome(), headless: 'shell', args: ['--autoplay-policy=no-user-gesture-required', ...chromeArgs] });
+// gl: WebGL films. Headless Chrome has no GPU and silently falls back (PixiJS -> Canvas renderer); SwiftShader gives real WebGL in software.
+export async function openFilm(html, { tc = false, gl = false, chromeArgs = [] } = {}) {
+  const glArgs = gl ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : [];
+  const browser = await puppeteer.launch({ executablePath: findChrome(), headless: 'shell', args: ['--autoplay-policy=no-user-gesture-required', ...glArgs, ...chromeArgs] });
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
   page.on('console', m => m.type() === 'error' && errors.push(m.text()));
   await page.goto('file://' + html + '?t=0', { waitUntil: 'networkidle0' });
   await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(() => window.anim.ready); // async renderers (WebGL init)
   await page.evaluate(v => window.anim.setTimecode && window.anim.setTimecode(v), tc); // explicit: films may show the timecode by default
   const duration = await page.evaluate(() => window.anim.duration);
   return { browser, page, errors, duration };
