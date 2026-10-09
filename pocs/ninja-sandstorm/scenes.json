@@ -1,0 +1,19 @@
+{
+  "_": "Opis scen S1..S13 (stan v7, z rewizjami z BRIEF §8). CO = co widać, JAK = kamera i rytm, PO CO = rola sceny. Czytany przez tools/timeline.mjs. Czasy scen bierze z animacji (anim.scenes()).",
+  "cast": { "B": "BISHUKIJ (jasnoszary)", "A": "ALAMANDRO (czarny)" },
+  "scenes": {
+    "S1": { "co": "Tytuł malowany pędzlem na papierze, imiona, czerwona pieczęć VS, burza w tle", "jak": "kamera stoi, napisy wjeżdżają pędzlem", "poco": "przedstawić walczących i styl tuszu" },
+    "S2": { "co": "Lektor: ROUND ONE, potem FIGHT!", "jak": "szeroki plan, muzyka: bicie serca, przejście w groove na FIGHT!", "poco": "start rundy, nabranie tempa" },
+    "S3": { "co": "Zderzenie w powietrzu, wymiana ciosów i bloków; ALAMANDRO kopie wysoko, BISHUKIJ kuca i podcina go oburącz, ALAMANDRO pada i wstaje", "jak": "kamera śledzi, lekkie zbliżenie; podcięcie wolniej, z pełnym obrotem na dłoniach", "poco": "pokazać, że BISHUKIJ jest szybki i zwinny; pierwsza krew" },
+    "S4": { "co": "ZWROT 1 · SAND COBRA: BISHUKIJ przeskakuje i dusi ALAMANDRO od tyłu, ten traci HP, wyrywa się łokciem", "jak": "piruet kamery, potem zbliżenie na duszenie", "poco": "BISHUKIJ przejmuje przewagę" },
+    "S5": { "co": "Szybkie serie obu stron, każde salto BISHUKIJA to unik przed konkretnym ciosem", "jak": "kamera śledzi, tempo wysokie", "poco": "BISHUKIJ prowadzi na punkty" },
+    "S6": { "co": "ZWROT 2 · BLACK MONSOON: BISHUKIJ skacze, ALAMANDRO paruje (widoczne odbicie ręki), łapie pięść, zakłada dźwignię i się śmieje; seria 12 ciosów, K.O.", "jak": "najazd i obrót do frontu ALAMANDRO przy parowaniu, odjazd na monsunie", "poco": "odwrócenie losu: czarny pokazuje siłę, koniec rundy 1" },
+    "S7": { "co": "Ściana piasku zalewa kadr, kleks tuszu, przejście w noc", "jak": "przejście maską tuszu", "poco": "zmiana nastroju: runda 2 nocą" },
+    "S8": { "co": "Nocna burza, piorun, ROUND TWO, FIGHT!", "jak": "szeroki plan, bicie serca w muzyce", "poco": "napięcie przed rewanżem" },
+    "S9": { "co": "BISHUKIJ wściekły, szybki i skuteczny; ALAMANDRO pierwszy raz krwawi", "jak": "kamera śledzi, piorun w tle", "poco": "rewanż BISHUKIJA, odwrócenie przewagi" },
+    "S10": { "co": "ZWROT 3 · DUNE BREAKER: chwyt za pas, uniesienie i suplex przez głowę, ALAMANDRO ląduje na głowie i przewraca się", "jak": "obrót kamery w trakcie rzutu", "poco": "najmocniejszy cios BISHUKIJA, ALAMANDRO na skraju" },
+    "S11": { "co": "ALAMANDRO wstaje, szaleńczo się śmieje, znika i atakuje z trzech stron (teleporty), BISHUKIJ ogłuszony; lektor: FINISH HIM!", "jak": "cięcia przy teleportach, kamera śledzi", "poco": "kontra: czarny przejmuje walkę na dobre" },
+    "S12": { "co": "ZWROT 4 · SPINE OF THE STORM: piorun, zbliżenie na pięść, cios, głowa wyrwana z kręgosłupem; FATALITY", "jak": "zbliżenie 3× na pięść, werbel do kontaktu, cisza, potem odjazd", "poco": "fatality, kulminacja" },
+    "S13": { "co": "Lądowanie superbohatera z trofeum, ALAMANDRO WINS, THE STORM CHOSE BLACK., wiatr zasypuje kadr", "jak": "szeroki plan, muzyka zwycięstwa", "poco": "puenta i zamknięcie" }
+  }
+}

@@ -9,7 +9,7 @@ Poligon animacji generowanych **kodem** (HTML/Canvas, deterministycznie) + rozw�
 ## Proces (obowiązuje)
 1. **Nowy PoC:** ponumerowane pytania pogłębiające (2–3 albo 5–8 zależnie od skali) → `BRIEF.md` z szablonu [`kit/templates/BRIEF.md`](kit/templates/BRIEF.md) (tabela scen S1..Sn z asercjami) → **akceptacja usera** → dopiero kod.
 2. **Feedback** w formacie [`docs/EDIT-PROTOCOL.md`](docs/EDIT-PROTOCOL.md): `[film]` / `S6` / `@41.2` + tagi. Kanał: czat.
-3. **Runda feedbacku = nowa wersja:** `pocs/<temat>/vN-feedback-K/` (kopia poprzedniej) + **nowy artefakt** (nowy plik → nowy link) + `CHANGES.md` + porównanie `tools/frames.mjs --vs=<poprzednia>` + `TIMELINE.md`. Zmiana decyzji z briefu → wpis w `BRIEF.md` §8 „Rewizje”.
+3. **Runda feedbacku = nowa wersja:** `pocs/<temat>/vN-feedback-K/` (kopia poprzedniej) + **nowy artefakt** (nowy plik → nowy link) + `CHANGES.md` + porównanie `tools/frames.mjs --vs=<poprzednia>` + `TIMELINE.md` (v2: po scenach, opisy z `pocs/<temat>/scenes.json`). Zmiana decyzji z briefu → wpis w `BRIEF.md` §8 „Rewizje” **i migawka `BRIEF.md` w katalogu wersji** (brief, który obowiązuje tę wersję). Wejście usera, od którego film się zaczął: `pocs/<temat>/PROMPT.md`. Zebrane, jeszcze niezrealizowane uwagi: `pocs/<temat>/NEXT.md`.
 4. **Walidacja przed oddaniem** (Decision #4 ANIM-001): `node check.mjs` (fabuła, widzialność, **skan klatka po klatce**), gęste arkusze zmienianych scen, jedno spojrzenie (`Read` PNG), MP4 na życzenie (`--mp4`) + pomiar głośności ffmpeg (model nie słyszy dźwięku).
 5. Uczciwie raportuj, czego nie sprawdzono (dźwięk, płynność ruchu na żywo).
 

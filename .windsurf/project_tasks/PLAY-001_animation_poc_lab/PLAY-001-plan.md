@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Spike WebGL v1 gotowy (15/15, symulacja = v7): https://claude.ai/code/artifact/9a209cbf-154b-42cb-9f36-936ef317fba3 · [postmortem](../../../pocs/ninja-webgl/v1-spike-s6-s8/POSTMORTEM.md)
-*   **Immediate Next Action:** Ocena usera (artefakt + `side-s6.mp4` / `side-s8.mp4`): czy skok jakości wystarcza na v8 w WebGL? Kandydat na następny krok jakościowy: nowy pędzel postaci. W tle: ocena głosów v7.
+*   **Current Focus:** Feedback 7 zebrany w [`pocs/ninja-sandstorm/NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (szalony ALAMANDRO, stopy, paralaksa ×3 + burza, stwór i runda 3, BISHUKIJ-robot, fatality energią + dezintegracja, bogatszy słownik ruchów). Spike WebGL: cały film renderuje się przez WebGL; raport efektów [`docs/webgl-effects.md`](../../../docs/webgl-effects.md)
+*   **Immediate Next Action:** Pytania do v8 (długość i runda 3, fatality, robot: wygląd i głos, krew przy publikacji) → BRIEF §8 → v8 w Canvas 2D → port do WebGL.
 
 ---
 
@@ -87,7 +87,7 @@
 - [ ] Ocena v7 przez usera
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
-- [ ] TIMELINE v2: kolumna scenariusza mówi CO się dzieje, JAK i DO CZEGO dąży; grupowanie po scenach S1..Sn 1-1 z BRIEF
+- [x] TIMELINE v2 (2026-10-09): grupowanie po scenach, CO / JAK / PO CO z [`scenes.json`](../../../pocs/ninja-sandstorm/scenes.json), polskie opisy akcji, zwinięte puste sekundy; wygenerowane dla v7 i spike'a WebGL
 - [ ] Znaczniki scen w kodzie (`scene(id, t0, t1, cel)`) dla PoC #2 i #3
 - [x] Generator `tools/timeline.mjs` + `tools/frames.mjs` + `docs/EDIT-PROTOCOL.md` (v1)
 
@@ -104,7 +104,8 @@
 - [x] Pytania ad1–ad3 (S6 + S8, kinowo, 720p) → brief [`pocs/ninja-webgl/BRIEF.md`](../../../pocs/ninja-webgl/BRIEF.md)
 - [x] Akceptacja briefu (2026-10-09)
 - [x] Spike `pocs/ninja-webgl/v1-spike-s6-s8/`: 15/15, [`compare-v7-gl.png`](../../../pocs/ninja-webgl/v1-spike-s6-s8/compare-v7-gl.png), MP4 segmentów, [postmortem](../../../pocs/ninja-webgl/v1-spike-s6-s8/POSTMORTEM.md)
-- [ ] Ocena spike'a przez usera → decyzja o v8 w WebGL
+- [x] Ocena spike'a: user widzi, że zmienił się cały film; decyzja: zmiany w v7 (Canvas) → v8, potem port do WebGL
+- [x] Migawki briefu per wersja (v1–v7), [`PROMPT.md`](../../../pocs/ninja-sandstorm/PROMPT.md) z wejściem usera
 
 ---
 

@@ -1,6 +1,6 @@
-# TIMELINE: Ninja Sandstorm v7 (Canvas 2D)
+# TIMELINE: Ninja WebGL spike v1
 
-> **Wygenerowane z animacji** (`node tools/timeline.mjs`), więc zawsze zgodne z kodem. Opisy scen (CO / JAK / PO CO): [`../scenes.json`](../scenes.json).
+> **Wygenerowane z animacji** (`node tools/timeline.mjs`), więc zawsze zgodne z kodem. Opisy scen (CO / JAK / PO CO): [`../../ninja-sandstorm/scenes.json`](../../ninja-sandstorm/scenes.json).
 > Czytaj: scena → co ma się dziać i po co → sekunda po sekundzie. **Scenariusz** = co reżyseruje kod (`E042` = ID zdarzenia, do poprawek), **Wynik** = co faktycznie zaszło. Puste sekundy są zwinięte.
 > Poprawki: `S6 …`, `@41.2 …` albo `E087 …` ([`EDIT-PROTOCOL`](../../../docs/EDIT-PROTOCOL.md)).
 > Obsada: **B** = BISHUKIJ (jasnoszary) · **A** = ALAMANDRO (czarny).
