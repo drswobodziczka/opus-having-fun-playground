@@ -1,0 +1,340 @@
+{
+ "round1": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[shouting] Round one!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.226259,
+    "mean": -21.4,
+    "heard": "Round one",
+    "words": true,
+    "ok": false
+   },
+   {
+    "k": 1,
+    "dur": 1.086871,
+    "mean": -20.8,
+    "heard": "Round one",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 1
+ },
+ "fight": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[shouting] Fight!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.230181,
+    "mean": -24.5,
+    "heard": "Fight!",
+    "words": true,
+    "ok": false
+   },
+   {
+    "k": 1,
+    "dur": 0.683741,
+    "mean": -23.1,
+    "heard": "Fight!",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 1
+ },
+ "ko": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[shouting] K.O.!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.202698,
+    "mean": -21.9,
+    "heard": "KO",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 1.400635,
+    "mean": -21.5,
+    "heard": "KO",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 1
+ },
+ "round2": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[shouting] Round two!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.232562,
+    "mean": -20.9,
+    "heard": "Round two",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 1.343197,
+    "mean": -21.8,
+    "heard": "Round two",
+    "words": true,
+    "ok": false
+   }
+  ],
+  "picked": 0
+ },
+ "finish": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[shouting] Finish him!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.324671,
+    "mean": -21.3,
+    "heard": "Finish him!",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 1.8061,
+    "mean": -24,
+    "heard": "Finish him",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 0
+ },
+ "fatality": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[shouting] Fatality!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.220431,
+    "mean": -21.1,
+    "heard": "Fatality",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 1.810385,
+    "mean": -23.5,
+    "heard": "Fatality",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 0
+ },
+ "wins": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[shouting] Alamandro wins!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.838435,
+    "mean": -20.5,
+    "heard": "Alamandro wins",
+    "words": true,
+    "ok": false
+   },
+   {
+    "k": 1,
+    "dur": 1.923243,
+    "mean": -20.6,
+    "heard": "Alamandra wins",
+    "words": false,
+    "ok": false
+   }
+  ],
+  "picked": 0,
+  "speed": 1.2
+ },
+ "storm": {
+  "who": "announcer",
+  "voice": "pNInz6obpgDQGcFmaJgB",
+  "text": "[deep voice] The storm chose black.",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.875941,
+    "mean": -25.8,
+    "heard": "The storm chose black",
+    "words": true,
+    "ok": false
+   },
+   {
+    "k": 1,
+    "dur": 1.960249,
+    "mean": -24.8,
+    "heard": "The storm chose black",
+    "words": true,
+    "ok": false
+   }
+  ],
+  "picked": 0,
+  "speed": 1.14
+ },
+ "monsoon": {
+  "who": "alamandro",
+  "voice": "SOYHLrjzK2X1ezoPC6cr",
+  "text": "[shouting] Black Monsoon!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.400249,
+    "mean": -13.7,
+    "heard": "Black Monsoon",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 1.353016,
+    "mean": -14.6,
+    "heard": "Black Monsoon",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 0
+ },
+ "spine": {
+  "who": "alamandro",
+  "voice": "SOYHLrjzK2X1ezoPC6cr",
+  "text": "[shouting] Spine of the storm!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.594535,
+    "mean": -14.9,
+    "heard": "Spine of the storm",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 1.654739,
+    "mean": -15.2,
+    "heard": "Spine of the storm",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 0
+ },
+ "haha": {
+  "who": "alamandro",
+  "voice": "SOYHLrjzK2X1ezoPC6cr",
+  "text": "[laughs] Ha ha ha!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.242698,
+    "mean": -19.2,
+    "heard": "[laughs]",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 1.193401,
+    "mean": -18.5,
+    "heard": "[laughs]",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 1
+ },
+ "cackle": {
+  "who": "alamandro",
+  "voice": "SOYHLrjzK2X1ezoPC6cr",
+  "text": "[laughs maniacally] Hahahahahaha! [crazy laugh] HA HA HA HA HAAA!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 4.086213,
+    "mean": -16.1,
+    "heard": "[laughs]",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 3.745306,
+    "mean": -16.2,
+    "heard": "[laughs]",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 0
+ },
+ "cobra": {
+  "who": "bishukij",
+  "voice": "N2lVS1w4EtoT3dr4eOWO",
+  "text": "[shouting] Sand Cobra!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.19093,
+    "mean": -11.6,
+    "heard": "Sand Cobra",
+    "words": true,
+    "ok": true
+   },
+   {
+    "k": 1,
+    "dur": 2.012698,
+    "mean": -12.1,
+    "heard": "Sand cobra",
+    "words": true,
+    "ok": false
+   }
+  ],
+  "picked": 0
+ },
+ "dune": {
+  "who": "bishukij",
+  "voice": "N2lVS1w4EtoT3dr4eOWO",
+  "text": "[shouting] Dune Breaker!",
+  "takes": [
+   {
+    "k": 0,
+    "dur": 1.969229,
+    "mean": -12,
+    "heard": "Dune breaker!",
+    "words": true,
+    "ok": false
+   },
+   {
+    "k": 1,
+    "dur": 1.754286,
+    "mean": -12.2,
+    "heard": "Dune breaker",
+    "words": true,
+    "ok": true
+   }
+  ],
+  "picked": 1
+ }
+}
