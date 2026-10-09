@@ -7,7 +7,7 @@
 ### 🎯 Chirurgiczna precyzja: brief daje kierunek, zamrożony kod daje kontrolę
 - **Co się stało:** filmy są w 100% powtarzalne i każda poprawka zmienia tylko to, o co prosił user. Pytanie: co by było, gdyby zbudować film jeszcze raz z samego briefu?
 - **Lekcja:** agent (jak ludzki animator) za każdym razem **inaczej zinterpretuje brief**: ta sama fabuła i sceny, ale inne pozy, rytm, szczegóły, błędy. Precyzja nie bierze się z briefu, tylko z **zamrożenia kodu** po pierwszej wersji: od tego momentu każda zmiana to kopia poprzedniej wersji + chirurgiczne podmiany, a film jest deterministyczny (stały krok 1/60 s, losowość z ziarna, wyniki ciosów w scenariuszu, test powtórki).
-- **Jak stosować:** (1) v1 z briefu = punkt startu, akceptowany jako całość; (2) od v2 nigdy „od nowa”: kopia + minimalne zmiany; (3) żadnego `Math.random()` ani zegara systemowego; (4) uprząż pilnuje, że to, czego nie dotykaliśmy, się nie zmieniło (zdarzenia, pozy). Eksperyment do zrobienia: [BACKLOG B10](../BACKLOG.md).
+- **Jak stosować:** (1) v1 z briefu = punkt startu, akceptowany jako całość; (2) od v2 nigdy „od nowa”: kopia + minimalne zmiany; (3) żadnego `Math.random()` ani zegara systemowego; (4) uprząż pilnuje, że to, czego nie dotykaliśmy, się nie zmieniło (zdarzenia, pozy). Eksperyment do zrobienia: [BACKLOG B11](../BACKLOG.md).
 
 ### 📄 Brief per wersja, cienki CHANGES
 - **Co się stało:** wspólny brief + tabela rewizji sprawiał, że brief v7 przeczył sam sobie (piksel, Daniel, serce z v1).
@@ -38,7 +38,7 @@
 
 ### 👂 Model nie słyszy: mierz, transkrybuj, oglądaj spektrogram
 - **Lekcja:** słowa sprawdza transkrypcja (ElevenLabs Scribe), muzykę spektrogram i głośność w czasie, miks pomiar poziomów w oknach (spokój / akcja / kwestia). Barwę ocenia człowiek.
-- **Jak stosować:** każda zmiana dźwięku = pomiar przed/po w konkretnym oknie czasu.
+- **Jak stosować:** każda zmiana dźwięku = pomiar przed/po w konkretnym oknie czasu, na ścieżkach osobno (`tools/stems.mjs`). Docelowo asercje dźwięku w uprzęży (ANIM-001 Decision #8), nie wiedza agenta.
 
 ### 🗣️ ElevenLabs v3: każde wywołanie to inne ujęcie
 - **Lekcja:** ten sam tekst daje różne wykonania (raz krzyk, raz spokojnie). Klucz API ma własny limit kredytów, niezależny od konta. Na darmowym planie działają tylko głosy premade.

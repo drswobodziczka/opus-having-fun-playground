@@ -56,10 +56,15 @@
 
 ## 🏗️ Architectural Decisions (ADR Log)
 
+### Decision #8: Weryfikacja dźwięku w uprzęży, nie w głowie agenta (user, 2026-10-09)
+*   **Context:** Dziś weryfikacja audio to wiedza agenta + rozproszone skrypty: transkrypcja kwestii w `vo/make.mjs`, poziomy ścieżek w `tools/stems.mjs`, spektrogram i `volumedetect` ad hoc. Uprząż tylko wypisuje liczbę sygnałów audio, niczego nie asertuje.
+*   **Decision:** `kit/harness/audio` (budowany przy FILM-001): render ścieżek osobno (`renderAudio(rate, { stem })`) i asercje: brak przesteru (szczyt < −1 dBFS), każda kwestia lektora słyszalna (VO ≥ X dB nad resztą w swoim oknie), kwestie się nie nakładają (czasy + długości plików), poziomy ścieżek w zadanych oknach (np. wiatr pod muzyką), muzyka obecna tam, gdzie ma grać, cisza tam, gdzie ma być; raport poziomów i spektrogram PNG jako arkusz; transkrypcje z `vo/takes.json` sprawdzane względem scenariusza. Progi w sekcji „Plan testów” briefu.
+*   **Consequence:** Audio staje się częścią uprzęży jak skan klatek; `tools/stems.mjs` przechodzi do kitu.
+
 ### Decision #6: Chirurgiczna precyzja, powtarzalność i kontrola jako sznyt skilla (user, 2026-10-09)
 *   **Context:** Agent interpretuje brief za każdym razem inaczej (jak ludzki animator). Precyzja w PoC-ach bierze się z zamrożenia kodu po v1 i chirurgicznych zmian, nie z briefu.
 *   **Decision:** Skill uczy wprost, JAK uzyskiwać chirurgiczną precyzję zmian, powtarzalność i kontrolę: v1 z briefu = punkt startu; od v2 tylko kopia + minimalne podmiany; determinizm (stały krok, losowość z ziarna, wyniki w scenariuszu, bez zegara systemowego); uprząż pilnuje niezmienionych części (zdarzenia, pozy, test powtórki); brief per wersja + cienki CHANGES.
-*   **Consequence:** Osobny rozdział SKILL.md; fiszka w [`docs/LESSONS.md`](../../../docs/LESSONS.md); eksperyment B10 (ten sam brief, nowa budowa) jako miara rozrzutu.
+*   **Consequence:** Osobny rozdział SKILL.md; fiszka w [`docs/LESSONS.md`](../../../docs/LESSONS.md); eksperyment B11 (ten sam brief, nowa budowa) jako miara rozrzutu.
 
 ### Decision #7: Plan testów omawiany z userem (2026-10-09)
 *   **Context:** Asercje (liczbowe) i arkusze/paski klatek (wizualne) to osobne procesy; user chce współdecydować, co sprawdzamy i gdzie robić arkusze konkretnych momentów.
