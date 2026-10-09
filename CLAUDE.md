@@ -5,6 +5,7 @@ Poligon animacji generowanych **kodem** (HTML/Canvas, deterministycznie) + rozw�
 ## Zadania (start każdej sesji)
 - `.windsurf/project_tasks/PLAY-001_animation_poc_lab/`: seria PoC-ów. Zacznij od **Status Dashboard** w `PLAY-001-plan.md`.
 - `.windsurf/project_tasks/ANIM-001_animation_skill/`: skill do animacji (wzorce, decyzje, kryteria).
+- `.windsurf/project_tasks/CHAN-001_ai_awareness_channel/`: kanał YT o AI safety (cel poligonu). ⏸️ Zaparkowane do czasu ANIM-001.
 
 ## Proces (obowiązuje)
 1. **Nowy PoC:** ponumerowane pytania pogłębiające (2–3 albo 5–8 zależnie od skali) → `BRIEF.md` z szablonu [`kit/templates/BRIEF.md`](kit/templates/BRIEF.md) (tabela scen S1..Sn z asercjami) → **akceptacja usera** → dopiero kod.

@@ -13,3 +13,16 @@
 | B7 | **Pomysły WebGL / 3D** (orbita kamery, postacie 2.5D, shadery CRT/bloom, cząsteczki na GPU) | kolejne PoC-e po spike'u PixiJS | [`docs/ideas-webgl.md`](docs/ideas-webgl.md) | czeka |
 | B8 | **Wywiad po walce**: obie postacie mówią do kamery kilka zdań o walce (na początku/końcu filmu albo osobny filmik) | humor, osobowość postaci, test mowy postaci | 2026-10-09. *Ocena agenta:* nasz framework lepiej trzyma styl i postacie (te same rigi, tusz, determinizm), a lipsync jest u nas łatwy, bo postacie nie mają ust: robot BISHUKIJ = świecący wizjer/głośnik pulsujący z głośnością głosu, ALAMANDRO = kaptur i oczy reagujące na sylaby (ElevenLabs zwraca znaczniki czasu znaków). Model generatywny (talking head) da realizm, ale zgubi styl i spójność z filmem. | czeka |
 | B9 | **Polityka wersjonowania PoC-a** („release'y”): drobne poprawki na najnowszej wersji (historia w gicie), duże przebudowy jako nowa wersja `vN`; numeracja `vN.M` dla drobnych | mniej katalogów, czytelna historia | 2026-10-09, pomysł usera; pierwszy test: ninja v7.2 | czeka |
+| B10 | **Kanał YT o AI safety / security / wpływie AI na społeczeństwo / AI for good**: generyczny skill do filmów jako „silnik produkcji” krótkich animacji edukacyjnych | cel docelowy całego poligonu: siać świadomość formą bardziej nośną niż blog | 2026-10-09, pomysł usera; **po** skillsecie i domknięciu PoC-ów. *Ocena agenta:* patrz sekcja „B10: notatki” niżej | → [CHAN-001](.windsurf/project_tasks/CHAN-001_ai_awareness_channel/CHAN-001-plan.md) |
+
+## B10: notatki (2026-10-09)
+
+**Animacja vs tekst.** Animacja lepiej się niesie (Shorts/Reels/TikTok, wyjaśnianie mechanizmów obrazem), tekst lepiej buduje wiarygodność i jest cytowalny. Najlepiej oba: film jako nośnik, krótki wpis ze źródłami jako „przypisy” (link w opisie).
+
+**Wzorce do podpatrzenia:** Kurzgesagt, Rational Animations (AI safety, animacja), Robert Miles (AI safety, wyjaśnianie), CGP Grey, 3Blue1Brown (generowane kodem: Manim, najbliższe naszemu podejściu).
+
+**Co z naszego frameworku pasuje:** determinizm i wersjonowanie (poprawka faktu = nowa wersja), stałe postacie i styl jako marka kanału, lektor ElevenLabs, walidacja klatka po klatce. Brakuje: warstwy faktów (źródła per scena, fact-check przed publikacją), formatu pionowego 9:16, napisów, szablonu „wyjaśniacza” (diagram, metafora, postać-narrator).
+
+**Ryzyka:** wiarygodność (temat podatny na hype i doomerstwo: każda teza ze źródłem, rozróżnienie fakt/prognoza/opinia), regularność publikacji ważniejsza od jakości pojedynczego filmu, oznaczenie treści generowanych przez AI (wymóg YT).
+
+**Pierwszy krok (gdy przyjdzie czas):** 1 pilot, 60–90 s, pionowy, jeden konkretny problem (np. prompt injection albo reward hacking) z metaforą postaci z ninja; test, czy produkcja jednego odcinka mieści się w rozsądnym czasie.
