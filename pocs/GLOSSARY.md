@@ -70,3 +70,8 @@
 | **LUT (grading)** | Tabela przekształcenia kolorów: każdy kolor wejściowy → kolor wyjściowy. Jeden obrazek-tablica nadaje całemu filmowi spójny „look” (jak filtr w aplikacji do zdjęć). |
 | **God rays** | Promienie światła widoczne w pyle lub mgle (światło „przebija” się przez cząstki). |
 | **Displacement (zniekształcenie)** | Przesuwanie pikseli według mapy szumu: falowanie gorącego powietrza, woda, „żywy” tusz. |
+| **Szum (noise), fbm** | Gładka „losowa” funkcja (np. Perlin, value noise): sąsiednie punkty mają podobne wartości, więc daje naturalne kształty (chmury, papier, falowanie). **fbm** = kilka warstw szumu o rosnącej częstotliwości nałożonych na siebie (bogatsza faktura). |
+| **Shockwave (fala uderzeniowa)** | Pierścień zniekształcenia obrazu rozchodzący się od miejsca uderzenia. |
+| **Zoom blur (rozmycie promieniste)** | Rozmycie wzdłuż linii do punktu środkowego, jak przy gwałtownym najeździe kamery; w grach „szarpnięcie” przy mocnym ciosie. |
+| **System cząsteczek** | Setki–tysiące drobnych obiektów (pył, iskry, deszcz) z prostymi regułami ruchu, rysowanych przez GPU jako sprite'y. |
+| **Hitstop** | (gry) zamrożenie akcji na kilka klatek przy trafieniu, żeby cios „siadł”; często z trzęsieniem kamery i efektem uderzenia. |

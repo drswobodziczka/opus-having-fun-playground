@@ -63,9 +63,9 @@ Warstwy: **tło** (papier, słońce/księżyc, płaskowyże, wydmy, wiry) · **�
 - **ze spike'a (v1), teraz na cały film:** papier + ziarno + winieta (shader całej klatki); mokry pędzel na postaciach (postrzępiona krawędź, halo); głębia ostrości tła rosnąca ze zbliżeniem kamery; smugi ruchu szybkich kończyn; bloom nocą (tylko świat, HUD ostry); piorun podświetla postacie.
 - **nowe (v2):**
   1. **Falowanie gorącego powietrza** nad wydmami i przy wirach (zniekształcenie obrazu mapą szumu, mocniejsze w podmuchach).
-  2. **Promienie światła** (god rays) od słońca i księżyca przez pył burzy; mocniejsze, gdy wiatr niesie więcej piasku.
+  2. **Promienie światła** (god rays) od słońca i księżyca przez pył burzy; mocniejsze, gdy wiatr niesie więcej piasku; tarcza słońca czysta (bez pasów).
   3. **Grading kolorów (LUT)**: jeden spójny „look” dnia i nocy; naprawia szarzenie papieru ze spike'a.
-  4. **Fala uderzeniowa + rozmycie promieniste** na ciosach specjalnych (SAND COBRA, BLACK MONSOON, DUNE BREAKER, SPINE OF THE STORM) i przy K.O.
+  4. **Fala uderzeniowa + rozmycie promieniste** na ciosach specjalnych (SAND COBRA, BLACK MONSOON, DUNE BREAKER, SPINE OF THE STORM) i przy K.O.: fala 0,9 s, rozmycie tylko 0,22 s z ostrym środkiem (postacie czytelne).
 - **Piasek ładniejszy, ta sama mechanika:** jedno pole wiatru z v7.5 (zgodne z dźwiękiem). GPU dokłada gęstość: więcej, mniejszych drobinek napędzanych tym samym `windPhase`/`windGust`, z **refleksami** (pojedyncze ziarna błyskają pod światłem słońca/księżyca i pioruna). Zamiast niezależnego piasku ze spike'a.
 
 ### HUD

@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Ninja v7.5: słyszalna wichura z podmuchami (z pola wiatru obrazu), miks zmierzony na ścieżkach osobno (`tools/stems.mjs`); 41/41: https://claude.ai/code/artifact/d6769840-da54-4228-a190-d7faa7ce8430. Fiszki z lekcjami: [`docs/LESSONS.md`](../../../docs/LESSONS.md)
-*   **Immediate Next Action:** Akceptacja briefu portu WebGL v2 ([`BRIEF.md`](../../../pocs/ninja-webgl/v2-port-v7.5/BRIEF.md), w tym plan testów i arkuszy) → kod → artefakt + arkusze porównań v7.5 | v2 + samouczek → MP4 jako follow-up. Równolegle PLAY-001.1 Spinacz (osobny agent). Ninja v8 później.
+*   **Current Focus:** Ninja WebGL v2 (port v7.5, cały film): 4 nowe efekty (falowanie, promienie, LUT, fala uderzeniowa) + piasek GPU na polu wiatru; 18/18 na GPU: https://claude.ai/code/artifact/7bd123a7-1ca1-4dd6-a101-631cf04100d6 · samouczek [`docs/webgl-tutorial.md`](../../../docs/webgl-tutorial.md)
+*   **Immediate Next Action:** Ocena WebGL v2 przez usera (na żywo: fala uderzeniowa, falowanie, piasek). Follow-up: MP4 całego filmu na GPU (`node check.mjs --mp4` w `pocs/ninja-webgl/v2-port-v7.5/`). Równolegle PLAY-001.1 Spinacz (osobny agent). Ninja v8 później (w Canvas, potem port).
 
 ---
 
@@ -125,7 +125,8 @@ Wcześniejsze PoC-e (Clip Fighter, Paper Cuts, Ninja, Ninja WebGL) są prowadzon
 - [x] Pytania ad1–ad3 (S6 + S8, kinowo, 720p) → brief [`pocs/ninja-webgl/BRIEF.md`](../../../pocs/ninja-webgl/BRIEF.md)
 - [x] Akceptacja briefu (2026-10-09)
 - [x] Spike `pocs/ninja-webgl/v1-spike-s6-s8/`: 15/15, [`compare-v7-gl.png`](../../../pocs/ninja-webgl/v1-spike-s6-s8/compare-v7-gl.png), MP4 segmentów, [postmortem](../../../pocs/ninja-webgl/v1-spike-s6-s8/POSTMORTEM.md)
-- [ ] **Port v7.5 do WebGL (`pocs/ninja-webgl/v2-port-v7.5/`)**: cały film, 4 nowe efekty (falowanie powietrza, god rays, LUT, fala uderzeniowa) + ładniejszy piasek na tym samym polu wiatru + samouczek `docs/webgl-tutorial.md`; brief do akceptacji: [`BRIEF.md`](../../../pocs/ninja-webgl/v2-port-v7.5/BRIEF.md)
+- [x] **Port v7.5 do WebGL (`pocs/ninja-webgl/v2-port-v7.5/`)** (2026-10-10, 18/18, [`CHANGES.md`](../../../pocs/ninja-webgl/v2-port-v7.5/CHANGES.md)): cały film, 4 nowe efekty (falowanie powietrza, god rays, LUT, fala uderzeniowa) + ładniejszy piasek na tym samym polu wiatru + samouczek `docs/webgl-tutorial.md`; [`BRIEF.md`](../../../pocs/ninja-webgl/v2-port-v7.5/BRIEF.md)
+- [ ] Ocena WebGL v2 przez usera · MP4 całego filmu (follow-up)
 - [x] Ocena spike'a: user widzi, że zmienił się cały film; decyzja: zmiany w v7 (Canvas) → v8, potem port do WebGL
 - [x] Migawki briefu per wersja (v1–v7), [`PROMPT.md`](../../../pocs/ninja-sandstorm/PROMPT.md) z wejściem usera
 
