@@ -1,0 +1,102 @@
+[
+ {
+  "role": "dziadek",
+  "name": "Bill",
+  "line": "N1",
+  "dur": 2.39,
+  "max": 3.2,
+  "fits": true,
+  "heard": "Był sobie mały robot w małym warsztacie",
+  "words": true
+ },
+ {
+  "role": "dziadek",
+  "name": "Bill",
+  "line": "N5",
+  "dur": 5.56,
+  "max": 3.4,
+  "fits": false,
+  "heard": "Potem zbudował pomocników, a pomocnicy pomocników",
+  "words": true
+ },
+ {
+  "role": "dziadek",
+  "name": "George",
+  "line": "N1",
+  "dur": 2.15,
+  "max": 3.2,
+  "fits": true,
+  "heard": "Był sobie mały robot w małym warsztacie",
+  "words": true
+ },
+ {
+  "role": "dziadek",
+  "name": "George",
+  "line": "N5",
+  "dur": 4.31,
+  "max": 3.4,
+  "fits": false,
+  "heard": "Potem zbudował pomocników, a pomocnicy pomocników",
+  "words": true
+ },
+ {
+  "role": "dziadek",
+  "name": "Brian",
+  "line": "N1",
+  "dur": 2.44,
+  "max": 3.2,
+  "fits": true,
+  "heard": "Był sobie mały robot w małym warsztacie",
+  "words": true
+ },
+ {
+  "role": "dziadek",
+  "name": "Brian",
+  "line": "N5",
+  "dur": 4.79,
+  "max": 3.4,
+  "fits": false,
+  "heard": "Potem zbudował pomocników, a pomocnicy pomocników",
+  "words": true
+ },
+ {
+  "role": "ai",
+  "name": "River",
+  "line": "A1",
+  "dur": 2.33,
+  "max": 2.3,
+  "fits": false,
+  "heard": "Jak najwięcej spinaczy. Przyjęto",
+  "words": false
+ },
+ {
+  "role": "ai",
+  "name": "River",
+  "line": "A4",
+  "dur": 3.03,
+  "max": 2.5,
+  "fits": false,
+  "heard": "Wyłącznik obniża wydajność. Usunięto",
+  "words": true
+ },
+ {
+  "role": "ai",
+  "name": "Alice",
+  "line": "A1",
+  "dur": 2.82,
+  "max": 2.3,
+  "fits": false,
+  "heard": "Fel. Jak najwięcej spinaczy. Przyjęto",
+  "words": false
+ },
+ {
+  "role": "ai",
+  "name": "Alice",
+  "line": "A4",
+  "dur": 3.36,
+  "max": 2.5,
+  "fits": false,
+  "heard": "Wyłącznik obniża wydajność. Usunięto",
+  "words": true
+ }
+]

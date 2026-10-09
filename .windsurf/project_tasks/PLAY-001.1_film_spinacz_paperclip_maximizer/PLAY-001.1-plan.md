@@ -8,7 +8,7 @@
 
 *   **Current State:** 🟡 In Progress (start 2026-10-09)
 *   **Current Focus:** Phase 1: preprodukcja (brief zaakceptowany, zostały głosy)
-*   **Immediate Next Action:** Próbki głosów premade ElevenLabs (dziadek PL × 2–3 głosy, AI × 2 głosy z obróbką; po 2 kwestie, ~400 kredytów) → wybór uchem przez usera → Phase 2: kod v1 na kicie (najpierw `kit/engine` + README wg Decision #2).
+*   **Immediate Next Action:** User odsłuchuje REEL-e w `pocs/spinacz/voice-samples/` i wybiera dziadka (Bill / George / Brian) i głos AI (River / Alice) → Phase 2: kod v1 na kicie (najpierw `kit/engine` + README wg Decision #2), `vo/make.mjs` w `kit/audio`.
 
 ---
 
@@ -54,7 +54,8 @@
 - [x] Pytania pogłębiające (7) zadane 2026-10-09: [`research/01-pytania.md`](research/01-pytania.md)
 - [x] Odpowiedzi usera (2026-10-10)
 - [x] `pocs/spinacz/v1-flat-45s/BRIEF.md` z szablonu `kit/templates/BRIEF.md` + plan testów i arkuszy (szkic gotowy, rozmowa z userem przy akceptacji)
-- [ ] Próbki głosów premade (dziadek PL, AI) do wyboru uchem
+- [x] Próbki głosów premade wygenerowane 2026-10-10: [`voice-samples/`](../../../pocs/spinacz/voice-samples/) (`make.mjs`, `samples.json`), ~450 kredytów
+- [ ] Wybór głosów przez usera
 - [x] Akceptacja (2026-10-10, z uwagami z review wniesionymi do briefu)
 
 ### Phase 2: Produkcja v1
@@ -71,6 +72,11 @@
 - [ ] Rundy feedbacku (`vN-feedback-K/`, brief per wersja, cienki CHANGES)
 
 ---
+
+## 🐛 Wnioski z próbek (do produkcji vo)
+*   **N5 nie mieści się w limicie 3,4 s** (4,3–5,6 s u wszystkich głosów, przez pauzę „A pomocnicy… pomocników”): przy produkcji wydłużyć okno N5 (przesunąć A4 o ~1 s) albo skrócić tekst; przyspieszenie > 1,2× brzmi źle.
+*   Kwestie AI ~0,3–0,8 s za długie (A1 2,3–2,8 s / 2,3 s; A4 3,0–3,4 s / 2,5 s): poluzować limity o ~0,6 s albo `speed` 1,1.
+*   v3 potrafi pominąć pierwsze słowo po tagu (River A1 bez „Cel”), a obróbka AI zniekształca spółgłoski (Alice „Fel”): 2+ ujęcia z wyborem po transkrypcji (już w `make.mjs` ninja) i lżejszy `acrusher`.
 
 ## 🔮 Options for Evolution / Refactor
 *   (brak)
