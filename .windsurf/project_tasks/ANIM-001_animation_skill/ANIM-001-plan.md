@@ -12,6 +12,7 @@
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   **2026-10-09 lekcja: efekty ruchu (cząsteczki, wiatr, wiry) uprząż nie widzi** (skan dotyczy stawów). v7.3 oceniane stopklatkami wyszło źle („palące się” wiry, „wybuchy” zamiast wiatru). Krok walidacji: `tools/strip.mjs` (pasek kolejnych klatek); kandydat na detektor w kicie (ciągłość i kierunek ruchu cząstek).
 *   **2026-10-08 (user): skan klatka po klatce = kręgosłup uprzęży w skillu.** To główne narzędzie do łapania „baboli”: rozwijamy je o kolejne detektory (dziś: skoki kości ≥ 60 px, NaN; plus test powtórki). Arkusze PNG to uzupełnienie dla estetyki, nie główny sygnał.
 *   2026-10-07: wzorzec silnika/uprzęży/audio to teraz **ninja v7** (`pocs/ninja-sandstorm/v7-feedback-6/`): + `vo/make.mjs` (ElevenLabs, obsada, STT, sloty), `music/score.mjs` → MIDI → soundfont (spessasynth_core), `embed.mjs`, `syncMusic`, test „Replay” (reset stanu postaci). User pyta o framework do powtarzalnych filmów → [`options/reusable-kit.md`](options/reusable-kit.md).
 *   HANDOVER 2026-10-07: dalsza praca w tym repo (`CLAUDE.md`). Najpełniejszy wzorzec silnika i uprzęży to teraz **ninja v5** (`pocs/ninja-sandstorm/v5-feedback-4/`): + adaptacyjna muzyka sterowana zdarzeniami (`SCENE_MODE`, `STINGERS`), limiter na wyjściu, jeden projekt postaci (obwódka zależna od tła), IK do podłoża (`groundF/B`).

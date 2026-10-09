@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Ninja v7.3 (drobna): wichura (ciurek + podmuchy na wydmach i arenie), efektowne wiry, krzaczaste krzaki w głębi, krótsze stopy; 41/41: https://claude.ai/code/artifact/a7422c7c-f502-416b-a86f-f3aa524aab8b
-*   **Immediate Next Action:** Ocena v7.3 przez usera (ruch na żywo). Potem pytania do v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (długość i runda 3 ze stworem, fatality energią, robot: wygląd i głos, krew przy publikacji, słownik ruchów v2) → `v8/BRIEF.md` → v8 w Canvas → port do WebGL.
+*   **Current Focus:** Ninja v7.4: wiry z obrotem (orbity, wciąganie, odrywanie styczne), jedno pole wiatru (stały ciąg + podmuchy) na wszystkich planach; ruch sprawdzony paskami klatek (`tools/strip.mjs`); 41/41: https://claude.ai/code/artifact/5d99e16b-3314-468b-867d-3959189e6a8b
+*   **Immediate Next Action:** Ocena v7.4 przez usera (ruch na żywo). Potem pytania do v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (długość i runda 3 ze stworem, fatality energią, robot: wygląd i głos, krew przy publikacji, słownik ruchów v2) → `v8/BRIEF.md` → v8 w Canvas → port do WebGL.
 
 ---
 
@@ -89,7 +89,9 @@
 - [x] v7.2 (część feedbacku 7): śmiech, stopy, świat; [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7.2-feedback-7/CHANGES.md)
 - [x] Ocena v7.2: stopy ok-ish, śmiech ok, świat do przeiterowania
 - [x] v7.3: świat (wichura, wiry, krzaki, podmuchy na arenie) + stopy; [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7.3-feedback-8/CHANGES.md)
-- [ ] Ocena v7.3 przez usera → v8
+- [x] Ocena v7.3: stopy ok, arena super; wiry („palą się”) i podmuchy na wydmach („wybuchy”) źle; lekcja: ruch sprawdzać paskami klatek
+- [x] v7.4: wiry i wiatr od nowa; [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7.4-feedback-9/CHANGES.md)
+- [ ] Ocena v7.4 przez usera → v8
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [x] TIMELINE v2 (2026-10-09): grupowanie po scenach, CO / JAK / PO CO z [`scenes.json`](../../../pocs/ninja-sandstorm/scenes.json), polskie opisy akcji, zwinięte puste sekundy; wygenerowane dla v7 i spike'a WebGL

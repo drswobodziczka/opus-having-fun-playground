@@ -18,7 +18,7 @@ Poligon animacji generowanych **kodem** (HTML/Canvas, deterministycznie) + rozw�
    | `vN/POSTMORTEM.md` | **jak** to zrobiliśmy: szczegóły techniczne, problemy, lekcje do kitu/skilla |
    | `<temat>/BRIEF.md` | tylko odnośnik „aktualny = vN” + tabela wersji |
    | `<temat>/PROMPT.md` · `NEXT.md` | wejście usera, od którego film się zaczął · zebrane, niezrealizowane uwagi |
-4. **Walidacja przed oddaniem** (Decision #4 ANIM-001): `node check.mjs` (fabuła, widzialność, **skan klatka po klatce**), gęste arkusze zmienianych scen, jedno spojrzenie (`Read` PNG), MP4 na życzenie (`--mp4`) + pomiar głośności ffmpeg (model nie słyszy dźwięku).
+4. **Walidacja przed oddaniem** (Decision #4 ANIM-001): `node check.mjs` (fabuła, widzialność, **skan klatka po klatce**), gęste arkusze zmienianych scen, jedno spojrzenie (`Read` PNG), MP4 na życzenie (`--mp4`) + pomiar głośności ffmpeg (model nie słyszy dźwięku). **Efekty ruchu** (wiatr, wiry, cząsteczki) sprawdzaj paskiem kolejnych klatek `tools/strip.mjs`, nie stopklatką (uprząż ich nie widzi).
 5. Uczciwie raportuj, czego nie sprawdzono (dźwięk, płynność ruchu na żywo).
 
 ## Komendy
@@ -27,6 +27,7 @@ npm install                                               # puppeteer-core
 cd pocs/<temat>/<wersja> && node check.mjs [--mp4] [--tc]  # uprząż
 node tools/timeline.mjs <anim.html> "<tytuł>"              # TIMELINE.md (sekunda po sekundzie)
 node tools/frames.mjs <anim.html> <t…> [--before=HEAD | --vs=<inna.html>] [--out=plik.png]
+node tools/strip.mjs <anim.html> <out.png> <t0> <n> <dt> <x> <y> <w> <h> [k] [cols]   # pasek kolejnych klatek (ruch efektów)
 ```
 Chrome: headless shell z `~/.cache/puppeteer` (autodetekcja). ffmpeg 8 (Homebrew). Lektor: macOS `say` + ffmpeg (ElevenLabs: [`docs/elevenlabs.md`](docs/elevenlabs.md), klucz w Keychain `elevenlabs-api`).
 
