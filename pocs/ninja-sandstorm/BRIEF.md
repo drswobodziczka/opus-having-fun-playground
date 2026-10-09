@@ -2,7 +2,7 @@
 
 > Ten plik tylko wskazuje aktualny brief. **Każda wersja ma własny, pełny brief** opisujący dokładnie to, co ta wersja pokazuje.
 
-- **Aktualny: [`v7.4-feedback-9/BRIEF.md`](v7.4-feedback-9/BRIEF.md)**
+- **Aktualny: [`v7.5-feedback-11/BRIEF.md`](v7.5-feedback-11/BRIEF.md)**
 - Oryginał (zaakceptowany 2026-10-02): [`v1-ink-pixel-60s/BRIEF.md`](v1-ink-pixel-60s/BRIEF.md)
 - Wejście usera: [`PROMPT.md`](PROMPT.md) · uwagi czekające na realizację: [`NEXT.md`](NEXT.md) · opisy scen dla TIMELINE: [`scenes.json`](scenes.json)
 
@@ -18,3 +18,4 @@
 | v7.2 | [brief](v7.2-feedback-7/BRIEF.md) | [changes](v7.2-feedback-7/CHANGES.md) |
 | v7.3 | [brief](v7.3-feedback-8/BRIEF.md) | [changes](v7.3-feedback-8/CHANGES.md) |
 | v7.4 | [brief](v7.4-feedback-9/BRIEF.md) | [changes](v7.4-feedback-9/CHANGES.md) |
+| v7.5 | [brief](v7.5-feedback-11/BRIEF.md) | [changes](v7.5-feedback-11/CHANGES.md) |

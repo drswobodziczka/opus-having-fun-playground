@@ -28,6 +28,7 @@ cd pocs/<temat>/<wersja> && node check.mjs [--mp4] [--tc]  # uprząż
 node tools/timeline.mjs <anim.html> "<tytuł>"              # TIMELINE.md (sekunda po sekundzie)
 node tools/frames.mjs <anim.html> <t…> [--before=HEAD | --vs=<inna.html>] [--out=plik.png]
 node tools/strip.mjs <anim.html> <out.png> <t0> <n> <dt> <x> <y> <w> <h> [k] [cols]   # pasek kolejnych klatek (ruch efektów)
+node tools/stems.mjs <anim.html> "nazwa:od:długość" … [--reuse]                     # poziomy ścieżek (wiatr, muzyka, lektor, efekty) w oknach czasu
 ```
 Chrome: headless shell z `~/.cache/puppeteer` (autodetekcja). ffmpeg 8 (Homebrew). Lektor: macOS `say` + ffmpeg (ElevenLabs: [`docs/elevenlabs.md`](docs/elevenlabs.md), klucz w Keychain `elevenlabs-api`).
 

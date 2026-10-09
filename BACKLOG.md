@@ -26,3 +26,4 @@
 **Ryzyka:** wiarygodność (temat podatny na hype i doomerstwo: każda teza ze źródłem, rozróżnienie fakt/prognoza/opinia), regularność publikacji ważniejsza od jakości pojedynczego filmu, oznaczenie treści generowanych przez AI (wymóg YT).
 
 **Pierwszy krok (gdy przyjdzie czas):** 1 pilot, 60–90 s, pionowy, jeden konkretny problem (np. prompt injection albo reward hacking) z metaforą postaci z ninja; test, czy produkcja jednego odcinka mieści się w rozsądnym czasie.
+| B10 | **Eksperyment „ten sam brief, nowa budowa”**: zbudować film od zera wyłącznie z briefu (np. ninja v7.4) i porównać z istniejącym | pokazać, ile filmu niesie brief, a ile zamrożony kod; zmierzyć rozrzut interpretacji agenta (jak dwóch animatorów) | 2026-10-09; lekcja: [`docs/LESSONS.md`](docs/LESSONS.md) „Chirurgiczna precyzja” | czeka |

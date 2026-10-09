@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Ninja v7.4: wiry z obrotem (orbity, wciąganie, odrywanie styczne), jedno pole wiatru (stały ciąg + podmuchy) na wszystkich planach; ruch sprawdzony paskami klatek (`tools/strip.mjs`); 41/41: https://claude.ai/code/artifact/5d99e16b-3314-468b-867d-3959189e6a8b
-*   **Immediate Next Action:** Ocena v7.4 przez usera (ruch na żywo). Potem pytania do v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (długość i runda 3 ze stworem, fatality energią, robot: wygląd i głos, krew przy publikacji, słownik ruchów v2) → `v8/BRIEF.md` → v8 w Canvas → port do WebGL.
+*   **Current Focus:** Ninja v7.5: słyszalna wichura z podmuchami (z pola wiatru obrazu), miks zmierzony na ścieżkach osobno (`tools/stems.mjs`); 41/41: https://claude.ai/code/artifact/d6769840-da54-4228-a190-d7faa7ce8430. Fiszki z lekcjami: [`docs/LESSONS.md`](../../../docs/LESSONS.md)
+*   **Immediate Next Action:** Ocena v7.5 uchem. Następnie (ustalone 2026-10-09): **nowy mały film (20–30 s, inny gatunek) budowany „kitem w trakcie”**: przy nim wydzielić `kit/engine` i `kit/audio`, na końcu `SKILL.md`. Najpierw pytania + brief z szablonu (z sekcją „Plan testów i arkuszy”, omawianą z userem). Ninja v8 (NEXT.md) później.
 
 ---
 
@@ -91,7 +91,9 @@
 - [x] v7.3: świat (wichura, wiry, krzaki, podmuchy na arenie) + stopy; [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7.3-feedback-8/CHANGES.md)
 - [x] Ocena v7.3: stopy ok, arena super; wiry („palą się”) i podmuchy na wydmach („wybuchy”) źle; lekcja: ruch sprawdzać paskami klatek
 - [x] v7.4: wiry i wiatr od nowa; [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7.4-feedback-9/CHANGES.md)
-- [ ] Ocena v7.4 przez usera → v8
+- [x] Ocena v7.4: wiry i ruch piasku dużo lepsze
+- [x] v7.5: dźwięk wichury; [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7.5-feedback-11/CHANGES.md)
+- [ ] Ocena v7.5 uchem
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [x] TIMELINE v2 (2026-10-09): grupowanie po scenach, CO / JAK / PO CO z [`scenes.json`](../../../pocs/ninja-sandstorm/scenes.json), polskie opisy akcji, zwinięte puste sekundy; wygenerowane dla v7 i spike'a WebGL

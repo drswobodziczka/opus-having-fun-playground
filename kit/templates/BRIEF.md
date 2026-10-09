@@ -70,6 +70,13 @@ Zwrot akcji zapisuj jako: zapowiedź → moment → konsekwencja (wszystkie wido
 - **Wyjście:** artefakt (link na wersję) · MP4 · TIMELINE
 - **Szacunek:** <rozmiar, czas generowania, koszt kredytów TTS>
 
+## 6a. Plan testów i arkuszy (omawiany z userem)
+<!-- High level, do przegadania przy akceptacji. Asercje są liczbowe (log zdarzeń, położenie na ekranie, kości) i nie oglądają obrazu; arkusze i paski klatek są dla oczu. -->
+- **Asercje (liczbowo):** z kolumny „Sprawdzenie” w §3 + stałe: skan klatka po klatce, test powtórki, brak błędów.
+- **Arkusze klatek (oczami):** <które momenty: zwroty (zapowiedź / moment / konsekwencja), sceny zmieniane w rundzie, momenty wskazane przez usera>
+- **Paski klatek (ruch efektów):** <które efekty: cząsteczki, wiatr, ogień…; `tools/strip.mjs`>
+- **Dźwięk (pomiar):** <okna do zmierzenia: kwestie lektora vs muzyka, spokój vs akcja>
+
 ## 7. Decyzje (zaakceptowane <data>)
 1.
 

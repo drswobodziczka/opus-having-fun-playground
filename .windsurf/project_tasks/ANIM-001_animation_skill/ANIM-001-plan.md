@@ -56,6 +56,15 @@
 
 ## 🏗️ Architectural Decisions (ADR Log)
 
+### Decision #6: Chirurgiczna precyzja, powtarzalność i kontrola jako sznyt skilla (user, 2026-10-09)
+*   **Context:** Agent interpretuje brief za każdym razem inaczej (jak ludzki animator). Precyzja w PoC-ach bierze się z zamrożenia kodu po v1 i chirurgicznych zmian, nie z briefu.
+*   **Decision:** Skill uczy wprost, JAK uzyskiwać chirurgiczną precyzję zmian, powtarzalność i kontrolę: v1 z briefu = punkt startu; od v2 tylko kopia + minimalne podmiany; determinizm (stały krok, losowość z ziarna, wyniki w scenariuszu, bez zegara systemowego); uprząż pilnuje niezmienionych części (zdarzenia, pozy, test powtórki); brief per wersja + cienki CHANGES.
+*   **Consequence:** Osobny rozdział SKILL.md; fiszka w [`docs/LESSONS.md`](../../../docs/LESSONS.md); eksperyment B10 (ten sam brief, nowa budowa) jako miara rozrzutu.
+
+### Decision #7: Plan testów omawiany z userem (2026-10-09)
+*   **Context:** Asercje (liczbowe) i arkusze/paski klatek (wizualne) to osobne procesy; user chce współdecydować, co sprawdzamy i gdzie robić arkusze konkretnych momentów.
+*   **Decision:** Przy briefie krótka rozmowa high-level o planie testów: asercje (z kolumny „Sprawdzenie”), momenty na arkusze, efekty na paski klatek; user dopisuje swoje momenty. Sekcja „Plan testów i arkuszy” w szablonie briefu.
+
 ### Decision #5: Kit i skill modelujemy w trakcie PoC-ów (2026-10-08)
 *   **Context:** User: „szkoda marnować doświadczeń”; czekanie z frameworkiem do końca PoC-ów gubi lekcje i mnoży kopie kodu.
 *   **Decision:** Zbieranie na bieżąco: ogólne klocki lądują w `kit/` w repo playgroundu (root), skill w `skills/code-animation/` (symlink do `~/.claude/skills`). Kolejne wersje PoC-ów używają klocków z kitu. **Sprawdzian końcowy** (nowy mały film od zera tylko z kitu) planujemy po postępie we wszystkich PoC-ach.
