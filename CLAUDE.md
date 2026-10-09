@@ -2,6 +2,8 @@
 
 Poligon animacji generowanych **kodem** (HTML/Canvas, deterministycznie) + rozwój skilla do animacji. Język rozmów i dokumentów: **polski**.
 
+**User się uczy:** gamedevu, produkcji animacji, składni filmu (montaż, kadr, rytm), renderowania, generowania obrazów i dźwięku oraz narzędzi do tego. **Nowy termin = krótkie wyjaśnienie przy pierwszym użyciu + wpis w [`pocs/GLOSSARY.md`](pocs/GLOSSARY.md)** (a dłuższe tematy: samouczek w `docs/`, lekcje: [`docs/LESSONS.md`](docs/LESSONS.md)).
+
 ## Zadania (start każdej sesji)
 - `.windsurf/project_tasks/PLAY-001_animation_poc_lab/`: seria PoC-ów. Zacznij od **Status Dashboard** w `PLAY-001-plan.md`.
 - `.windsurf/project_tasks/ANIM-001_animation_skill/`: skill do animacji (wzorce, decyzje, kryteria).

@@ -8,18 +8,19 @@
 
 *   **Current State:** 🟡 In Progress (start 2026-10-09)
 *   **Current Focus:** Phase 1: preprodukcja
-*   **Immediate Next Action:** Zebrać odpowiedzi usera na 7 pytań z [`research/01-pytania.md`](research/01-pytania.md) → BRIEF z szablonu kitu z tabelą scen i sekcją „Plan testów i arkuszy” (progi dla asercji dźwięku, Decision #8) → przegląd z userem → akceptacja → kod.
+*   **Immediate Next Action:** Przegląd briefu [`v1-flat-45s/BRIEF.md`](../../../pocs/spinacz/v1-flat-45s/BRIEF.md) z userem (sceny, kwestie, progi dźwięku w §6a) → akceptacja → próbki głosów premade (dziadek, AI) → kod.
 
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
 *   2026-10-09: zadanie wyekstrahowane (handoff) z propozycji trzech nowych filmów po ninja v7.5; źródło: [`BACKLOG.md`](../../../BACKLOG.md). Budowa **„kitem w trakcie”** (ANIM-001 Decision #5): ogólne klocki (silnik, audio, weryfikacja dźwięku) lądują w `kit/`, film używa ich od razu.
+*   2026-10-10: odpowiedzi na 7 pytań zebrane (oba formaty, papercut, robot + Ola, PL dziadek + AI, galaktyka + plansza, pozytywka → fabryka, 45 s); brief v1 napisany, czeka na akceptację. Zakres kitu z ANIM-001 (Immediate Next Action) dopisany do briefu §6b i Phase 2 (wcześniej brakowało `stems.mjs`, DSL `at()/sys()`, `window.anim`, modułu stylu).
 *   Proces: `CLAUDE.md` (bramki, wersje, role plików: brief per wersja, cienki CHANGES, POSTMORTEM), fiszki: [`docs/LESSONS.md`](../../../docs/LESSONS.md).
 
 ---
 
 ## 📎 Artefakty
-*   (brak)
+*   [`pocs/spinacz/v1-flat-45s/BRIEF.md`](../../../pocs/spinacz/v1-flat-45s/BRIEF.md): brief v1 (8 scen, 13 kwestii, plan testów z progami dźwięku), do akceptacji
 
 ---
 
@@ -44,14 +45,18 @@
 
 ### Phase 1: Preprodukcja
 - [x] Pytania pogłębiające (7) zadane 2026-10-09: [`research/01-pytania.md`](research/01-pytania.md)
-- [ ] Odpowiedzi usera
-- [ ] `pocs/<temat>/BRIEF.md` z szablonu `kit/templates/BRIEF.md` + plan testów i arkuszy (rozmowa z userem)
+- [x] Odpowiedzi usera (2026-10-10)
+- [x] `pocs/spinacz/v1-flat-45s/BRIEF.md` z szablonu `kit/templates/BRIEF.md` + plan testów i arkuszy (szkic gotowy, rozmowa z userem przy akceptacji)
+- [ ] Próbki głosów premade (dziadek PL, AI) do wyboru uchem
 - [ ] Akceptacja
 
 ### Phase 2: Produkcja v1
 - [ ] Kod (na kicie), uprząż, TIMELINE, arkusze, paski klatek efektów
-- [ ] **`kit/harness/audio`**: asercje dźwięku w uprzęży (ANIM-001 Decision #8), pierwszy film, który z nich korzysta
-- [ ] Wydzielić `kit/engine` i `kit/audio` (vo, partytura, render, embed) przy tym filmie
+- [ ] Wydzielić `kit/engine` (zegar 60 Hz, DSL `at()/sys()`, sceny, kamera, `window.anim`, parametr formatu)
+- [ ] Wydzielić `kit/audio` (vo, partytura, render offline per ścieżka, embed)
+- [ ] **`kit/harness/audio`**: asercje dźwięku (ANIM-001 Decision #8), progi z briefu §6a; przenieść `tools/stems.mjs` do kitu
+- [ ] `kit/style/papercut`: pierwszy moduł stylu (B6)
+- [ ] Lekcje do ANIM-001 + fiszki `docs/LESSONS.md` (`SKILL.md` poza zakresem: ANIM-001 na końcu)
 - [ ] Artefakt + MP4, postmortem
 
 ### Phase 3: Feedback

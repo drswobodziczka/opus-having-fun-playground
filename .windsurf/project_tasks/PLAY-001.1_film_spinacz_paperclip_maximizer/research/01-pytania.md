@@ -9,3 +9,6 @@
 5. **Zakończenie:** (a) klasyczne: świat, potem galaktyka ze spinaczy, (b) **pointa z humorem** (robot w pustym świecie podaje spinacz… nikomu), (c) plansza z morałem i źródłem (Bostrom, 2003); można łączyć (b)+(c).
 6. **Muzyka:** (a) bajkowa pozytywka, która mechanicznie przyspiesza i przechodzi w fabryczny rytm, (b) inna. *Rekomendacja: (a): muzyka sama opowiada eskalację.*
 7. **Długość:** 25–30 s czy więcej miejsca na eskalację (40–45 s)?
+
+## Odpowiedzi usera (2026-10-10)
+1 **oba** (9:16 + 16:9) · 2 **płaski wektor / wycinanka** · 3 **robot w warsztacie** · 4 **PL, dziadek + wtręty AI** · 5 **galaktyka + plansza z morałem** · 6 **pozytywka → fabryka** · 7 **40–45 s**. Wynik: [`pocs/spinacz/v1-flat-45s/BRIEF.md`](../../../../pocs/spinacz/v1-flat-45s/BRIEF.md).

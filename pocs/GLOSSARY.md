@@ -48,3 +48,25 @@
 | **Loudnorm / LUFS** | Normalizacja głośności do poziomu odczuwanego przez ucho (LUFS). Wyrównuje kwestie lektora między sobą. |
 | **Limiter** | Ogranicza szczyty sygnału, żeby suma dźwięków nie przesterowała. |
 | **Spektrogram** | Obraz dźwięku: czas × częstotliwość × energia. Pozwala modelowi „zobaczyć” muzykę, której nie słyszy. |
+
+## Render i grafika (WebGL)
+
+| Termin | Znaczenie |
+|---|---|
+| **GPU** | Karta graficzna: tysiące małych rdzeni liczących równolegle (np. kolor każdego piksela naraz). U ciebie: Apple M3 Pro (GPU wbudowane w układ). |
+| **WebGL** | Interfejs przeglądarki do rysowania na GPU (wersja 2 = WebGL2). Strona wysyła do GPU dane i małe programy (shadery), GPU liczy obraz. |
+| **Shader** | Mały program uruchamiany **na GPU**, pisany w języku GLSL. **Vertex shader** mówi, *gdzie* są wierzchołki kształtu; **fragment shader** liczy *kolor każdego piksela*. Filtry (papier, pędzel, bloom) to fragment shadery. |
+| **Tekstura** | Obraz w pamięci GPU; shader może z niej „próbkować” kolory. U nas warstwy narysowane Canvasem 2D stają się teksturami. |
+| **Uniform** | Parametr shadera ustawiany z JS co klatkę (np. siła błysku pioruna, numer klatki dla ziarna). |
+| **Filtr (post-process)** | Przejście po gotowym obrazie: scena → tekstura → shader przelicza każdy piksel. Koszt ≈ liczba pikseli × liczba filtrów. |
+| **Metal** | Natywny interfejs graficzny Apple (odpowiednik DirectX na Windows i Vulkana na Linuksie/Androidzie). Na Macu to on naprawdę rozmawia z GPU. |
+| **ANGLE** | Warstwa tłumacząca w Chrome: przyjmuje wywołania WebGL (standard OpenGL ES) i zamienia je na natywne API systemu: **Metal** na Macu, DirectX na Windows, Vulkan na Linuksie. Dzięki niej ten sam kod WebGL działa wszędzie. |
+| **SwiftShader** | „Programowe GPU” od Google: udaje kartę graficzną na zwykłym procesorze (CPU). Działa wszędzie, także bez GPU (serwery, okrojony Chrome), ale jest ~20× wolniejszy. U nas: zapas w uprzęży. |
+| **Headless Chrome** | Chrome bez okna, sterowany skryptem (Puppeteer). **Headless shell** = okrojona wersja bez GPU (WebGL tylko przez SwiftShader); **pełny Chrome w trybie headless** używa prawdziwego GPU (Metal). |
+| **PixiJS** | Biblioteka JS do szybkiej grafiki 2D na GPU (WebGL/WebGPU): sprite'y, kontenery, filtry, własne shadery. Patrz [`docs/pixijs.md`](../docs/pixijs.md). |
+| **Sprite** | Obrazek (tekstura) umieszczony w scenie z pozycją, skalą, obrotem i przezroczystością. U nas: warstwy i ziarna piasku. |
+| **Bloom** | Poświata wokół jasnych miejsc (jak światło w obiektywie). |
+| **Głębia ostrości (DOF)** | Rozmycie planów poza ostrością (u nas: tło przy zbliżeniu kamery). |
+| **LUT (grading)** | Tabela przekształcenia kolorów: każdy kolor wejściowy → kolor wyjściowy. Jeden obrazek-tablica nadaje całemu filmowi spójny „look” (jak filtr w aplikacji do zdjęć). |
+| **God rays** | Promienie światła widoczne w pyle lub mgle (światło „przebija” się przez cząstki). |
+| **Displacement (zniekształcenie)** | Przesuwanie pikseli według mapy szumu: falowanie gorącego powietrza, woda, „żywy” tusz. |

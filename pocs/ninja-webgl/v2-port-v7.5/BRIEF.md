@@ -1,6 +1,6 @@
 # BRIEF: The Storm Chose Black · WebGL v2 (port ninja v7.5)
 
-> **Brief wersji `ninja-webgl/v2-port-v7.5`** · status: **do akceptacji** (2026-10-10). Treść filmu (§1–3, §5) = **dokładnie ninja v7.5** ([brief](../../ninja-sandstorm/v7.5-feedback-11/BRIEF.md)); różnice: **§4 Styl → Render WebGL**, **§6 Wykonanie**, **§6a Plan testów**. Poprzednia wersja WebGL: [`v1-spike-s6-s8`](../v1-spike-s6-s8/BRIEF.md).
+> **Brief wersji `ninja-webgl/v2-port-v7.5`** · status: **zaakceptowany 2026-10-10**. Treść filmu (§1–3, §5) = **dokładnie ninja v7.5** ([brief](../../ninja-sandstorm/v7.5-feedback-11/BRIEF.md)); różnice: **§4 Styl → Render WebGL**, **§6 Wykonanie**, **§6a Plan testów**. Poprzednia wersja WebGL: [`v1-spike-s6-s8`](../v1-spike-s6-s8/BRIEF.md).
 > Wejście usera: [`../../ninja-sandstorm/PROMPT.md`](../../ninja-sandstorm/PROMPT.md) · decyzje portu (2026-10-10): ad1 cały film · ad2 wszystkie 4 nowe efekty + samouczek · ad3 jedno pole wiatru, piasek ładniejszy · ad4 artefakt + arkusze porównań, MP4 jako follow-up
 > Wnioski z PoC #2, które ten brief wprost adresuje: gęstsza walka, każdy zwrot pokazany jako **zapowiedź → moment → konsekwencja**, czytelne chwyty i rzuty, ruch kamery wynikający z akcji, prawdziwy lektor zamiast `speechSynthesis`.
 
