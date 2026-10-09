@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Ninja v7.5: słyszalna wichura z podmuchami (z pola wiatru obrazu), miks zmierzony na ścieżkach osobno (`tools/stems.mjs`); 41/41: https://claude.ai/code/artifact/d6769840-da54-4228-a190-d7faa7ce8430. Fiszki z lekcjami: [`docs/LESSONS.md`](../../../docs/LESSONS.md)
-*   **Immediate Next Action:** Ocena v7.5 uchem. Następnie (ustalone 2026-10-09): **nowy mały film (20–30 s, inny gatunek) budowany „kitem w trakcie”**: przy nim wydzielić `kit/engine` i `kit/audio`, na końcu `SKILL.md`. Najpierw pytania + brief z szablonu (z sekcją „Plan testów i arkuszy”, omawianą z userem). Ninja v8 (NEXT.md) później.
+*   **Immediate Next Action:** (1) Ocena ninja v7.5 uchem (wichura, miks). (2) Nowe filmy idą w osobnych zadaniach: **FILM-001 Spinacz** (w toku, czeka na odpowiedzi na pytania), potem FILM-002 Notatka, FILM-003 Wyścig. (3) Ninja v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (robot, fatality energią, runda 3 ze stworem, słownik ruchów v2) po FILM-001, na kicie.
 
 ---
 

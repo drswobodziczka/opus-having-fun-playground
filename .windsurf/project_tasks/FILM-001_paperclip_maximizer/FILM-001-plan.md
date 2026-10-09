@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress (start 2026-10-09)
 *   **Current Focus:** Phase 1: preprodukcja
-*   **Immediate Next Action:** Pytania pogłębiające (2–3 albo 5–8) → BRIEF z szablonu kitu (z sekcją „Plan testów i arkuszy” omawianą z userem) → akceptacja → kod.
+*   **Immediate Next Action:** Zebrać odpowiedzi usera na 7 pytań z [`research/01-pytania.md`](research/01-pytania.md) → BRIEF z szablonu kitu z tabelą scen i sekcją „Plan testów i arkuszy” (progi dla asercji dźwięku, Decision #8) → przegląd z userem → akceptacja → kod.
 
 ---
 
@@ -31,14 +31,19 @@
 ---
 
 ## 🏗️ Architectural Decisions (ADR Log)
-*   (brak)
+
+### Decision #1 (z ANIM-001 Decision #8): weryfikacja dźwięku w uprzęży (2026-10-09)
+*   **Context:** Dziś weryfikacja audio to wiedza agenta + rozproszone skrypty (`vo/make.mjs` transkrypcja, `tools/stems.mjs` poziomy, spektrogram i `volumedetect` ad hoc). Uprząż niczego w dźwięku nie asertuje.
+*   **Decision:** Ten film jako pierwszy buduje i używa `kit/harness/audio`: render ścieżek osobno (`renderAudio(rate, { stem })`), asercje: brak przesteru (szczyt < −1 dBFS), każda kwestia narratora słyszalna nad resztą w swoim oknie, kwestie się nie nakładają, poziomy ścieżek w zadanych oknach, muzyka/cisza tam, gdzie mają być, transkrypcje (`vo/takes.json`) zgodne ze scenariuszem; raport poziomów + spektrogram PNG jako arkusz. **Progi w sekcji „Plan testów i arkuszy” briefu**, ustalane z userem.
+*   **Consequence:** `tools/stems.mjs` przechodzi do kitu; asercje dźwięku dostępne dla kolejnych filmów (FILM-002, FILM-003, ninja v8).
 
 ---
 
 ## 📋 Implementation Plan
 
 ### Phase 1: Preprodukcja
-- [ ] Pytania pogłębiające
+- [x] Pytania pogłębiające (7) zadane 2026-10-09: [`research/01-pytania.md`](research/01-pytania.md)
+- [ ] Odpowiedzi usera
 - [ ] `pocs/<temat>/BRIEF.md` z szablonu `kit/templates/BRIEF.md` + plan testów i arkuszy (rozmowa z userem)
 - [ ] Akceptacja
 

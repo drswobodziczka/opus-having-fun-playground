@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Phase 3: skill. Wzorce są zebrane z 3 PoC-ów (PLAY-001), czekają na spisanie w `SKILL.md` i szablon
-*   **Immediate Next Action:** `kit/harness` ✅ (dowód na v7: identyczne wyniki). Dalej: używać go w spike'u WebGL (`pocs/ninja-webgl/`), potem wydzielić `kit/audio`. Szablon briefu: [`kit/templates/BRIEF.md`](../../../kit/templates/BRIEF.md) (pierwsze użycie: brief ninja-webgl).
+*   **Immediate Next Action:** Przy FILM-001 (Spinacz): wydzielić `kit/engine` (zegar, DSL `at()/sys()`, sceny, kamera, `window.anim`) i `kit/audio` (vo, partytura, render, embed), zbudować `kit/harness/audio` (Decision #8, asercje dźwięku z progami z briefu), przenieść `tools/stems.mjs` do kitu. `SKILL.md` na końcu, z tego, co zadziałało (w tym rozdział o chirurgicznej precyzji, Decision #6, i planie testów z userem, Decision #7).
 
 ---
 
