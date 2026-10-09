@@ -40,6 +40,17 @@
 
 ---
 
+## 🧩 Podzadania (kolejne PoC-e jako osobne zadania)
+| Zadanie | PoC | Stan |
+|---|---|---|
+| [FILM-001](../FILM-001_paperclip_maximizer/FILM-001-plan.md) | Spinacz: bajka o maksymalizatorze spinaczy | 🟡 w toku (pytania przed briefem) |
+| [FILM-002](../FILM-002_prompt_injection_note/FILM-002-plan.md) | Notatka: komedia o prompt injection | ⏸️ po FILM-001 |
+| [FILM-003](../FILM-003_race/FILM-003-plan.md) | Wyścig: dwa pojazdy na zakrętach | ⏸️ po FILM-002 |
+
+Wcześniejsze PoC-e (Clip Fighter, Paper Cuts, Ninja, Ninja WebGL) są prowadzone bezpośrednio w tym zadaniu. Każdy podzadaniowy film zasila też ANIM-001 (kit i skill).
+
+---
+
 ## ✅ Acceptance Criteria
 *   [x] Co najmniej 3 PoC-e w różnych stylach (1-bit ✅, kolorowy pixel ✅, tusz + mroczny pixel ✅), każdy z postmortemem.
 *   [x] Co najmniej 3 pozycje z backlogu `docs/toolbox.md` wypróbowane i opisane (ffmpeg MP4, log zdarzeń + asercje, dźwięk).

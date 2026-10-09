@@ -2,6 +2,7 @@
 
 > **Rola:** Dynamiczne Centrum Dowodzenia (SSOT). Tu sprawdzasz status, planujesz ruchy i zapisujesz decyzje.
 > **Kontekst:** Patrz plik `FILM-003-context.md`
+> **Zadanie nadrzędne:** [PLAY-001](../PLAY-001_animation_poc_lab/PLAY-001-plan.md) (seria PoC-ów; ten film to kolejny PoC) · **zasila:** [ANIM-001](../ANIM-001_animation_skill/ANIM-001-plan.md) (kit i skill rosną przy filmie)
 
 ## 🚦 Status Dashboard
 
