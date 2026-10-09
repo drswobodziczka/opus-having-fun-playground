@@ -1,6 +1,8 @@
 # Feedback 7 (zebrany 2026-10-09) → v8
 
-> Luźne pomysły i poprawki usera do bieżącego scenariusza. **Zmiany robimy w v7 (Canvas 2D) → v8, potem port do WebGL.** Przed kodem: krótkie pytania + wpisy w BRIEF §8 (część to zmiany decyzji). Komentarze agenta: *kursywą*.
+> **v7.2 (2026-10-09) zrobiło:** #1 częściowo (głos śmiechu w 25,95 s), #2 (stopy), #3 (paralaksa ×3, burza, życie na wydmach). Reszta poniżej → v8.
+
+> Luźne pomysły i poprawki usera do bieżącego scenariusza. **Zmiany robimy w v7 (Canvas 2D) → v8, potem port do WebGL.** Przed kodem: krótkie pytania, potem nowy pełny brief `v8/BRIEF.md` (część to zmiany decyzji). Komentarze agenta: *kursywą*.
 
 | # | Uwaga usera | Gdzie | Komentarz / plan | Zmiana briefu? |
 |---|---|---|---|---|

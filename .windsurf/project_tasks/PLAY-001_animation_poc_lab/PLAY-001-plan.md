@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Feedback 7 zebrany w [`pocs/ninja-sandstorm/NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (szalony ALAMANDRO, stopy, paralaksa ×3 + burza, stwór i runda 3, BISHUKIJ-robot, fatality energią + dezintegracja, bogatszy słownik ruchów). Spike WebGL: cały film renderuje się przez WebGL; raport efektów [`docs/webgl-effects.md`](../../../docs/webgl-effects.md)
-*   **Immediate Next Action:** Pytania do v8 (długość i runda 3, fatality, robot: wygląd i głos, krew przy publikacji) → BRIEF §8 → v8 w Canvas 2D → port do WebGL.
+*   **Current Focus:** Ninja v7.2 (pierwsza wersja „drobna”): śmiech po K.O., stopy, paralaksa ×3 + żywa burza; 41/41 na `kit/harness`: https://claude.ai/code/artifact/d692f9bc-9b1d-4652-8949-d89c3b15e45b. Briefy per wersja (v1–v7.2) spójne, CHANGES cienkie, szczegóły w POSTMORTEM
+*   **Immediate Next Action:** Ocena v7.2 przez usera. Potem pytania do v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (długość i runda 3 ze stworem, fatality energią, robot: wygląd i głos, krew przy publikacji, słownik ruchów v2) → `v8/BRIEF.md` → v8 w Canvas → port do WebGL.
 
 ---
 
@@ -84,7 +84,10 @@
 - [x] Feedback 5 (lektor Harry v3, szalony śmiech, muzyka kung-fu z soundfontu) → v6-feedback-5, 40/40, [`CHANGES.md`](../../../pocs/ninja-sandstorm/v6-feedback-5/CHANGES.md); BRIEF §8
 - [x] Ocena v6: muzyka „rewelacja”; głos OK, ale część kwestii mniej emocjonalna; bug po powtórce (BISHUKIJ z ręką w górze)
 - [x] Feedback 6 → v7-feedback-6, 41/41 (nowy test „Replay”), [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7-feedback-6/CHANGES.md); BRIEF §8
-- [ ] Ocena v7 przez usera
+- [x] Ocena v7 przez usera
+- [x] Briefy per wersja przepisane na czysto (v2–v7), cienkie CHANGES + POSTMORTEM, role plików w `CLAUDE.md` (2026-10-09)
+- [x] v7.2 (część feedbacku 7): śmiech, stopy, świat; [`CHANGES.md`](../../../pocs/ninja-sandstorm/v7.2-feedback-7/CHANGES.md)
+- [ ] Ocena v7.2 przez usera → v8
 
 ### Phase 2c: Czytelność rozpiski (TODO usera)
 - [x] TIMELINE v2 (2026-10-09): grupowanie po scenach, CO / JAK / PO CO z [`scenes.json`](../../../pocs/ninja-sandstorm/scenes.json), polskie opisy akcji, zwinięte puste sekundy; wygenerowane dla v7 i spike'a WebGL
