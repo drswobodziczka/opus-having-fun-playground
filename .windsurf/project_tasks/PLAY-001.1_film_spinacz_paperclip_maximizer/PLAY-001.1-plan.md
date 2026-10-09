@@ -7,25 +7,26 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress (start 2026-10-09)
-*   **Current Focus:** Phase 1: preprodukcja
-*   **Immediate Next Action:** Przegląd briefu [`v1-flat-45s/BRIEF.md`](../../../pocs/spinacz/v1-flat-45s/BRIEF.md) z userem (sceny, kwestie, progi dźwięku w §6a) → akceptacja → próbki głosów premade (dziadek, AI) → kod.
+*   **Current Focus:** Phase 1: preprodukcja (brief zaakceptowany, zostały głosy)
+*   **Immediate Next Action:** Próbki głosów premade ElevenLabs (dziadek PL × 2–3 głosy, AI × 2 głosy z obróbką; po 2 kwestie, ~400 kredytów) → wybór uchem przez usera → Phase 2: kod v1 na kicie (najpierw `kit/engine` + README wg Decision #2).
 
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
 *   2026-10-09: zadanie wyekstrahowane (handoff) z propozycji trzech nowych filmów po ninja v7.5; źródło: [`BACKLOG.md`](../../../BACKLOG.md). Budowa **„kitem w trakcie”** (ANIM-001 Decision #5): ogólne klocki (silnik, audio, weryfikacja dźwięku) lądują w `kit/`, film używa ich od razu.
 *   2026-10-10: odpowiedzi na 7 pytań zebrane (oba formaty, papercut, robot + Ola, PL dziadek + AI, galaktyka + plansza, pozytywka → fabryka, 45 s); brief v1 napisany, czeka na akceptację. Zakres kitu z ANIM-001 (Immediate Next Action) dopisany do briefu §6b i Phase 2 (wcześniej brakowało `stems.mjs`, DSL `at()/sys()`, `window.anim`, modułu stylu).
+*   2026-10-10: **brief zaakceptowany** z uwagami z review: dokładna charakterystyka stylu papercut, tło merytoryczne (Bostrom 2003, konwergencja instrumentalna, maszyny von Neumanna), **technik przy wyłączniku zamienia się w spinacz** (ZWROT 2), głucha galaktyka, morał o dobrych celach, granicach i wyłączniku; każdy moduł kitu z README (ANIM-001 Decision #9).
 *   Proces: `CLAUDE.md` (bramki, wersje, role plików: brief per wersja, cienki CHANGES, POSTMORTEM), fiszki: [`docs/LESSONS.md`](../../../docs/LESSONS.md).
 
 ---
 
 ## 📎 Artefakty
-*   [`pocs/spinacz/v1-flat-45s/BRIEF.md`](../../../pocs/spinacz/v1-flat-45s/BRIEF.md): brief v1 (8 scen, 13 kwestii, plan testów z progami dźwięku), do akceptacji
+*   [`pocs/spinacz/v1-flat-45s/BRIEF.md`](../../../pocs/spinacz/v1-flat-45s/BRIEF.md): brief v1 (8 scen, 13 kwestii, plan testów z progami dźwięku), zaakceptowany 2026-10-10
 
 ---
 
 ## ✅ Acceptance Criteria
-*   [ ] Brief zaakceptowany (z planem testów i arkuszy omówionym z userem)
+*   [x] Brief zaakceptowany (z planem testów i arkuszy omówionym z userem)
 *   [ ] v1 zbudowana na kicie (`kit/harness` + nowe klocki), uprząż zielona, MP4 z dźwiękiem
 *   [ ] Lekcje: co z kitu zadziałało, czego brakowało → ANIM-001
 *   [ ] Ocena usera i rundy feedbacku wg procesu
@@ -41,6 +42,12 @@
 
 ---
 
+### Decision #2 (z ANIM-001 Decision #9): README każdego modułu kitu (user, 2026-10-10)
+*   **Decision:** każdy moduł wydzielany przy tym filmie ma `README.md`: kontrakt, opis metod, zastosowanie, przykłady; minimalnie, ale wystarczająco do użycia bez czytania kodu.
+*   **Consequence:** moduł bez README nie jest „gotowy”; uzupełniamy też `kit/harness`.
+
+---
+
 ## 📋 Implementation Plan
 
 ### Phase 1: Preprodukcja
@@ -48,7 +55,7 @@
 - [x] Odpowiedzi usera (2026-10-10)
 - [x] `pocs/spinacz/v1-flat-45s/BRIEF.md` z szablonu `kit/templates/BRIEF.md` + plan testów i arkuszy (szkic gotowy, rozmowa z userem przy akceptacji)
 - [ ] Próbki głosów premade (dziadek PL, AI) do wyboru uchem
-- [ ] Akceptacja
+- [x] Akceptacja (2026-10-10, z uwagami z review wniesionymi do briefu)
 
 ### Phase 2: Produkcja v1
 - [ ] Kod (na kicie), uprząż, TIMELINE, arkusze, paski klatek efektów
@@ -56,6 +63,7 @@
 - [ ] Wydzielić `kit/audio` (vo, partytura, render offline per ścieżka, embed)
 - [ ] **`kit/harness/audio`**: asercje dźwięku (ANIM-001 Decision #8), progi z briefu §6a; przenieść `tools/stems.mjs` do kitu
 - [ ] `kit/style/papercut`: pierwszy moduł stylu (B6)
+- [ ] README każdego modułu (kontrakt, metody, zastosowanie, przykłady; Decision #2), także uzupełnienie `kit/harness`
 - [ ] Lekcje do ANIM-001 + fiszki `docs/LESSONS.md` (`SKILL.md` poza zakresem: ANIM-001 na końcu)
 - [ ] Artefakt + MP4, postmortem
 

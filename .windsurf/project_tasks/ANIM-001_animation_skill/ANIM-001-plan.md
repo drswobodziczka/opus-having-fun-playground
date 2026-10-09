@@ -56,6 +56,11 @@
 
 ## 🏗️ Architectural Decisions (ADR Log)
 
+### Decision #9: Minimalna wystarczająca dokumentacja każdego modułu kitu (user, 2026-10-10)
+*   **Context:** Kit rośnie przy filmach (Decision #5), a ma go używać agent i user bez czytania kodu; skill będzie na nim stał.
+*   **Decision:** każdy moduł `kit/*` ma `README.md`: kontrakt (wejście, wyjście, gwarancje, czego nie robi), opis metod (sygnatura + zdanie), zastosowanie (kiedy tak / nie), przykłady (minimalny fragment + film, który go używa). Bez esejów.
+*   **Consequence:** moduł bez README nie jest „gotowy” w [`kit/README.md`](../../../kit/README.md); dotyczy też istniejącego `kit/harness` (do uzupełnienia przy PLAY-001.1).
+
 ### Decision #8: Weryfikacja dźwięku w uprzęży, nie w głowie agenta (user, 2026-10-09)
 *   **Context:** Dziś weryfikacja audio to wiedza agenta + rozproszone skrypty: transkrypcja kwestii w `vo/make.mjs`, poziomy ścieżek w `tools/stems.mjs`, spektrogram i `volumedetect` ad hoc. Uprząż tylko wypisuje liczbę sygnałów audio, niczego nie asertuje.
 *   **Decision:** `kit/harness/audio` (budowany przy PLAY-001.1): render ścieżek osobno (`renderAudio(rate, { stem })`) i asercje: brak przesteru (szczyt < −1 dBFS), każda kwestia lektora słyszalna (VO ≥ X dB nad resztą w swoim oknie), kwestie się nie nakładają (czasy + długości plików), poziomy ścieżek w zadanych oknach (np. wiatr pod muzyką), muzyka obecna tam, gdzie ma grać, cisza tam, gdzie ma być; raport poziomów i spektrogram PNG jako arkusz; transkrypcje z `vo/takes.json` sprawdzane względem scenariusza. Progi w sekcji „Plan testów” briefu.

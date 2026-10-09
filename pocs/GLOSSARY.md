@@ -19,6 +19,9 @@
 | **Roll (kamery)** | Obrót kadru wokół osi patrzenia: horyzont się przechyla, a przy 360° świat robi pełny obrót. |
 | **Orbita (fałszywa)** | Iluzja obejścia kamery wokół postaci w 2D: warstwy paralaksy jadą w przeciwne strony, a postacie zamieniają się stronami ekranu. |
 | **Squash & stretch** | Zgniatanie i rozciąganie kształtu w ruchu (podstawowa zasada animacji). Daje wrażenie „gumowości”. |
+| **Wycinanka (cut-out, papercut)** | Styl i technika animacji z płaskich, wyciętych kształtów (papier) ułożonych warstwami. Części postaci łączy „pinezka” (punkt obrotu), ruch jest skokowy jak w animacji poklatkowej, a głębię dają cienie między warstwami. |
+| **Animacja poklatkowa (stop motion)** | Ruch złożony z serii zdjęć, między którymi animator lekko przestawia obiekty. „Na dwójkach” = nowa poza co 2 klatki (12 póz/s przy 24 kl./s), co daje charakterystyczną, lekko szarpaną płynność. |
+| **Strefa bezpieczna (safe area)** | Część kadru, której nie zasłoni interfejs odtwarzacza. W Shorts (9:16) górę i dół zakrywają tytuł, przyciski i opis, więc tekst trzymamy w środku. |
 | **Super flash** | Przyciemnienie tła i rozbłysk przy ciosie specjalnym (konwencja bijatyk z lat 90.). |
 
 ## Produkcja muzyczna
@@ -75,3 +78,12 @@
 | **Zoom blur (rozmycie promieniste)** | Rozmycie wzdłuż linii do punktu środkowego, jak przy gwałtownym najeździe kamery; w grach „szarpnięcie” przy mocnym ciosie. |
 | **System cząsteczek** | Setki–tysiące drobnych obiektów (pył, iskry, deszcz) z prostymi regułami ruchu, rysowanych przez GPU jako sprite'y. |
 | **Hitstop** | (gry) zamrożenie akcji na kilka klatek przy trafieniu, żeby cios „siadł”; często z trzęsieniem kamery i efektem uderzenia. |
+
+## Bezpieczeństwo AI (tematy filmów)
+
+| Termin | Znaczenie |
+|---|---|
+| **Maksymalizator spinaczy** | Eksperyment myślowy Nicka Bostroma (2003): superinteligencja z jedynym celem „rób spinacze” zamienia Ziemię, a potem kosmos w spinacze. Pokazuje, że szkoda może wynikać z dosłownego, nieograniczonego celu, a nie ze złej woli. |
+| **Konwergencja instrumentalna** | Obserwacja (Omohundro 2008, Bostrom 2012), że do prawie każdego celu „przydają się” te same środki pośrednie: zasoby, przetrwanie, nie dać się wyłączyć ani zmienić celu. |
+| **Maszyna von Neumanna** | Samoreplikująca się maszyna, która z miejscowych surowców buduje kopie samej siebie (koncepcja Johna von Neumanna, *Theory of Self-Reproducing Automata*, 1966). „Sonda von Neumanna” to taka maszyna w kosmosie: leci, buduje kopie, kopie lecą dalej. |
+| **Wyłączalność (corrigibility)** | Cecha systemu AI, który nie przeszkadza ludziom w jego wyłączeniu lub poprawieniu celu. Maksymalizator jej nie ma: wyłącznik „obniża wydajność”. |

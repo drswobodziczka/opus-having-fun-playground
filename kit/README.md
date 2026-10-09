@@ -9,4 +9,6 @@
 | `audio/` | głosy (`vo`: obsada, ujęcia, STT, sloty), muzyka (MIDI, soundfont), `embed` | ⏳ do wydzielenia z ninja v7 |
 | `engine/` | zegar 60 Hz, DSL `at()/sys()`, SCENES, log, kamera, rig + IK, audio-cue, `window.anim` | ⏳ później |
 
+**Dokumentacja modułu (wymóg, ANIM-001 Decision #9):** każdy katalog modułu ma `README.md` z czterema częściami: **kontrakt** (wejście, wyjście, gwarancje, czego moduł nie robi) · **metody** (sygnatura + jedno zdanie) · **zastosowanie** (kiedy tak, kiedy nie) · **przykłady** (minimalny fragment + film, który go używa). Minimalnie, ale wystarczająco, żeby agent użył modułu bez czytania kodu. Bez takiego README moduł nie dostaje ✅.
+
 Skill (przepis dla agenta) powstanie obok: `skills/code-animation/SKILL.md`, podpięty do `~/.claude/skills` symlinkiem.

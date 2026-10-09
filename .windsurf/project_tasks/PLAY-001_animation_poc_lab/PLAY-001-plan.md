@@ -44,7 +44,7 @@
 ## 🧩 Podzadania (kolejne PoC-e jako osobne zadania)
 | Zadanie | PoC | Stan |
 |---|---|---|
-| [PLAY-001.1](../PLAY-001.1_film_spinacz_paperclip_maximizer/PLAY-001.1-plan.md) | Spinacz: bajka o maksymalizatorze spinaczy | 🟡 w toku (brief v1 do akceptacji) |
+| [PLAY-001.1](../PLAY-001.1_film_spinacz_paperclip_maximizer/PLAY-001.1-plan.md) | Spinacz: bajka o maksymalizatorze spinaczy | 🟡 w toku (brief zaakceptowany, próbki głosów) |
 | [PLAY-001.2](../PLAY-001.2_film_notatka_prompt_injection/PLAY-001.2-plan.md) | Notatka: komedia o prompt injection | ⏸️ po PLAY-001.1 |
 | [PLAY-001.3](../PLAY-001.3_film_wyscig_race/PLAY-001.3-plan.md) | Wyścig: dwa pojazdy na zakrętach | ⏸️ po PLAY-001.2 |
 
