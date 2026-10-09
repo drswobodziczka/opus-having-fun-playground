@@ -1,8 +1,7 @@
-# BRIEF: The Storm Chose Black (BISHUKIJ vs ALAMANDRO)
+# BRIEF: The Storm Chose Black (BISHUKIJ vs ALAMANDRO) · v2
 
-> **Migawka briefu dla `v2-feedback-1`** (wygenerowana 2026-10-09): §1–7 jak przy akceptacji, §8 rewizje do v2 włącznie. Brief bieżący: [`../BRIEF.md`](../BRIEF.md) · prompt: [`../PROMPT.md`](../PROMPT.md).
-
-> Status: **ZAAKCEPTOWANY** (2026-10-02) · PoC #3 w PLAY-001 · wersja briefu 1
+> **Brief wersji `v2-feedback-1`**: dokładnie to, co ta wersja filmu pokazuje (stan 2026-10-06). · poprzedni: [`../v1-ink-pixel-60s/BRIEF.md`](../v1-ink-pixel-60s/BRIEF.md) · co się zmieniło: [`CHANGES.md`](CHANGES.md)
+> Pierwotnie zaakceptowany 2026-10-02 · PoC #3 w PLAY-001 · wejście usera: [`../PROMPT.md`](../PROMPT.md)
 > Wnioski z PoC #2, które ten brief wprost adresuje: gęstsza walka, każdy zwrot pokazany jako **zapowiedź → moment → konsekwencja**, czytelne chwyty i rzuty, ruch kamery wynikający z akcji, prawdziwy lektor zamiast `speechSynthesis`.
 
 ## 1. Założenia (ad1–ad7)
@@ -27,22 +26,22 @@
 **Animacja (zmiana względem PoC #2):** szkielet 2D (głowa, tułów, ramiona, przedramiona, uda, łydki) z pozami kluczowymi i interpolacją. **Kontakt w chwytach jest wymuszony**: dłoń „przykleja się” do szyi lub pasa przeciwnika, więc chwyt i rzut widać.
 
 ## 3. Scenariusz i sceny (60 s, dwie rundy)
-| Czas | Scena | Co się dzieje | Zwrot · kamera |
-|---|---|---|---|
-| 0:00–0:03 | **Intro (a)** | imiona malowane pędzlem na papierze ryżowym, czerwona pieczęć, burza w tle | |
-| 0:03–0:05 | Runda 1 | lektor: „ROUND ONE!” → „FIGHT!” | |
-| 0:05–0:11 | Wymiana (a) | obaj w powietrzu, zderzenia ciosów w locie, bloki, ślizgi po piasku, pierwsze krople krwi | |
-| 0:11–0:15 | **ZWROT 1: chwyt duszący** | *zapowiedź:* BISHUKIJ odbija się od wydmy. *moment:* przeskakuje nad ALAMANDRO i łapie go za szyję od tyłu („SAND COBRA!”). *konsekwencja:* ALAMANDRO sinieje i kopie piasek, potem wyrywa się łokciem w twarz, BISHUKIJ krwawi z nosa | **najazd** na twarze (zoom ~1,8×), po wyrwaniu kamera odskakuje |
-| 0:15–0:21 | Wymiana (a) | szybkie serie obu stron, BISHUKIJ prowadzi na punkty | |
-| 0:21–0:27 | **ZWROT 2: seria zabójczych ciosów** | *zapowiedź:* ALAMANDRO łapie pięść BISHUKIJA w locie i śmieje się („HA HA HA!”). *moment:* „BLACK MONSOON!”, 12 ciosów w 1,5 s, krew w smugach tuszu. *konsekwencja:* podbródkowy wyrzuca BISHUKIJA w ścianę burzy → „K.O.” | **odjazd**: kamera cofa się z każdym ciosem i odsłania ścianę piasku |
-| 0:27–0:30 | Przejście | ściana piasku zalewa kadr, plama tuszu się rozlewa → **styl (b)** | |
-| 0:30–0:33 | Runda 2 (b) | burza w nocy, błyskawice; „ROUND TWO!” → „FIGHT!” | |
-| 0:33–0:39 | Wymiana (b) | BISHUKIJ wściekły, szybki i skuteczny: ALAMANDRO pierwszy raz krwawi | |
-| 0:39–0:44 | **ZWROT 3: rzut** | *zapowiedź:* BISHUKIJ łapie ALAMANDRO za pas i kołnierz (widoczny kontakt dłoni). *moment:* zamach z obrotu, wysoki łuk w kadrze („DUNE BREAKER!”). *konsekwencja:* uderzenie w wydmę, krater, fontanna piasku, ALAMANDRO traci połowę życia | **obrót** kamery ~100° za łukiem lotu, powrót przy lądowaniu (nie 360°) |
-| 0:44–0:50 | Kontra | ALAMANDRO wstaje, śmieje się („HA HA HA!”), znika w burzy i atakuje z trzech stron. BISHUKIJ oszołomiony, pasek HP pusty | |
-| 0:50 | | lektor: **„FINISH HIM!”** | |
-| 0:50–0:56 | **ZWROT 4: wyrwanie serca** | *zapowiedź:* błyskawica, sylwetki, ALAMANDRO cofa pięść. *moment:* cios w pierś, wyrwane serce: stylizowana czerwona, pulsująca sylwetka (bez anatomii). *konsekwencja:* BISHUKIJ pada w piasek, burza zasypuje ciało. „FATALITY!” | **najazd + lekki obrót** (~20°) na dłoń z sercem, potem odjazd na pustynię |
-| 0:56–1:00 | Wygrana | „ALAMANDRO WINS”, autorska kwestia lektora (niżej), wiatr zasypuje kadr, pętla | |
+| ID | Czas | Scena | Co się dzieje | Zwrot · kamera |
+|---|---|---|---|---|
+| S1 | 0:00–0:03 | **Intro (a)** | imiona malowane pędzlem na papierze ryżowym, czerwona pieczęć, burza w tle |  |
+| S2 | 0:03–0:05 | Runda 1 | lektor: „ROUND ONE!” → „FIGHT!” |  |
+| S3 | 0:05–0:11 | Wymiana (a) | obaj w powietrzu, zderzenia ciosów w locie, bloki, ślizgi po piasku, pierwsze krople krwi. ALAMANDRO kopie wysoko, a BISHUKIJ robi **salto w tył jako unik w zwolnieniu** (0,35×): kopnięcie trafia w powietrze | zwolnienie 8,6–9,1 s |
+| S4 | 0:11–0:15 | **ZWROT 1: chwyt duszący** | *zapowiedź:* BISHUKIJ odbija się od wydmy. *moment:* **piruet**: obchodzi ALAMANDRO (1,5 obrotu) i zakłada duszenie od tyłu: przedramię przez gardło, druga ręka na potylicy, ofiara uniesiona, rękami szarpie przedramię (linie napięcia), „SAND COBRA!”. *konsekwencja:* ALAMANDRO traci HP, wyrywa się łokciem w twarz | **obrót kamery razem z piruetem** i **najazd do 2,15×** na duszenie, odskok przed łokciem |
+| S5 | 0:15–0:21 | Wymiana (a) | szybkie serie obu stron, BISHUKIJ prowadzi na punkty |  |
+| S6 | 0:21–0:26,4 | **ZWROT 2: seria zabójczych ciosów** | *zapowiedź:* BISHUKIJ atakuje z powietrza, ALAMANDRO **paruje przedramieniem** (iskra, „PARRY”), łapie nadgarstek i śmieje się („HA HA HA!”). *moment:* „BLACK MONSOON!”, 12 ciosów w 1,5 s, krew w smugach tuszu. *konsekwencja:* podbródkowy wyrzuca BISHUKIJA w ścianę burzy → „K.O.” | **najazd 1,6× z lekkim obrotem na front ALAMANDRO** przy parowaniu, **odjazd** na monsunie |
+| S7 | 0:26,4–0:30 | Przejście | ściana piasku zalewa kadr, plama tuszu się rozlewa → **styl (b)** |  |
+| S8 | 0:30–0:33 | Runda 2 (b) | burza w nocy, błyskawice; „ROUND TWO!” → „FIGHT!” |  |
+| S9 | 0:33–0:39 | Wymiana (b) | BISHUKIJ wściekły, szybki i skuteczny: ALAMANDRO pierwszy raz krwawi |  |
+| S10 | 0:39–0:44 | **ZWROT 3: rzut** | *zapowiedź:* BISHUKIJ łapie ALAMANDRO za pas i kołnierz (widoczny kontakt dłoni). *moment:* **zamach w przysiadzie ze skrętem tułowia** → eksplozja → **płaski, daleki lot** (~200 px), „DUNE BREAKER!”. *konsekwencja:* **ślizg po piasku** (~70 px, ślady), ALAMANDRO traci połowę życia | kamera podąża za lotem **bez obrotu** |
+| S11 | 0:44–0:50 | Kontra | ALAMANDRO wstaje, śmieje się („HA HA HA!”), znika w burzy i atakuje z trzech stron. BISHUKIJ oszołomiony, pasek HP pusty |  |
+|  | 0:50 |  | lektor: **„FINISH HIM!”** |  |
+| S12 | 0:50–0:56 | **ZWROT 4: wyrwanie serca** | *zapowiedź:* błyskawica; **zbliżenie na pięść** ALAMANDRO: drży, rozwiera się, zbiera energię, zaciska z błyskiem. *moment:* wystrzał (linie pędu), cios w pierś, wyrwane serce: stylizowana czerwona, pulsująca sylwetka (bez anatomii). *konsekwencja:* BISHUKIJ pada w piasek, burza zasypuje ciało. „FATALITY!” | **zbliżenie 3× na pięść**, potem **najazd 2,2× na serce**, odjazd na pustynię |
+| S13 | 0:56–1:00 | Wygrana | **lądowanie superbohatera**: salto w tył, przyklęk, pięść w piasek, błyskawica, serce w górze. „ALAMANDRO WINS”, „THE STORM CHOSE BLACK.”, wiatr zasypuje kadr | najazd do 1,8× na pozę zwycięzcy |
 
 **Przemoc:** krew i fatality są stylizowane (czerwone plamy tuszu i pikseli, serce jako symboliczny kształt), w konwencji bijatyk z lat 90. Bez realistycznej anatomii.
 
@@ -72,22 +71,13 @@ Paski HP w stylu bijatyk z lat 90., imiona, licznik, combo („12 HITS”), bane
 
 ## 6. Wykonanie
 - Jeden plik HTML, Canvas 2D, stały krok 60 Hz, scenariusz z wynikami (wzorzec z PoC #2).
-- **Nowe:** rig szkieletowy + pozy kluczowe; ograniczenia kontaktu w chwytach; kamera z celem (punkt + zoom + kąt) sterowana przez zwroty; przejście (a)→(b) jako maska tuszu.
-- **Uprząż v2:**
-  - asercje fabuły (4 zwroty w oknach czasowych, zwycięzca, fatality);
-  - **nowe asercje „widzialności”**: przy każdym zwrocie arkusz „zapowiedź / moment / konsekwencja” i sprawdzenie, że obie postacie są w kadrze;
-  - MP4 z dźwiękiem.
-- Szacunek: ~1500–2000 linii; generowanie ~6–10 min, weryfikacja kilka minut.
+- Rig szkieletowy + pozy kluczowe; ograniczenia kontaktu w chwytach (IK); kamera z celem (punkt + zoom + kąt) sterowana ujęciami; przejście (a) → (b) jako maska tuszu.
+- **Sceny w kodzie:** `SCENES` S1..S13 (te same ID co w tabeli §3) i znacznik „scena · sekunda” w kadrze (klawisz T).
+- **Sterowanie:** klik w film = pauza/start, `←`/`→` ±1 s (z `Shift` ±0,1 s), także z fokusem na suwaku.
+- **Uprząż:** 35 asercji: fabuła (4 zwroty w oknach czasowych, zwycięzca, fatality), salto-unik w S3, parowanie przed chwytem, lądowanie i ślizg rzutu, lądowanie zwycięzcy, widzialność per klatka (`both` całe ciała / `key` głowy i dłonie / `A` zbliżenie); arkusze zwrotów (zapowiedź / moment / konsekwencja) i scen; MP4 z dźwiękiem.
 
 ## 7. Decyzje (zaakceptowane 2026-10-02)
 1. Autorska kwestia lektora: **„THE STORM CHOSE BLACK.”**
 2. Głos: **Daniel** (macOS `say`) po obróbce w ffmpeg.
 3. Nazwy ciosów: **SAND COBRA, BLACK MONSOON, DUNE BREAKER, HEART OF THE STORM**.
 4. Tytuł filmu: **„THE STORM CHOSE BLACK”**.
-
-## 8. Rewizje (zmiany decyzji po feedbacku)
-> Brief opisuje aktualny film. Każda runda, która zmienia decyzję z sekcji 1–7, dopisuje się tutaj. Szczegóły zmian są w `CHANGES.md` danej wersji.
-
-| Wersja | Zmiana decyzji | Zastępuje |
-|---|---|---|
-| v2 | S3: salto to **unik w zwolnieniu**; S4: **piruet z kamerą + prawdziwe duszenie**; S6: **sparowanie** przed chwytem; S10: rzut z zamachem i ślizgiem; S12: **zbliżenie na pięść** (drży, rozwiera się, zbiera energię); S13: **lądowanie superbohatera** | sceny 3, 4, 6, 10, 12, 13 w tabeli §3 |

@@ -1,6 +1,6 @@
 # Postmortem: Ninja WebGL spike v1 (S6 + S8, „kinowo”, 1280×720)
 
-> 2026-10-09. Artefakt: https://claude.ai/code/artifact/9a209cbf-154b-42cb-9f36-936ef317fba3 · brief: [`../BRIEF.md`](../BRIEF.md) · porównanie: [`compare-v7-gl.png`](compare-v7-gl.png) · MP4 (lokalnie): `seg-s6.mp4`, `seg-s8.mp4`, `side-s6.mp4`, `side-s8.mp4` (v7 | WebGL)
+> 2026-10-09. Artefakt: https://claude.ai/code/artifact/9a209cbf-154b-42cb-9f36-936ef317fba3 · brief: [`BRIEF.md`](BRIEF.md) · porównanie: [`compare-v7-gl.png`](compare-v7-gl.png) · MP4 (lokalnie): `seg-s6.mp4`, `seg-s8.mp4`, `side-s6.mp4`, `side-s8.mp4` (v7 | WebGL)
 
 ## Co zbudowano
 - Kopia `storm.html` z v7: symulacja nietknięta (dodane tylko dane renderu: historia póz `HIST`, czas plamy krwi `t0`). `drawWorld` podzielony na warstwy `drawBack` / `drawMid` / `drawFront`.

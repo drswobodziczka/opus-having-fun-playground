@@ -6,6 +6,7 @@ Jak używać:
 - Tabela scen (§3) jest obowiązkowa: ID S1..Sn są wspólne dla BRIEF, kodu (SCENES), TIMELINE i feedbacku (@S6).
 - Każda scena ma kolumnę „Sprawdzenie”: z niej powstają asercje uprzęży. Akceptując brief, akceptujesz też asercje.
 - Komentarze HTML (wskazówki jak ta) usuń przed akceptacją.
+- Brief jest **per wersja**: `vN/BRIEF.md` opisuje dokładnie wersję N (kopiuj brief poprzedniej wersji i nanieś zmiany). Co się zmieniło, mówi cienki `vN/CHANGES.md`; jak, mówi `vN/POSTMORTEM.md`.
 -->
 # BRIEF: <Tytuł filmu>
 
@@ -72,11 +73,6 @@ Zwrot akcji zapisuj jako: zapowiedź → moment → konsekwencja (wszystkie wido
 ## 7. Decyzje (zaakceptowane <data>)
 1.
 
-## 8. Rewizje (zmiany decyzji po feedbacku)
-> Brief opisuje aktualny film. Każda runda, która zmienia decyzję z §1–7, dopisuje się tutaj. Szczegóły w `CHANGES.md` danej wersji.
-
-| Wersja | Zmiana decyzji | Zastępuje |
-|---|---|---|
 
 <!--
 BANK PYTAŃ (wybierz pasujące, nie wszystkie):

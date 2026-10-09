@@ -1,6 +1,8 @@
-# BRIEF: Ninja WebGL (spike renderu, „kinowo”)
+# BRIEF: Ninja WebGL (spike renderu, „kinowo”) · v1
 
-> PoC: `pocs/ninja-webgl/` · status: **zaakceptowany 2026-10-09** · długość: 2 fragmenty, ok. 10 s · wersja startowa: `v1-spike-s6-s8` · baza: ninja v7 (`pocs/ninja-sandstorm/v7-feedback-6/`) · decyzja: [PLAY-001 options/webgl-render.md](../../.windsurf/project_tasks/PLAY-001_animation_poc_lab/options/webgl-render.md)
+> **Brief wersji `v1-spike-s6-s8`**: dokładnie to, co ta wersja pokazuje. Postmortem: [`POSTMORTEM.md`](POSTMORTEM.md).
+
+> PoC: `pocs/ninja-webgl/` · status: **zaakceptowany 2026-10-09** · długość: 2 fragmenty, ok. 10 s · wersja startowa: `v1-spike-s6-s8` · baza: ninja v7 (`pocs/ninja-sandstorm/v7-feedback-6/`) · decyzja: [PLAY-001 options/webgl-render.md](../../../.windsurf/project_tasks/PLAY-001_animation_poc_lab/options/webgl-render.md)
 
 ## 1. Założenia (ad1–ad3, 2026-10-09)
 | # | Pytanie (skrót) | Ustalenie |
@@ -50,9 +52,3 @@ Bez zmian z v7 (głosy, muzyka, efekty). W MP4 spike'a: dźwięk wycięty z tych
 1. Nazwa i miejsce: `pocs/ninja-webgl/v1-spike-s6-s8/`.
 2. Kryterium sukcesu: **Ty** widzisz wyraźny skok jakości na arkuszu i w MP4, a asercje symulacji przechodzą bez zmian.
 3. Jeśli sukces: kolejny krok to v8 ninja w całości na WebGL (osobna runda).
-
-## 8. Rewizje (zmiany decyzji po feedbacku)
-> Brief opisuje aktualny film. Każda runda, która zmienia decyzję z §1–7, dopisuje się tutaj. Szczegóły w `CHANGES.md` danej wersji.
-
-| Wersja | Zmiana decyzji | Zastępuje |
-|---|---|---|

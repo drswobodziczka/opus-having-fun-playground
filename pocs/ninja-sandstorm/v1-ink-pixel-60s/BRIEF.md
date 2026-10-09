@@ -1,6 +1,6 @@
-# BRIEF: The Storm Chose Black (BISHUKIJ vs ALAMANDRO)
+# BRIEF: The Storm Chose Black (BISHUKIJ vs ALAMANDRO) · v1
 
-> **Migawka briefu dla `v1-ink-pixel-60s`** (wygenerowana 2026-10-09): §1–7 jak przy akceptacji, §8 rewizje do v1 włącznie. Brief bieżący: [`../BRIEF.md`](../BRIEF.md) · prompt: [`../PROMPT.md`](../PROMPT.md).
+> **Brief wersji `v1-ink-pixel-60s`**: oryginał zaakceptowany 2026-10-02, bez zmian. Wejście usera: [`../PROMPT.md`](../PROMPT.md)
 
 > Status: **ZAAKCEPTOWANY** (2026-10-02) · PoC #3 w PLAY-001 · wersja briefu 1
 > Wnioski z PoC #2, które ten brief wprost adresuje: gęstsza walka, każdy zwrot pokazany jako **zapowiedź → moment → konsekwencja**, czytelne chwyty i rzuty, ruch kamery wynikający z akcji, prawdziwy lektor zamiast `speechSynthesis`.
@@ -84,9 +84,3 @@ Paski HP w stylu bijatyk z lat 90., imiona, licznik, combo („12 HITS”), bane
 2. Głos: **Daniel** (macOS `say`) po obróbce w ffmpeg.
 3. Nazwy ciosów: **SAND COBRA, BLACK MONSOON, DUNE BREAKER, HEART OF THE STORM**.
 4. Tytuł filmu: **„THE STORM CHOSE BLACK”**.
-
-## 8. Rewizje (zmiany decyzji po feedbacku)
-> Brief opisuje aktualny film. Każda runda, która zmienia decyzję z sekcji 1–7, dopisuje się tutaj. Szczegóły zmian są w `CHANGES.md` danej wersji.
-
-| Wersja | Zmiana decyzji | Zastępuje |
-|---|---|---|
