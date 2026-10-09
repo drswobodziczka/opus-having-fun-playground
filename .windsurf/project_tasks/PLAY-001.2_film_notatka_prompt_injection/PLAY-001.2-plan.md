@@ -1,14 +1,14 @@
-# FILM-002: Notatka: komedia o prompt injection
+# PLAY-001.2: Film „Notatka”: komedia o prompt injection
 
 > **Rola:** Dynamiczne Centrum Dowodzenia (SSOT). Tu sprawdzasz status, planujesz ruchy i zapisujesz decyzje.
-> **Kontekst:** Patrz plik `FILM-002-context.md`
+> **Kontekst:** Patrz plik `PLAY-001.2-context.md`
 > **Zadanie nadrzędne:** [PLAY-001](../PLAY-001_animation_poc_lab/PLAY-001-plan.md) (seria PoC-ów; ten film to kolejny PoC) · **zasila:** [ANIM-001](../ANIM-001_animation_skill/ANIM-001-plan.md) (kit i skill rosną przy filmie)
 
 ## 🚦 Status Dashboard
 
-*   **Current State:** ⏸️ Todo (po FILM-001)
+*   **Current State:** ⏸️ Todo (po PLAY-001.1)
 *   **Current Focus:** Phase 1: preprodukcja
-*   **Immediate Next Action:** Po FILM-001: pytania pogłębiające → BRIEF z szablonu kitu → akceptacja → kod (na kicie z FILM-001).
+*   **Immediate Next Action:** Po PLAY-001.1: pytania pogłębiające → BRIEF z szablonu kitu → akceptacja → kod (na kicie z PLAY-001.1).
 
 ---
 

@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Ninja v7.5: słyszalna wichura z podmuchami (z pola wiatru obrazu), miks zmierzony na ścieżkach osobno (`tools/stems.mjs`); 41/41: https://claude.ai/code/artifact/d6769840-da54-4228-a190-d7faa7ce8430. Fiszki z lekcjami: [`docs/LESSONS.md`](../../../docs/LESSONS.md)
-*   **Immediate Next Action:** (1) Ocena ninja v7.5 uchem (wichura, miks). (2) Nowe filmy idą w osobnych zadaniach: **FILM-001 Spinacz** (w toku, czeka na odpowiedzi na pytania), potem FILM-002 Notatka, FILM-003 Wyścig. (3) Ninja v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (robot, fatality energią, runda 3 ze stworem, słownik ruchów v2) po FILM-001, na kicie.
+*   **Immediate Next Action:** (1) Ocena ninja v7.5 uchem (wichura, miks). (2) Nowe filmy idą w osobnych zadaniach: **PLAY-001.1 Spinacz** (w toku, czeka na odpowiedzi na pytania), potem PLAY-001.2 Notatka, PLAY-001.3 Wyścig. (3) Ninja v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (robot, fatality energią, runda 3 ze stworem, słownik ruchów v2) po PLAY-001.1, na kicie.
 
 ---
 
@@ -43,9 +43,9 @@
 ## 🧩 Podzadania (kolejne PoC-e jako osobne zadania)
 | Zadanie | PoC | Stan |
 |---|---|---|
-| [FILM-001](../FILM-001_paperclip_maximizer/FILM-001-plan.md) | Spinacz: bajka o maksymalizatorze spinaczy | 🟡 w toku (pytania przed briefem) |
-| [FILM-002](../FILM-002_prompt_injection_note/FILM-002-plan.md) | Notatka: komedia o prompt injection | ⏸️ po FILM-001 |
-| [FILM-003](../FILM-003_race/FILM-003-plan.md) | Wyścig: dwa pojazdy na zakrętach | ⏸️ po FILM-002 |
+| [PLAY-001.1](../PLAY-001.1_film_spinacz_paperclip_maximizer/PLAY-001.1-plan.md) | Spinacz: bajka o maksymalizatorze spinaczy | 🟡 w toku (pytania przed briefem) |
+| [PLAY-001.2](../PLAY-001.2_film_notatka_prompt_injection/PLAY-001.2-plan.md) | Notatka: komedia o prompt injection | ⏸️ po PLAY-001.1 |
+| [PLAY-001.3](../PLAY-001.3_film_wyscig_race/PLAY-001.3-plan.md) | Wyścig: dwa pojazdy na zakrętach | ⏸️ po PLAY-001.2 |
 
 Wcześniejsze PoC-e (Clip Fighter, Paper Cuts, Ninja, Ninja WebGL) są prowadzone bezpośrednio w tym zadaniu. Każdy podzadaniowy film zasila też ANIM-001 (kit i skill).
 

@@ -7,7 +7,7 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Phase 3: skill. Wzorce są zebrane z 3 PoC-ów (PLAY-001), czekają na spisanie w `SKILL.md` i szablon
-*   **Immediate Next Action:** Przy FILM-001 (Spinacz): wydzielić `kit/engine` (zegar, DSL `at()/sys()`, sceny, kamera, `window.anim`) i `kit/audio` (vo, partytura, render, embed), zbudować `kit/harness/audio` (Decision #8, asercje dźwięku z progami z briefu), przenieść `tools/stems.mjs` do kitu. `SKILL.md` na końcu, z tego, co zadziałało (w tym rozdział o chirurgicznej precyzji, Decision #6, i planie testów z userem, Decision #7).
+*   **Immediate Next Action:** Przy PLAY-001.1 (Spinacz): wydzielić `kit/engine` (zegar, DSL `at()/sys()`, sceny, kamera, `window.anim`) i `kit/audio` (vo, partytura, render, embed), zbudować `kit/harness/audio` (Decision #8, asercje dźwięku z progami z briefu), przenieść `tools/stems.mjs` do kitu. `SKILL.md` na końcu, z tego, co zadziałało (w tym rozdział o chirurgicznej precyzji, Decision #6, i planie testów z userem, Decision #7).
 
 ---
 
@@ -58,7 +58,7 @@
 
 ### Decision #8: Weryfikacja dźwięku w uprzęży, nie w głowie agenta (user, 2026-10-09)
 *   **Context:** Dziś weryfikacja audio to wiedza agenta + rozproszone skrypty: transkrypcja kwestii w `vo/make.mjs`, poziomy ścieżek w `tools/stems.mjs`, spektrogram i `volumedetect` ad hoc. Uprząż tylko wypisuje liczbę sygnałów audio, niczego nie asertuje.
-*   **Decision:** `kit/harness/audio` (budowany przy FILM-001): render ścieżek osobno (`renderAudio(rate, { stem })`) i asercje: brak przesteru (szczyt < −1 dBFS), każda kwestia lektora słyszalna (VO ≥ X dB nad resztą w swoim oknie), kwestie się nie nakładają (czasy + długości plików), poziomy ścieżek w zadanych oknach (np. wiatr pod muzyką), muzyka obecna tam, gdzie ma grać, cisza tam, gdzie ma być; raport poziomów i spektrogram PNG jako arkusz; transkrypcje z `vo/takes.json` sprawdzane względem scenariusza. Progi w sekcji „Plan testów” briefu.
+*   **Decision:** `kit/harness/audio` (budowany przy PLAY-001.1): render ścieżek osobno (`renderAudio(rate, { stem })`) i asercje: brak przesteru (szczyt < −1 dBFS), każda kwestia lektora słyszalna (VO ≥ X dB nad resztą w swoim oknie), kwestie się nie nakładają (czasy + długości plików), poziomy ścieżek w zadanych oknach (np. wiatr pod muzyką), muzyka obecna tam, gdzie ma grać, cisza tam, gdzie ma być; raport poziomów i spektrogram PNG jako arkusz; transkrypcje z `vo/takes.json` sprawdzane względem scenariusza. Progi w sekcji „Plan testów” briefu.
 *   **Consequence:** Audio staje się częścią uprzęży jak skan klatek; `tools/stems.mjs` przechodzi do kitu.
 
 ### Decision #6: Chirurgiczna precyzja, powtarzalność i kontrola jako sznyt skilla (user, 2026-10-09)

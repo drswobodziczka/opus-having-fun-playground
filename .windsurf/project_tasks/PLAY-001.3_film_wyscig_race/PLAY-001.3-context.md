@@ -1,17 +1,17 @@
-# FILM-002: Kontekst
+# PLAY-001.3: Kontekst
 
 > **Rola:** Żywy Brief. Zakres biznesowy, wymagania, kluczowe pliki, dane referencyjne.
 
 ## Opis Zadania
-Komedia 20–25 s o prompt injection: robot-kamerdyner dostaje list z ukrytym poleceniem i grzecznie wynosi sejf złodziejowi. Gag pokazujący mechanizm ataku bez żargonu; pasuje do celu kanału (CHAN-001).
+Wyścig 20 s dwóch pojazdów po trasie z zakrętami. Czysty test silnika na innym gatunku: kamera w ruchu, prędkość, wyprzedzanie, bez riga postaci.
 
 Źródło: propozycja agenta zaakceptowana przez usera 2026-10-09 („wszystkie trzy tematy są super”), handoff do osobnych zadań.
 
 ## Co nowego sprawdza (względem ninja)
-- mimika i „myślenie” robota (np. dymek, wizjer)
-- rekwizyty i interakcja z obiektami (list, sejf, drzwi)
-- komedia: timing gagu, reakcje
-- czytelne pokazanie ukrytej instrukcji w liście
+- kamera śledząca w ruchu (panorama, najazd na wyprzedzanie)
+- wrażenie prędkości (rozmycie, linie pędu, paralaksa trasy)
+- fizyka pojazdów (zakręty, poślizg) jako scenariusz z wynikami
+- dźwięk silników i przelotów (efekty)
 
 ## Wymagania
 - Proces z `CLAUDE.md`: pytania → BRIEF (z szablonu, z planem testów) → akceptacja → kod; runda feedbacku = nowa wersja.

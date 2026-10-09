@@ -1,4 +1,4 @@
-# FILM-001: pytania przed briefem (do odpowiedzi usera)
+# PLAY-001.1: pytania przed briefem (do odpowiedzi usera)
 
 > Zadane 2026-10-09 (koniec sesji, bez odpowiedzi). Następna sesja: zebrać odpowiedzi (np. „1b 2b 3a…”) → BRIEF z szablonu `kit/templates/BRIEF.md` z tabelą scen i sekcją „Plan testów i arkuszy” (z progami dla asercji dźwięku, Decision #8) → przegląd z userem → akceptacja.
 

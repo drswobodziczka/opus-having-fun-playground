@@ -1,7 +1,7 @@
-# FILM-001: Spinacz: bajka o maksymalizatorze spinaczy
+# PLAY-001.1: Film „Spinacz”: bajka o maksymalizatorze spinaczy
 
 > **Rola:** Dynamiczne Centrum Dowodzenia (SSOT). Tu sprawdzasz status, planujesz ruchy i zapisujesz decyzje.
-> **Kontekst:** Patrz plik `FILM-001-context.md`
+> **Kontekst:** Patrz plik `PLAY-001.1-context.md`
 > **Zadanie nadrzędne:** [PLAY-001](../PLAY-001_animation_poc_lab/PLAY-001-plan.md) (seria PoC-ów; ten film to kolejny PoC) · **zasila:** [ANIM-001](../ANIM-001_animation_skill/ANIM-001-plan.md) (kit i skill rosną przy filmie)
 
 ## 🚦 Status Dashboard
@@ -36,7 +36,7 @@
 ### Decision #1 (z ANIM-001 Decision #8): weryfikacja dźwięku w uprzęży (2026-10-09)
 *   **Context:** Dziś weryfikacja audio to wiedza agenta + rozproszone skrypty (`vo/make.mjs` transkrypcja, `tools/stems.mjs` poziomy, spektrogram i `volumedetect` ad hoc). Uprząż niczego w dźwięku nie asertuje.
 *   **Decision:** Ten film jako pierwszy buduje i używa `kit/harness/audio`: render ścieżek osobno (`renderAudio(rate, { stem })`), asercje: brak przesteru (szczyt < −1 dBFS), każda kwestia narratora słyszalna nad resztą w swoim oknie, kwestie się nie nakładają, poziomy ścieżek w zadanych oknach, muzyka/cisza tam, gdzie mają być, transkrypcje (`vo/takes.json`) zgodne ze scenariuszem; raport poziomów + spektrogram PNG jako arkusz. **Progi w sekcji „Plan testów i arkuszy” briefu**, ustalane z userem.
-*   **Consequence:** `tools/stems.mjs` przechodzi do kitu; asercje dźwięku dostępne dla kolejnych filmów (FILM-002, FILM-003, ninja v8).
+*   **Consequence:** `tools/stems.mjs` przechodzi do kitu; asercje dźwięku dostępne dla kolejnych filmów (PLAY-001.2, PLAY-001.3, ninja v8).
 
 ---
 

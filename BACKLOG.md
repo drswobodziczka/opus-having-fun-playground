@@ -15,9 +15,9 @@
 | B9 | **Polityka wersjonowania PoC-a** („release'y”): drobne poprawki na najnowszej wersji (historia w gicie), duże przebudowy jako nowa wersja `vN`; numeracja `vN.M` dla drobnych | mniej katalogów, czytelna historia | 2026-10-09, pomysł usera; pierwszy test: ninja v7.2 | czeka |
 | B10 | **Kanał YT o AI safety / security / wpływie AI na społeczeństwo / AI for good**: generyczny skill do filmów jako „silnik produkcji” krótkich animacji edukacyjnych | cel docelowy całego poligonu: siać świadomość formą bardziej nośną niż blog | 2026-10-09, pomysł usera; **po** skillsecie i domknięciu PoC-ów. *Ocena agenta:* patrz sekcja „B10: notatki” niżej | → [CHAN-001](.windsurf/project_tasks/CHAN-001_ai_awareness_channel/CHAN-001-plan.md) |
 | B11 | **Eksperyment „ten sam brief, nowa budowa”**: zbudować film od zera wyłącznie z briefu (np. ninja v7.4) i porównać z istniejącym | pokazać, ile filmu niesie brief, a ile zamrożony kod; zmierzyć rozrzut interpretacji agenta (jak dwóch animatorów) | 2026-10-09; lekcja: [`docs/LESSONS.md`](docs/LESSONS.md) „Chirurgiczna precyzja” | czeka |
-| B12 | **Film „Spinacz”**: bajka 25–30 s o maksymalizatorze spinaczy | inny gatunek, tłum obiektów, narrator; AI safety | 2026-10-09 | → [FILM-001](.windsurf/project_tasks/FILM-001_paperclip_maximizer/FILM-001-plan.md) |
-| B13 | **Film „Notatka”**: komedia 20–25 s o prompt injection (robot-kamerdyner) | mimika robota, rekwizyty, gag; AI security | 2026-10-09 | → [FILM-002](.windsurf/project_tasks/FILM-002_prompt_injection_note/FILM-002-plan.md) |
-| B14 | **Film „Wyścig”**: 20 s, dwa pojazdy na zakrętach | test silnika: kamera w ruchu, prędkość, bez riga | 2026-10-09 | → [FILM-003](.windsurf/project_tasks/FILM-003_race/FILM-003-plan.md) |
+| B12 | **Film „Spinacz”**: bajka 25–30 s o maksymalizatorze spinaczy | inny gatunek, tłum obiektów, narrator; AI safety | 2026-10-09 | → [PLAY-001.1](.windsurf/project_tasks/PLAY-001.1_film_spinacz_paperclip_maximizer/PLAY-001.1-plan.md) |
+| B13 | **Film „Notatka”**: komedia 20–25 s o prompt injection (robot-kamerdyner) | mimika robota, rekwizyty, gag; AI security | 2026-10-09 | → [PLAY-001.2](.windsurf/project_tasks/PLAY-001.2_film_notatka_prompt_injection/PLAY-001.2-plan.md) |
+| B14 | **Film „Wyścig”**: 20 s, dwa pojazdy na zakrętach | test silnika: kamera w ruchu, prędkość, bez riga | 2026-10-09 | → [PLAY-001.3](.windsurf/project_tasks/PLAY-001.3_film_wyscig_race/PLAY-001.3-plan.md) |
 
 ## B10: notatki (2026-10-09)
 
