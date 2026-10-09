@@ -7,11 +7,12 @@
 
 *   **Current State:** 🟡 In Progress
 *   **Current Focus:** Ninja v7.5: słyszalna wichura z podmuchami (z pola wiatru obrazu), miks zmierzony na ścieżkach osobno (`tools/stems.mjs`); 41/41: https://claude.ai/code/artifact/d6769840-da54-4228-a190-d7faa7ce8430. Fiszki z lekcjami: [`docs/LESSONS.md`](../../../docs/LESSONS.md)
-*   **Immediate Next Action:** (1) Ocena ninja v7.5 uchem (wichura, miks). (2) Nowe filmy idą w osobnych zadaniach: **PLAY-001.1 Spinacz** (w toku, czeka na odpowiedzi na pytania), potem PLAY-001.2 Notatka, PLAY-001.3 Wyścig. (3) Ninja v8 z [`NEXT.md`](../../../pocs/ninja-sandstorm/NEXT.md) (robot, fatality energią, runda 3 ze stworem, słownik ruchów v2) po PLAY-001.1, na kicie.
+*   **Immediate Next Action:** Akceptacja briefu portu WebGL v2 ([`BRIEF.md`](../../../pocs/ninja-webgl/v2-port-v7.5/BRIEF.md), w tym plan testów i arkuszy) → kod → artefakt + arkusze porównań v7.5 | v2 + samouczek → MP4 jako follow-up. Równolegle PLAY-001.1 Spinacz (osobny agent). Ninja v8 później.
 
 ---
 
 ## 🧠 Memory Dump (Kluczowe ustalenia z ostatniej sesji)
+*   2026-10-10: **uprząż WebGL na GPU**: pełny Chrome headless rysuje przez Metal (Apple M3 Pro), ok. 20× szybciej niż SwiftShader (spike: 39 vs 789 ms/klatkę, cała uprząż 13,5 s zamiast 540 s). `kit/harness` `openFilm({ gl: true })` wybiera GPU, SwiftShader jako zapas. v7.5 oceniona: OK.
 *   HANDOVER 2026-10-07: od następnej sesji pracujemy **w tym repo** (wcześniej sesja żyła w `title-master`). Konwencje i komendy: `CLAUDE.md` w root repo. Pamięć agenta (bramki preprodukcji, konto do pushowania) skopiowana do projektu playgroundu.
 *   Stan ninja: v1 → v7 (`pocs/ninja-sandstorm/v7-feedback-6/`, artefakt https://claude.ai/code/artifact/89d0d482-499c-4268-b6ce-5c3b47909a52). Muzyka v6 zaakceptowana („rewelacja”). Do oceny: głosy v7.
 *   Lektor generuje `vo/make.mjs` (obsada, ujęcia, STT, limity slotów); pliki `vo/*.mp3` są w repo per wersja, regenerować tylko zmienione kwestie (`node vo/make.mjs <nazwa>`). Klucz API ma własny limit kredytów (ustawiany w dashboardzie), niezależny od limitu konta.
@@ -124,6 +125,7 @@ Wcześniejsze PoC-e (Clip Fighter, Paper Cuts, Ninja, Ninja WebGL) są prowadzon
 - [x] Pytania ad1–ad3 (S6 + S8, kinowo, 720p) → brief [`pocs/ninja-webgl/BRIEF.md`](../../../pocs/ninja-webgl/BRIEF.md)
 - [x] Akceptacja briefu (2026-10-09)
 - [x] Spike `pocs/ninja-webgl/v1-spike-s6-s8/`: 15/15, [`compare-v7-gl.png`](../../../pocs/ninja-webgl/v1-spike-s6-s8/compare-v7-gl.png), MP4 segmentów, [postmortem](../../../pocs/ninja-webgl/v1-spike-s6-s8/POSTMORTEM.md)
+- [ ] **Port v7.5 do WebGL (`pocs/ninja-webgl/v2-port-v7.5/`)**: cały film, 4 nowe efekty (falowanie powietrza, god rays, LUT, fala uderzeniowa) + ładniejszy piasek na tym samym polu wiatru + samouczek `docs/webgl-tutorial.md`; brief do akceptacji: [`BRIEF.md`](../../../pocs/ninja-webgl/v2-port-v7.5/BRIEF.md)
 - [x] Ocena spike'a: user widzi, że zmienił się cały film; decyzja: zmiany w v7 (Canvas) → v8, potem port do WebGL
 - [x] Migawki briefu per wersja (v1–v7), [`PROMPT.md`](../../../pocs/ninja-sandstorm/PROMPT.md) z wejściem usera
 

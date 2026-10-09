@@ -51,4 +51,4 @@
 
 ### 🖼️ WebGL daje światło i ruch, nie kształt
 - **Lekcja:** shadery poprawiły noc, pioruny, ruch i atmosferę, ale postacie mają ten sam kształt pociągnięć. Uroda postaci to osobny problem (pędzel), nie sprawa silnika.
-- **Pułapki:** headless Chrome bez GPU po cichu wyłącza WebGL (SwiftShader + asercja „renderer = webgl”); przypisywanie `filters` co klatkę zabija wydajność; wspólne uniformy shaderów muszą mieć tę samą precyzję.
+- **Pułapki:** minimalny „headless shell” Chrome nie ma GPU i po cichu wyłącza WebGL; **pełny Chrome w trybie headless używa GPU** (macOS: Metal, ~20× szybciej niż SwiftShader), więc uprząż WebGL odpala pełny Chrome, a SwiftShader to zapas; zawsze asercja „renderer = webgl”; przypisywanie `filters` co klatkę zabija wydajność; wspólne uniformy shaderów muszą mieć tę samą precyzję.

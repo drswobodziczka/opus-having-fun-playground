@@ -24,10 +24,26 @@ export function cliArgs(argv = process.argv.slice(2)) {
 }
 
 // open the film in headless Chrome; collects page/console errors
-// gl: WebGL films. Headless Chrome has no GPU and silently falls back (PixiJS -> Canvas renderer); SwiftShader gives real WebGL in software.
-export async function openFilm(html, { tc = false, gl = false, chromeArgs = [] } = {}) {
-  const glArgs = gl ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : [];
-  const browser = await puppeteer.launch({ executablePath: findChrome(), headless: 'shell', args: ['--autoplay-policy=no-user-gesture-required', ...glArgs, ...chromeArgs] });
+// gl: WebGL films. The minimal headless shell has no GPU (Pixi silently falls back to Canvas). Full Chrome in headless mode
+// uses the real GPU (macOS: ANGLE on Metal, ~20x faster than software); fallback: headless shell + SwiftShader (software WebGL).
+export function findFullChrome() {
+  const root = path.join(os.homedir(), '.cache', 'puppeteer', 'chrome');
+  if (fs.existsSync(root)) for (const v of fs.readdirSync(root).filter(d => !d.startsWith('.')).sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))) {
+    for (const plat of fs.readdirSync(path.join(root, v))) {
+      const exe = path.join(root, v, plat, 'Google Chrome for Testing.app', 'Contents', 'MacOS', 'Google Chrome for Testing');
+      if (fs.existsSync(exe)) return exe;
+      const lin = path.join(root, v, plat, 'chrome'); if (fs.existsSync(lin)) return lin;
+    }
+  }
+  const sys = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+  return fs.existsSync(sys) ? sys : null;
+}
+export async function openFilm(html, { tc = false, gl = false, gpu = true, chromeArgs = [] } = {}) {
+  const full = gl && gpu ? findFullChrome() : null;
+  const launch = full
+    ? { executablePath: full, headless: true, args: ['--autoplay-policy=no-user-gesture-required', '--enable-gpu', '--ignore-gpu-blocklist', ...chromeArgs] }
+    : { executablePath: findChrome(), headless: 'shell', args: ['--autoplay-policy=no-user-gesture-required', ...(gl ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : []), ...chromeArgs] };
+  const browser = await puppeteer.launch(launch);
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
@@ -37,7 +53,8 @@ export async function openFilm(html, { tc = false, gl = false, chromeArgs = [] }
   await page.evaluate(() => window.anim.ready); // async renderers (WebGL init)
   await page.evaluate(v => window.anim.setTimecode && window.anim.setTimecode(v), tc); // explicit: films may show the timecode by default
   const duration = await page.evaluate(() => window.anim.duration);
-  return { browser, page, errors, duration };
+  const gpuName = gl ? await page.evaluate(() => { const c = document.createElement('canvas').getContext('webgl2'), e = c && c.getExtension('WEBGL_debug_renderer_info'); return c ? c.getParameter(e ? e.UNMASKED_RENDERER_WEBGL : c.RENDERER) : 'none'; }) : null;
+  return { browser, page, errors, duration, gpuName };
 }
 
 // poses at given seconds (JSON strings, for exact comparison)
