@@ -6,8 +6,8 @@
 ## 🚦 Status Dashboard
 
 *   **Current State:** 🟡 In Progress
-*   **Current Focus:** Faza 4: spike WebGL. Brief [`pocs/ninja-webgl/BRIEF.md`](../../../pocs/ninja-webgl/BRIEF.md) (S6 + S8, „kinowo”, 1280×720) czeka na akceptację; `kit/harness` gotowy (ANIM-001)
-*   **Immediate Next Action:** Akceptacja briefu ninja-webgl → render PixiJS dla S6 i S8–S9a → uprząż z kitu → arkusz v7 | WebGL + MP4 720p + pomiary. W tle: ocena v7 uchem.
+*   **Current Focus:** Spike WebGL v1 gotowy (15/15, symulacja = v7): https://claude.ai/code/artifact/9a209cbf-154b-42cb-9f36-936ef317fba3 · [postmortem](../../../pocs/ninja-webgl/v1-spike-s6-s8/POSTMORTEM.md)
+*   **Immediate Next Action:** Ocena usera (artefakt + `side-s6.mp4` / `side-s8.mp4`): czy skok jakości wystarcza na v8 w WebGL? Kandydat na następny krok jakościowy: nowy pędzel postaci. W tle: ocena głosów v7.
 
 ---
 
@@ -102,8 +102,9 @@
 ### Phase 4: Ładniejszy render (WebGL)
 - [x] Decyzja: własny silnik symulacji + render **PixiJS** z shaderami; Remotion / Motion Canvas odrzucone (rama czasu i MP4 już są, uroda to sprawa renderu). Notatka: [`options/webgl-render.md`](options/webgl-render.md)
 - [x] Pytania ad1–ad3 (S6 + S8, kinowo, 720p) → brief [`pocs/ninja-webgl/BRIEF.md`](../../../pocs/ninja-webgl/BRIEF.md)
-- [ ] Akceptacja briefu
-- [ ] Spike `pocs/ninja-webgl/v1-spike-s6-s8/`: render PixiJS → arkusz v7 | WebGL + wydajność + MP4 720p
+- [x] Akceptacja briefu (2026-10-09)
+- [x] Spike `pocs/ninja-webgl/v1-spike-s6-s8/`: 15/15, [`compare-v7-gl.png`](../../../pocs/ninja-webgl/v1-spike-s6-s8/compare-v7-gl.png), MP4 segmentów, [postmortem](../../../pocs/ninja-webgl/v1-spike-s6-s8/POSTMORTEM.md)
+- [ ] Ocena spike'a przez usera → decyzja o v8 w WebGL
 
 ---
 

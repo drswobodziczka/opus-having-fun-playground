@@ -1,6 +1,6 @@
 # BRIEF: Ninja WebGL (spike renderu, „kinowo”)
 
-> PoC: `pocs/ninja-webgl/` · status: **do akceptacji** · długość: 2 fragmenty, ok. 10 s · wersja startowa: `v1-spike-s6-s8` · baza: ninja v7 (`pocs/ninja-sandstorm/v7-feedback-6/`) · decyzja: [PLAY-001 options/webgl-render.md](../../.windsurf/project_tasks/PLAY-001_animation_poc_lab/options/webgl-render.md)
+> PoC: `pocs/ninja-webgl/` · status: **zaakceptowany 2026-10-09** · długość: 2 fragmenty, ok. 10 s · wersja startowa: `v1-spike-s6-s8` · baza: ninja v7 (`pocs/ninja-sandstorm/v7-feedback-6/`) · decyzja: [PLAY-001 options/webgl-render.md](../../.windsurf/project_tasks/PLAY-001_animation_poc_lab/options/webgl-render.md)
 
 ## 1. Założenia (ad1–ad3, 2026-10-09)
 | # | Pytanie (skrót) | Ustalenie |
@@ -36,7 +36,7 @@ Bez zmian z v7: BISHUKIJ (jasnoszary, szal), ALAMANDRO (czarny, kaptur, biała s
 Bez zmian z v7 (głosy, muzyka, efekty). W MP4 spike'a: dźwięk wycięty z tych samych sekund filmu v7.
 
 ## 6. Wykonanie
-- **Technika:** kopia `storm.html` z v7; render podmieniony na **PixiJS 8.19** + **pixi-filters 6.1** (cdnjs, przypięte wersje) + własne shadery (papier, pędzel). Symulacja nietknięta. Canvas 1280×720.
+- **Technika:** kopia `storm.html` z v7; render podmieniony na **PixiJS 8.19** (cdnjs) + **pixi-filters 6.1.4** (jsdelivr: na cdnjs brak plików) + własne shadery (papier, pędzel). Symulacja nietknięta. Canvas 1280×720.
 - **Kit (Decision #5):** przy okazji wydzielam **`kit/harness`** z v7 (Chrome, skan klatka po klatce, test powtórki, widzialność, arkusze, MP4) i używam go na **obu** filmach: v7 (dowód: 41/41 jak dziś) i spike.
 - **Uprząż spike'a:** zdarzenia i stawy identyczne z v7 w oknach S6 i S8–S9a; skan klatek i powtórka; brak błędów WebGL; klatki niepuste (wariancja pikseli); widzialność postaci.
 - **Wyjście:**
@@ -46,7 +46,7 @@ Bez zmian z v7 (głosy, muzyka, efekty). W MP4 spike'a: dźwięk wycięty z tych
   - artefakt (odtwarzacz z wyborem fragmentu).
 - **Szacunek:** render ~600–1000 linii nowego kodu; generowanie ~15–30 min; ryzyko: wydajność WebGL w headless Chrome (plan B: render klatek przez Chrome z GPU w trybie z oknem albo niższa rozdzielczość dla uprzęży).
 
-## 7. Decyzje (do akceptacji)
+## 7. Decyzje (zaakceptowane 2026-10-09)
 1. Nazwa i miejsce: `pocs/ninja-webgl/v1-spike-s6-s8/`.
 2. Kryterium sukcesu: **Ty** widzisz wyraźny skok jakości na arkuszu i w MP4, a asercje symulacji przechodzą bez zmian.
 3. Jeśli sukces: kolejny krok to v8 ninja w całości na WebGL (osobna runda).
